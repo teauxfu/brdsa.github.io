@@ -19,8 +19,7 @@ instagram: &instagram
 github: &github
   label: "GitHub"
   icon: "fab fa-fw fa-github"
-  url: "https://github.com/br-dsa" # ??? is this actually official github?
-  username: br-dsa
+  url: "https://github.com/dsa-ntc/brdsa.github.io"
 
 email: &email
   label: "Email"
