@@ -10,6 +10,12 @@ twitter: &twitter
   url: "https://twitter.com/BatonRougeDSA"
   username: BatonRougeDSA
 
+bluesky: &bluesky
+  label: "Blue Sky"
+  icon: "fas fa-fw fa-cloud"
+  url: "https://bsky.app/profile/batonrougedsa.bsky.social"
+  username: batonrougedsa
+
 instagram: &instagram
   label: "Instagram"
   icon: "fab fa-fw fa-instagram"
@@ -32,9 +38,10 @@ email: &email
 
 # This list appears in the footer of every page
 footer:
+  - *instagram
+  - *bluesky
   - *facebook
   - *twitter
-  - *instagram
   - *github
   - *email
 
