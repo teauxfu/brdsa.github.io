@@ -18,7 +18,6 @@ I'm an union man and, in my experience, when we show up, we win. I've packed the
 
 
 -Jacob Newsom
-----------------------------------
+
 "A better world is possible"
-----------------------------------
 
