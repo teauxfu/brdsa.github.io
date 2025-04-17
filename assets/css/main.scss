@@ -117,3 +117,27 @@ p {
     padding: 10px;
     margin-bottom: 10px;
 }
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    color: var(--red);
+    min-width: 20px; 
+    max-width: 20px;
+    text-align: center; 
+    margin-right: 6px; 
+}
+
+.social-link {
+    display: inline-block;
+    text-decoration: none; 
+}
