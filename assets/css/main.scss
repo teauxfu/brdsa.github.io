@@ -1,5 +1,5 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Only the main Sass file needs front matter (the dashes are enough, seems ok to ignore VSCode syntax error on this line https://github.com/jekyll/jekyll/issues/7628)
 ---
 
 @charset "utf-8";
@@ -14,6 +14,16 @@
 
 // import custom variables and mixins to extend BS4
 @import "lone-wolf-theme";
+
+// self-hosted font awesome v6.5.2
+// NOTE order matters, functions must load before variables
+@import "fontawesomeV6/functions";
+@import "fontawesomeV6/variables";
+@import "fontawesomeV6/mixins";
+@import "fontawesomeV6/core";
+@import "fontawesomeV6/icons";
+@import "fontawesomeV6/brands"; 
+@import "fontawesomeV6/solid"; 
 
 // Import the ManifoldDSA Font
 @import "fonts/manifolddsa.scss";
