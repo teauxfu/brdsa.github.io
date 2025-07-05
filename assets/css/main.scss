@@ -44,6 +44,15 @@
     height: 300px;
 }
 
+// since we use DSA red for links, bold anchor text for easier reading
+a {
+    font-weight: bold;
+}
+// show an underline on hover for links for clarity 
+a:hover {
+    text-decoration: underline;
+}
+
 hr {
     .large {
         border-top: 8px solid var(--black);
