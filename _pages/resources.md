@@ -4,20 +4,21 @@ title: "Resources"
 permalink: /resources/
 ---
 
-<h2>For Tenants</h2>
+## For Tenants
 
-Join BR's Renters Rights Assembly
-Black Mold info
-Legal resources
+- Join BR's Renters Rights Assembly
+- Black Mold info
+- Legal resources
 
-<h2>For Immigrants</h2>
+## For Immigrants
 
-Local organizations
-Legal resources
+- Local organizations
+- Legal resources
 
-<h2>For Workers</h2>
+## For Workers
 
-Find your union
+- Find your union
 
-<h2>For Learning About Socialism</h2>
+## For Learning About Socialism
 
+- Suggested reading
