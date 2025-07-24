@@ -45,3 +45,17 @@ npm run dev
 ```
 
 ### Useful links
+
+https://svelte.dev/docs/kit/debugging#Visual-Studio-Code
+
+Copied and modified this person's GH workflow
+https://github.com/khromov/derivault/blob/main/.github/workflows/build.yml
+
+general guidance for project layout 
+https://joyofcode.xyz/sveltekit-markdown-blog#rendering-a-single-post
+
+some default settings to put in `.vscode` 
+https://www.sveltepatterns.dev/getting-started-with-vscode
+
+phenomenal guide, can probably ditch the mdsvex if it's excessive 
+https://gebna.gg/blog/blog-from-scratch-using-sveltekit

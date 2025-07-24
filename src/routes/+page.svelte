@@ -1,6 +1,52 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit" class="text-blue">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	// import { formatDate } from '$lib/utils'
+	// import * as config from '$lib/config'
 
-<div class="w-5 h-5 bg-blue-500">
+	let { data } = $props()
+</script>
 
-</div>
+<svelte:head>
+	<!-- <title>{config.title}</title> -->
+</svelte:head>
+
+<section>
+	<p>posts show up hrere</p>
+	<ul class="posts">
+		{#each data.posts as post}
+			<li class="post">
+				<a href={`blog/${post.slug}`} class="title">{post.title}</a>
+				<p class="date">{post.date}</p>
+				<p class="description">{post.description}</p>
+			</li>
+		{/each}
+	</ul>
+</section>
+
+<style>
+	.posts {
+		display: grid;
+		gap: var(--size-7);
+
+		.post {
+			max-inline-size: var(--size-content-3);
+
+			&:not(:last-child) {
+				border-bottom: 1px solid var(--border);
+				padding-bottom: var(--size-7);
+			}
+
+			.title {
+				font-size: var(--font-size-fluid-3);
+				text-transform: capitalize;
+			}
+
+			.date {
+				color: var(--text-2);
+			}
+
+			.description {
+				margin-top: var(--size-3);
+			}
+		}
+	}
+</style>
