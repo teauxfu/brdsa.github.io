@@ -1,30 +1,23 @@
-# borrowed from
-# https://github.com/github/gitignore.git
+node_modules
 
-# Jekyll.gitignore
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
 
-# Ruby.gitignore
-*.gem
-*.rbc
-/.bundle/
-# for a library or gem, you might want to ignore these files since the code is
-# intended to run in multiple environments; otherwise, check them in:
-Gemfile.lock
-.ruby-version
-.ruby-gemset
+# OS
+.DS_Store
+Thumbs.db
 
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
 
-# Node.gitignore
-node_modules/
-npm-debug.log*
-package-lock.json
-
-# Editor generated files
-.vscode
-*.swp
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
