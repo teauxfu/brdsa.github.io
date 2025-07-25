@@ -1,15 +1,21 @@
     <script lang="ts">
-        let { PostContent, meta }  = $props()
+        import type { PageData } from './$types';
+
+        interface Props {
+            data: PageData;
+        }
+
+	    let { data }: Props = $props();
     </script>
 
     <div>
         <article>
             <header>
-            <h1>{meta.title}</h1>
+            <h1>{data.metadata.title}</h1>
             </header>
             <!-- render the post -->
             <div>
-                <PostContent />
+                <data.component />
             </div>
         </article>
     </div>

@@ -1,10 +1,11 @@
-<script>
-    import { metadata } from './about.md'
-    import About from './about.md'
+<script lang="ts">
+	import type { Post } from '$lib/types';
+    import About, { metadata } from './about.md'
+    const meta = metadata as Post;
 </script>
 
 <code>
-    {metadata.title} {metadata.date}
+    {meta.title} {meta.date}
 </code>
 
 <About />

@@ -1,3 +1,5 @@
+import type { Component } from "svelte";
+
 export type Post = {
   id: number;
   title: string;
@@ -9,3 +11,4 @@ export type Post = {
   // Add other fields as needed
 };
 
+export type PostModules = Record<string, () => Promise<{default: Component, metadata: Post}>>;

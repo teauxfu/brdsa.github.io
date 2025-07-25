@@ -11,7 +11,7 @@
 
 <section>
 	<p>Posts will show up here as a list</p>
-	<a href="blog/about" class="text-blue-600 underline">go to about</a>
+	<a href="about" class="text-blue-600 underline">go to about</a>
 	<iframe src="api/posts" title="debug"></iframe>
 
 	<ul class="posts">
