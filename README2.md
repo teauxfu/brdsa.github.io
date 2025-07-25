@@ -59,3 +59,9 @@ https://www.sveltepatterns.dev/getting-started-with-vscode
 
 phenomenal guide, can probably ditch the mdsvex if it's excessive 
 https://gebna.gg/blog/blog-from-scratch-using-sveltekit
+
+
+baller
+https://github.com/josh-collinsworth/sveltekit-blog-starter
+
+https://mli.puffinsystems.com/blog/sveltekit-blog-docs-with-mdsvex

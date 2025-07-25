@@ -1,11 +1,11 @@
 export type Post = {
   id: number;
   title: string;
-  content: string;
-  description: string;
   slug: string;
   date: Date;
+  description: string;
   published: boolean;
+  content: string;
   // Add other fields as needed
 };
 

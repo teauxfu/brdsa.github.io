@@ -1,12 +1,10 @@
 ---
-layout: post
-title: "Speech at Inauguration Day Rally 2025"
-permalink: /2025-01-20-inauguration-2025-rally-speech/
-tag: post tag
-short_description: "This speech was given on January 20, 2025 by BRDSA member Jacob Newsom outside the Governor's mansion"
-image: "assets/images/Inaug2025speechphoto.JPG"
-image_alt: "Jacob delivering speech outside Landry's mansion"
-image_caption: "Jacob delivering speech outside Landry's mansion"
+id: 2
+title: "speech"
+slug: "speech"
+date: '2025-01-02'
+description: '2025-01-speech'
+published: true
 ---
 
 Good afternoon, it is a pleasure to stand with yall today, my fellow workers and comrades, standing in defiance of the latest manifestation of the existential crisis of our age, this crisis of capitalism. True, we are here to express our discontent with President-Elect Donald Trump, but we oppose more than the man; we gather to oppose the system that supports him. A system that tells up things could be worse rather than they could be better, a system that tells us to blame our neighbor for our ills rather than the slumlord, the corporation, or the billionaire tax cuts, a system that steals from the working man and woman to line the pockets of those that already have more than enough in ill-gotten gains.

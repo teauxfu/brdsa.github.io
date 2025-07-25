@@ -1,10 +1,10 @@
 ---
-layout: page
-title: "About"
-permalink: /about/
+id: 1
+title: About
+slug: about
+date: 2025-01-01
+description: about page
 published: true
-slug: "about"
-date: '2025-01-01'
 ---
 
 The Baton Rouge Chapter of the Democratic Socialists of America (BRDSA) is a working class organization for the people of the Greater Baton Rouge Area. We believe that the economy and society should be run democratically to meet human needs, not to make profits. We recognize that working people in Baton Rouge have been robbed by the wealthy capitalist class for far too long. They hoard resources, underpay us, and charge us perpetual rent; meanwhile we, the workers, keep Baton Rouge running.
