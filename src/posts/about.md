@@ -1,5 +1,4 @@
 ---
-id: 1
 title: About
 slug: about
 date: 2025-01-01

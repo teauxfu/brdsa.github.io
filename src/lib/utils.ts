@@ -17,8 +17,14 @@ export function getPostModules()
 export function getSlugs()
 {
 	const modules = getPostModules();
+	const seen = new Set();
 	const entries = Object.keys(modules).map((path) => {
-		return { slug: pathToSlug(path) };
+		const slug = pathToSlug(path);
+		if (seen.has(slug)) {
+			throw new Error(`Duplicate slug detected: ${slug}`);
+		}
+		seen.add(slug);
+		return { slug };
 	});
 
 	return entries;

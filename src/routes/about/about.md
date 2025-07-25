@@ -7,6 +7,8 @@ description: 'about page'
 published: true
 ---
 
+## Mission statement
+
 The Baton Rouge Chapter of the Democratic Socialists of America (BRDSA) is a working class organization for the people of the Greater Baton Rouge Area. We believe that the economy and society should be run democratically to meet human needs, not to make profits. We recognize that working people in Baton Rouge have been robbed by the wealthy capitalist class for far too long. They hoard resources, underpay us, and charge us perpetual rent; meanwhile we, the workers, keep Baton Rouge running.
 
 Our mission is to create a **true democracy** that puts the people in control of their lives and community. We are organizing tenants, supporting workers, constructing mutual aid networks, educating the public, and standing in solidarity with resistance movements around the globe. We advance our demands for a better world through collaboration with unions, community service groups, and student organizations.

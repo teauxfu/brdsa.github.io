@@ -1,14 +1,17 @@
 import type { Component } from "svelte";
 
-export type Post = {
-  id: number;
+// this type models the frontmatter of a markdown post
+
+/** 
+ * This type models the frontmatter of a Markdown blog post file.
+*/
+export type PostMetadata = {
   title: string;
   slug: string;
   date: Date;
   description: string;
+  author: string;
   published: boolean;
-  content: string;
-  // Add other fields as needed
 };
 
-export type PostModules = Record<string, () => Promise<{default: Component, metadata: Post}>>;
+export type PostModules = Record<string, () => Promise<{default: Component, metadata: PostMetadata}>>;

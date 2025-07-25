@@ -1,13 +1,11 @@
 <script lang="ts">
 	import type { PostMetadata } from '$lib/types';
-    import About, { metadata } from './about.md'
+    import About, { metadata } from './donate.md'
     const meta = metadata as PostMetadata;
 </script>
 
 <code>
     {meta.title} {meta.date}
 </code>
-<p></p>
-<div class="prose ">
-    <About />
-</div>
+
+<About />
