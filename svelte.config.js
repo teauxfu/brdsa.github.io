@@ -19,6 +19,11 @@ const config = {
 		// have to set this to make the GH workflow work
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		},
+		prerender: {
+			handleHttpError: ({ path, referrer, message }) => {
+				throw new Error(message);
+			}
 		}
 	},
 	extensions: ['.svelte', '.svx', '.md']

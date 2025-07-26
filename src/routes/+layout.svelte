@@ -1,24 +1,23 @@
 <script lang="ts">
-	import '../app.css';
-
+	import PaletteBackground from '$lib/PaletteBackground.svelte';
+import '../app.css';
 	let { data, children } = $props();
-	
-
 </script>
 
-<div>
-	<header>
-		<nav>
-			<ul class="flex gap-2">
-				{#each data.sections as {slug, title} }
-					<a href={slug} class="text-blue-500 underline font-bold">{title}</a>
-				{/each}
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<article>
-			{@render children()}
-		</article>
-	</main>
-</div>
+<header>
+	<nav>
+		<ul class="flex gap-2">
+			{#each data.sections as { title, link }}
+				<a href={link}>{title}</a>
+			{/each}
+		</ul>
+	</nav>
+</header>
+<main class="grow dark:bg-dsa-black1">
+	{@render children()}
+</main>
+<footer>
+	<PaletteBackground backgroundClass="opacity-75" reversed>
+		<address class="text-center">Baton Rouge DSA</address>
+	</PaletteBackground>
+</footer>

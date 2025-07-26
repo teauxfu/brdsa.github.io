@@ -27,5 +27,6 @@ export function getSlugs()
 		return { slug };
 	});
 
+
 	return entries;
 }
