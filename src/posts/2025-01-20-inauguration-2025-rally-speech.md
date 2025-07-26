@@ -1,9 +1,9 @@
 ---
 id: 2
-title: "speech"
-slug: "speech"
-date: '2025-01-02'
-description: '2025-01-speech'
+title: "Speech at Inauguration Day Rally 2025"
+slug: "2025-01-20-inauguration-2025-rally-speech"
+date: 2025-01-02
+description: "This speech was given on January 20, 2025 by BRDSA member Jacob Newsom outside the Governor's mansion"
 published: true
 ---
 

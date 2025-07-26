@@ -26,6 +26,8 @@ But, for all that work, I suggest we might as well just rebuild it with somethin
 
 ## Why Svelte specifically? 
 
+TODO list some other tech specs to consider like build output size or some of the SEO features baked into SvelteKit
+
 pros 
 - we can continue to build with a GitHub action and host on GitHub Pages
 - we can retain all our existing Markdown pages, and continue using Markdown to add content 
@@ -38,3 +40,5 @@ cons
 - SvelteKit itself has an opinionated project structure that may be divisive 
 - Jekyll was designed specifically for static site generation, Svelte was not
 - Svelte is more niche
+
+

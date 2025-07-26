@@ -10,7 +10,7 @@ prereqs:
 
 ## Cloning the repo 
 
-link to the github repo, instructions for cloning
+TODO link to the github repo, instructions for cloning. 
 gh cli is pretty nice, they have a desktop interface too
 
 ## Project structure
@@ -24,7 +24,7 @@ They may seem weird at first, but they're nice once they click.
   - `app.html` is the root document, and our content gets injected in there
   - `app.css` is the root stylesheet
   - `lib` holds some TypeScript files that the site uses
-    - `config.ts` has some settings that affect the site, like it's title etc.
+    - `config.ts` has some settings that affect the site, like it's title, a list of nav links to show in the header, etc.
     - `types.ts` has a type definition in it called `PostMetadata` which is what the site expects to show up in the frontmatter of Markdown content
   - `posts` holds all the copy in the form of markdown files
     - we can freely reuse pieces of text from here around the site

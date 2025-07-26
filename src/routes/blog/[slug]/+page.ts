@@ -27,7 +27,7 @@ export const load: PageLoad = (async ({ params }) => {
 		error(404, "Sorry, we couldn't find that page");
 
 	return {component, metadata};
-}) satisfies PageLoad;
+});
 
 
 // because /blog/[slug] is a dynamic route, we need to let SvelteKit know to pre-render our blog posts
