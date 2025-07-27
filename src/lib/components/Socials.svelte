@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { config } from '$lib/config';
 	const socials = config.socials;
-	let { svgClass = 'fill-dsa-black dark:fill-dsa-red h-5 w-5' } = $props();
+	let { svgClass = 'fill-dsa-black dark:fill-dsa-red2 h-5 w-5' } = $props();
 </script>
 
 <!-- 
@@ -9,8 +9,8 @@
 The Socials component renders svg icons and links.
 -->
 
-<ul class="flex flex-wrap gap-1 justify-center md:gap-3 md:justify-end  mr-2">
-	<li class="flex items-center">
+<ul class="flex flex-wrap gap-1 md:gap-3 justify-evenly md:justify-end items-center">
+	<li>
 		<a href={socials.Instagram}>
 			{@render instagram()}
 			<span class="hidden">Instagram</span>
@@ -50,6 +50,18 @@ The Socials component renders svg icons and links.
 		<a href={socials.Newsletter}>
 			{@render mail()}
 			<span class="hidden">Newsletter </span>
+		</a>
+	</li>
+	<li>
+		<a href={`${config.location}/rss.xml`}>
+			{@render rss()}
+			<span class="hidden">RSS feed</span>
+		</a>
+	</li>
+		<li>
+		<a href={`${config.location}/sitemap.xml`}>
+			{@render sitemap()}
+			<span class="hidden">Sitemap</span>
 		</a>
 	</li>
 </ul>
@@ -124,4 +136,13 @@ The Socials component renders svg icons and links.
 
 {#snippet send()}
     <svg  class={svgClass}  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"   stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 14l11 -11" /><path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" /></svg>
+{/snippet}
+
+{#snippet rss()}
+	<svg class={svgClass} width="24" height="24" viewBox="0 0 24 24"  fill="none"    stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M4 4a16 16 0 0 1 16 16" /><path d="M4 11a9 9 0 0 1 9 9" /></svg>
+{/snippet}
+
+
+{#snippet sitemap()}
+	<svg  class={svgClass}  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"    stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M15 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M6 15v-1a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v1" /><path d="M12 9l0 3" /></svg>
 {/snippet}
