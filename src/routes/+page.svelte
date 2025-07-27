@@ -3,11 +3,13 @@
 	import Prose from '$lib/components/Prose.svelte';
 	import About from './about/about.md';
 	import hero from '$lib/images/Header_ABetterWorld_Louisiana.jpeg?enhanced'
+	import foodDistribution from '$lib/images/baton-rouge-dsa-cover-image.jpg?enhanced';
 </script>
 
 <svelte:head>
 	<title>Baton Rouge DSA</title>
 	<meta name="description" content="Home page for Baton Rouge DSA" />
+	<link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' />
 </svelte:head>
 
 <article class="@container flex flex-col">
@@ -29,7 +31,11 @@
 			<About/>
 		</Prose>
 		<aside>
-			<enhanced:img src="$lib/images/baton-rouge-dsa-cover-image.jpg" alt='BR DSA members distribute food' class="object-scale-down" />
+			<enhanced:img src={foodDistribution} alt='BR DSA members distribute food' class="object-scale-down" />
 		</aside>
+	</div>
+
+	<div class="bg-white/80 dark:bg-dsa-black/80 mx-auto">
+		 <script src='https://actionnetwork.org/widgets/v5/form/join-brdsa?format=js&source=widget'></script><div id='can-form-area-join-brdsa' style='width: 100%'></div>
 	</div>
 </article>

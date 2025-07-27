@@ -8,6 +8,7 @@
 <svelte:head>
 	<title>Donate to BRDSA</title>
 	<meta name="description" content="Information about donating to Baton Rouge DSA" />
+	<link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' />
 </svelte:head>
 
 <article class="@container flex flex-col">
