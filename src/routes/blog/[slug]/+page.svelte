@@ -17,8 +17,6 @@
 		}
 	)
 
-	console.log(Object.keys(imageModules))
-
 	const match = imageModules[`/src/lib/images/${metadata.imageUrl}`] as string | Picture ;
 </script>
 

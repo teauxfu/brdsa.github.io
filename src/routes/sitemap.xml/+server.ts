@@ -1,6 +1,8 @@
 import { config } from "$lib/config";
 import { getPosts } from "$lib/utils";
 
+export const prerender = true;
+
 export async function GET() {
 
     const posts = await getPosts();
@@ -17,25 +19,25 @@ export async function GET() {
 			xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 		>
 			<url>
-                <loc>${config.location}<loc>
+                <loc>${config.location}</loc>
             </url>
             <url>
-                <loc>${config.location}/about<loc>
+                <loc>${config.location}/about</loc>
             </url>
             <url>
-                <loc>${config.location}/our-work<loc>
+                <loc>${config.location}/our-work</loc>
             </url>
             <url>
-                <loc>${config.location}/get-involved<loc>
+                <loc>${config.location}/get-involved</loc>
             </url>
             <url>
-                <loc>${config.location}/donate<loc>
+                <loc>${config.location}/donate</loc>
             </url>
             <url>
-                <loc>${config.location}/fite<loc>
+                <loc>${config.location}/fite</loc>
             </url>
             <url>
-                <loc>${config.location}/blog<loc>
+                <loc>${config.location}/blog</loc>
             </url>
             ${posts.map(post => 
                 `
