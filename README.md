@@ -44,3 +44,5 @@ cons
 
 ## TODOS
 - update frontmatter so we can expose an image per post/page to the rss feed
+- remove unused image assets
+- port over the "our work" and "fite" pages
