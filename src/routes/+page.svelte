@@ -10,13 +10,10 @@
 </svelte:head>
 
 <article class="@container flex flex-col">
-	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">
-		Welcome to Baton Rouge DSA
-	</PaletteHeader>
-
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65 ">
+	<PaletteHeader>Welcome to Baton Rouge DSA</PaletteHeader>
+	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<blockquote class="border-l-dsa-red1 dark:text-dsa-black">
+			<blockquote class="border-l-dsa-red1 ">
 				How many men ever went to a barbecue and would let one man take off the table what was intended for nine-tenths of the people?
 				<footer class="text-right">
 					<cite class="font-bold">-- Huey P. Long, 1934</cite>

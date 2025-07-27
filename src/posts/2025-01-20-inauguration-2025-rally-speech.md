@@ -1,9 +1,10 @@
 ---
-id: 2
 title: "Speech at Inauguration Day Rally 2025"
 slug: "2025-01-20-inauguration-2025-rally-speech"
-date: 2025-01-02
+date: 2025-01-20
 description: "This speech was given on January 20, 2025 by BRDSA member Jacob Newsom outside the Governor's mansion"
+imageUrl: "/images/Inaug2025speechphoto.JPG"
+imageDescription: "Jacob Newsom speaking outside the Governor's mansion"
 published: true
 ---
 

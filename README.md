@@ -43,6 +43,8 @@ cons
 - Svelte is more niche
 
 ## TODOS
-- update frontmatter so we can expose an image per post/page to the rss feed
 - remove unused image assets
 - port over the "our work" and "fite" pages
+- fill out the generic /blob/ route to list all the available posts
+- make fill out meta tags for open graph images, title, etc. for when posts are shared
+- update frontmatter so we can expose an image per post/page to the rss feed

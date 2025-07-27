@@ -7,19 +7,20 @@
 		'https://actionnetwork.org/widgets/v5/fundraising/donate-to-baton-rouge-democratic-socialists-of-america?format=js&source=widget&css=whitelabel&style=full';
 </script>
 
-
+<svelte:head>
+	<title>Donate to BR DSA</title>
+	<meta name="Information about donating to Baton Rouge DSA" />
+</svelte:head>
 
 <article class="@container flex flex-col">
-	<PaletteHeader backgroundClass="opacity-75 dark:opacity-100" headerClass="text-5xl font-bold pl-2 pb-3">
-		Donate
-	</PaletteHeader>
-
-	<Prose>
-		<p>
-			Want to see where your money goes? Come to <a href="/get-involved">our next chapter meeting</a> and
-			see what we're up to!
-		</p>
-	</Prose>
-
+	<PaletteHeader>Donate to BR DSA</PaletteHeader>
+	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
+		<Prose>
+			<p class="dark:text-white">
+				Want to see where your money goes? Come to <a href="/get-involved">our next chapter meeting</a> and
+				see what we're up to!
+			</p>
+		</Prose>
+	</div>
 	<iframe src={actionNetworkLink} title="Donate to BR DSA via ActionNetwork"> </iframe>
 </article>

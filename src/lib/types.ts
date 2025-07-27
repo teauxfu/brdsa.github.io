@@ -12,6 +12,8 @@ export type PostMetadata = {
   description: string;
   author: string;
   published: boolean;
+  imageUrl?: string;
+  imageDescription?:string;
 };
 
 export type PostModules = Record<string, () => Promise<{default: Component, metadata: PostMetadata}>>;

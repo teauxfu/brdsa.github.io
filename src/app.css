@@ -4,10 +4,10 @@
 @import './DSATheme.css';
 
 .prose p a {
-	@apply font-bold text-dsa-red1 hover:underline decoration-dsa-red1;
+	@apply font-bold text-dsa-red1 dark:text-white hover:underline decoration-dsa-red1;
 }
 
 .prose cite a {
-	@apply font-bold decoration-dsa-red1;
+	@apply font-bold  decoration-dsa-red1;
 }
 

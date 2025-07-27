@@ -2,7 +2,7 @@
 	import PaletteBackground from "./PaletteBackground.svelte";
 
 
-let {  children, headerClass='text-6xl mb-4', backgroundClass = 'opacity-65' } = $props();
+let {  children, headerClass='text-5xl font-bold pl-2 pb-3', backgroundClass = 'opacity-65' } = $props();
 
 </script>
 

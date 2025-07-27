@@ -4,6 +4,11 @@
 	let { svgClass = 'fill-dsa-black dark:fill-dsa-red h-5 w-5' } = $props();
 </script>
 
+<!-- 
+@component
+The Socials component renders svg icons and links.
+-->
+
 <ul class="flex flex-wrap gap-1 justify-center md:justify-end mr-2">
 	<li class="flex items-center">
 		<a href={socials.Instagram}>

@@ -4,12 +4,16 @@
 	let { data, children } = $props();
 	import {config } from '$lib/config';
 	import Socials from '$lib/Socials.svelte';
-	
+	import { page } from '$app/state';  
 </script>
 
 <svelte:head>
 	<title>{data.title}</title>
 	<meta name={data.description}/>
+	<meta property="og:title" content={data.title}/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="/images/DSABR_Logo_3ColorOnBlk_Web.png"/>
+	<meta property="og:url" content={data.title}/>
 </svelte:head>
 
 <header class="@container flex items-center">
