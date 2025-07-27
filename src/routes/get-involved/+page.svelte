@@ -1,6 +1,6 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/PaletteHeader.svelte';
-	import Prose from '$lib/Prose.svelte';
+	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
+	import Prose from '$lib/components/Prose.svelte';
 	import GetInvolved from './get-involved.md';
 </script>
 

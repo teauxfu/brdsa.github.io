@@ -9,7 +9,7 @@
 The Socials component renders svg icons and links.
 -->
 
-<ul class="flex flex-wrap gap-1 justify-center md:justify-end mr-2">
+<ul class="flex flex-wrap gap-1 justify-center md:gap-3 md:justify-end  mr-2">
 	<li class="flex items-center">
 		<a href={socials.Instagram}>
 			{@render instagram()}

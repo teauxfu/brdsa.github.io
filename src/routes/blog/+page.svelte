@@ -1,7 +1,7 @@
 <script lang="ts">
-	import PaletteBackground from '$lib/PaletteBackground.svelte';
-	import PaletteHeader from '$lib/PaletteHeader.svelte';
-	import Prose from '$lib/Prose.svelte';
+	import PaletteBackground from '$lib/components/PaletteBackground.svelte';
+	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
+	import Prose from '$lib/components/Prose.svelte';
 	let { data } = $props();
 
 	const options: Intl.DateTimeFormatOptions = {

@@ -1,9 +1,25 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/PaletteHeader.svelte';
-	import Prose from '$lib/Prose.svelte';
+	//@ts-nocheck because our enhanced image complains about not having a default prop, but it does have one
+	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
+	import Prose from '$lib/components/Prose.svelte';
+	import type {Picture} from 'vite-imagetools';
 
 	let { data } = $props();
-    const {component: Post, metadata} = data;
+    const { component: Post, metadata } = data;
+
+	const imageModules = import.meta.glob(
+		'/src/lib/images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+		{
+			eager: true,
+			query: {
+				enhanced: true
+			}
+		}
+	)
+
+	console.log(Object.keys(imageModules))
+
+	const match = imageModules[`/src/lib/images/${metadata.imageUrl}`] as string | Picture ;
 </script>
 
 <svelte:head>
@@ -21,7 +37,7 @@
 			<p class="dark:text-white">
 				{metadata.description}
                 {#if metadata.imageUrl}
-                    <img src={metadata.imageUrl}  alt={metadata.imageDescription}/>
+					<enhanced:img src={match.default} alt={metadata.imageDescription ?? 'This image has no description'}/>
                 {/if}
 			</p>
 		</Prose>

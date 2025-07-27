@@ -1,6 +1,6 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/PaletteHeader.svelte';
-	import Prose from '$lib/Prose.svelte';
+	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
+	import Prose from '$lib/components/Prose.svelte';
 	import type { PostMetadata } from '$lib/types';
 	import About, { metadata } from './about.md';
 	const meta = metadata as PostMetadata;

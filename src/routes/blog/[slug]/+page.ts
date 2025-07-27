@@ -6,7 +6,7 @@ import { slugToPath, getSlugs, getPostModules } from "$lib/utils";
 // this params object provides info about the current request, such as which slug is in the URL 
 
 export const load: PageLoad = (async ({ params }) => {
-	// this will return pointers to all the available posts in the `/src/posts/` folder
+	// this will return pointers to all the available posts in the `/src/lib/posts/` folder
 	const posts = getPostModules();
 	// we find a match by the slug, which should be unique 
 	// TODO verify that getPostModules throws at build time if a duplicate is detected

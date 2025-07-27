@@ -1,16 +1,16 @@
 import type { PostMetadata, PostModules } from "./types";
 
 export function pathToSlug(path: string)  {
-	return path.replace("/src/posts/", "").replace(".md", "");
+	return path.replace("/src/lib/posts/", "").replace(".md", "");
 }
 
 export function slugToPath(slug: string)  {
-	return `/src/posts/${slug}.md`;
+	return `/src/lib/posts/${slug}.md`;
 }
 
 export function getPostModules()
 {
-	const modules = import.meta.glob("/src/posts/*.md") as PostModules;
+	const modules = import.meta.glob("/src/lib/posts/*.md") as PostModules;
 	return modules;
 }
 
@@ -35,7 +35,7 @@ export function getSlugs()
 export async function getPosts() {
 	let posts: PostMetadata[] = []
 
-	const paths = import.meta.glob('/src/posts/*.md', { eager: true })
+	const paths = import.meta.glob('/src/lib/posts/*.md', { eager: true })
 
 	for (const path in paths) {
 		const file = paths[path]
