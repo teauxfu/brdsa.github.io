@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>Get involved</title>
-	<meta name="How you can get involved with Baton Rouge DSA" />
+	<meta name="description" content="How you can get involved with Baton Rouge DSA" />
 </svelte:head>
 
 <article class="@container flex flex-col">

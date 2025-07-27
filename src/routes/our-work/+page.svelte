@@ -7,7 +7,7 @@
 
 <svelte:head>
 	<title>Our work</title>
-	<meta name="Information about campaigns and projects by Baton Rouge DSA" />
+	<meta name="description" content="Information about campaigns and projects by Baton Rouge DSA" />
 </svelte:head>
 
 <article class="@container flex flex-col">

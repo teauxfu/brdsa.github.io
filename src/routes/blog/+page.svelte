@@ -13,7 +13,7 @@
 
 <svelte:head>
 	<title>Statements by BRDSA</title>
-	<meta name="Statements and blog posts released by Baton Rouge DSA" />
+	<meta name="description" content="Statements and blog posts released by Baton Rouge DSA" />
 </svelte:head>
 
 <article class="@container flex flex-col">

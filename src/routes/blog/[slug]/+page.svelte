@@ -24,7 +24,7 @@
 
 <svelte:head>
 	<title>{metadata.title}</title>
-	<meta name={metadata.description} />
+	<meta name="description" content={metadata.description} />
 </svelte:head>
 
 <article class="@container flex flex-col">

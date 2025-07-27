@@ -7,7 +7,7 @@
 
 <svelte:head>
 	<title>Donate to BRDSA</title>
-	<meta name="Information about donating to Baton Rouge DSA" />
+	<meta name="description" content="Information about donating to Baton Rouge DSA" />
 </svelte:head>
 
 <article class="@container flex flex-col">

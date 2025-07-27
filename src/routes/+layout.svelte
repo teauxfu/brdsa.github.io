@@ -4,14 +4,16 @@
 	let { data, children } = $props();
 	import Socials from '$lib/components/Socials.svelte';
 	import { page } from '$app/state';
+	import hero from '$lib/images/DSABR_Logo_3ColorOnBlk_Web.png?enhanced';
+	import {config} from '$lib/config';
 </script>
 
 <svelte:head>
 	<title>{data.title}</title>
-	<meta name={data.description} />
+	<meta name="description" content={data.description} />
 	<meta property="og:title" content={data.title} />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="/images/DSABR_Logo_3ColorOnBlk_Web.png" />
+	<meta property="og:image" content={`${config.location}/images/DSABR_Logo_3ColorOnBlk_Web.png?enhanced`} />
 	<meta property="og:url" content={page.url.toString()} />
 </svelte:head>
 

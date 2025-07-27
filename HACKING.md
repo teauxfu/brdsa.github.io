@@ -68,6 +68,10 @@ One thing that wouldn't work, for example, was putting a `published` flag on the
 ### If there's a weird problem
 especially if you're getting a weird type error that seems wrong, give a shot just reloading vscode `ctrl shift p` then `developer: reload window`. occassionally the type cache is bad
 
+### Quirks with images
+
+for main content included in a page, we use `enhanced:img` wherever possible, including with a hero image optionall specified in the frontmatter of blog posts. however, it s
+
 ### Useful links
 
 sveltekit project structure

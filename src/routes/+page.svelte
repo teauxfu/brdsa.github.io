@@ -7,7 +7,7 @@
 
 <svelte:head>
 	<title>Baton Rouge DSA</title>
-	<meta name="Home page for Baton Rouge DSA" />
+	<meta name="description" content="Home page for Baton Rouge DSA" />
 </svelte:head>
 
 <article class="@container flex flex-col">

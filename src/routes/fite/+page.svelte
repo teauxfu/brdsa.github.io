@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>Famine Is The Enemy (FITE)</title>
-	<meta name="Information about our food distribution project Famine is the Enemy (FITE)" />
+	<meta name="description" content="Information about our food distribution project Famine is the Enemy (FITE)" />
 </svelte:head>
 <article class="@container flex flex-col">
 	<PaletteHeader>
