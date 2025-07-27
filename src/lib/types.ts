@@ -11,7 +11,6 @@ export type PostMetadata = {
   date: Date;
   description: string;
   author: string;
-  published: boolean;
   imageUrl?: string;
   imageDescription?:string;
 };

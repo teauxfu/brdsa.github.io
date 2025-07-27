@@ -19,15 +19,9 @@ export const load: PageLoad = (async ({ params }) => {
 	// default property is a svelte component that can be rendered, plus a metadata object
 	// that is populated with the stuff in frontmatter
 	const { default: component, metadata } = await thisPost().then();
-	
-	// don't serve the blog post if it's not meant to be published
-	// we can still use the text on the site if we reference it explicitly
-	// it just won't be served as a blog post on its own 
-	if(!metadata.published)
-		error(404, "Sorry, we couldn't find that page");
 
 	return {component, metadata};
-});
+}) satisfies PageLoad;
 
 
 // because /blog/[slug] is a dynamic route, we need to let SvelteKit know to pre-render our blog posts
