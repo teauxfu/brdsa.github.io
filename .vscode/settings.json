@@ -1,4 +1,8 @@
 {	
+	// editor tweaks 
+	"editor.wordWrap": "wordWrapColumn",
+   "editor.wordWrapColumn": 120,
+   "editor.rulers": [120],
     // show files before folders for consistency
     "explorer.sortOrder": "filesFirst",
 	"explorer.fileNesting.enabled": true,
@@ -10,7 +14,7 @@
     "files.associations": {
 		  "*.svx": "markdown",
 		  "*.css": "tailwindcss"
-		},
+	},
     // custom tab colors 
 	"workbench.editor.customLabels.patterns": {
 		// Page

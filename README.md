@@ -1,11 +1,12 @@
 <!-- omit from toc -->
-# Svelte migration 
+# SvelteKit migration 
 
 This is a proposal for a migration of brdsa.org's source code to a new framework. 
 
 - [What's this about?](#whats-this-about)
 - [Why do this?](#why-do-this)
-- [Why Svelte specifically?](#why-svelte-specifically)
+- [Why SvelteKit specifically?](#why-sveltekit-specifically)
+- [Technical details](#technical-details)
 - [TODOS](#todos)
 
 ## What's this about?
@@ -23,11 +24,19 @@ Shy of changing the framework we could
 - find some other remote theme to inherit from
 - don't use a remote theme and just improve the current stuff
 
-But, for all that work, I suggest we might as well just rebuild it with something more convenient and retain the assets that we like. 
+But, for all that work, I suggest we might as well just rebuild it with something more convenient/powerful and retain the assets that we like. 
 
-## Why Svelte specifically? 
+## Why SvelteKit specifically? 
 
-TODO list some other tech specs to consider like build output size or some of the SEO features baked into SvelteKit
+Svelte is a JavaScript library for creating UIs, and SvelteKit is a webserver tailored to serving Svelte apps.
+SvelteKit can also be used as a static site generator, which is what Jekyll is and what we want it for. 
+
+Our website is a static site -- just some files sitting on a server without any dynamic content like a comments section. The parts that are truly interactive, like the mailing list and so on, are served through `<iframe>`s which act kind of like windows into a different website. For example, there's no comment section or like buttons because that would require updating a database somewhere, which we don't have or need.
+
+More to the point, because SvelteKit excels at pre-prendering pages for optimal load times and SEO performance, all those benefits apply to using it as a static site generator. Static sites are great because they can usually be hosted for free or cheaply. Our current (free) webhost, GitHub Pages, requires that we produce a static build. 
+
+Svelte itself as a UI library has a really robust component model -- basically we can design a few elements on the page and reuse them easily. For anything but trivial HTML layouts, this is essential. Furthermore, through community libraries such as `mdsvex` we can easily take advantage of using Markdown for writing content. In combination, we get to design beautiful and responsive UI using Svelte, and do the bulk of our copy/prose/post authoring in easy-breezy Markdown.
+
 
 pros 
 - we can continue to build with a GitHub action and host on GitHub Pages
@@ -41,6 +50,13 @@ cons
 - SvelteKit itself has an opinionated project structure that may be divisive 
 - Jekyll was designed specifically for static site generation, Svelte was not
 - Svelte is more niche
+
+## Technical details
+
+TODO list some other tech specs to consider like build output size or some of the SEO features baked into SvelteKit
+
+Here's a Lighthouse report on the current site: 
+
 
 ## TODOS
 - remove unused image assets

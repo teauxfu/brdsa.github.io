@@ -13,6 +13,10 @@ prereqs:
 TODO link to the github repo, instructions for cloning. 
 gh cli is pretty nice, they have a desktop interface too
 
+VSCode is not required, but highly recommended. The suggested settings in `.vscode/settings.json` and `.vscode/extensions.json` were tailored for this project, but are not required. For basic changes or working with Markdown, the online GitHub text editor is probably fine, too.
+
+There shouldn't be too much need for interacting with the TypeScript files, besides maybe `/src/lib/config.ts`.
+
 ## Project structure
 
 Here's the docs for the [Svelte markup syntax](https://svelte.dev/docs/svelte/basic-markup).
@@ -37,7 +41,6 @@ They may seem weird at first, but they're nice once they click.
 - `static` is just static stuff that should be served at the site root. `robots.txt`, `favicon.ico` etc.
 
 
-
 ## Initial setup
 
 Initial creation of the project. In the startup options we added `tailwind` and `mdsvex`, and opted for the static adapter since we're pushing to github pages.
@@ -51,14 +54,21 @@ npm run dev
 
 ### GitHub workflow
 
-Copied and modified this person's GH workflow, updated the Node version I think
+Copied and modified this person's GH workflow, updated the Node version I think?
 https://github.com/khromov/derivault/blob/main/.github/workflows/build.yml
 
 ### Setting up the blog route
 
-I actually struggled with this a fair bit. 
+I actually struggled with this a fair bit at first, but it's working now. I don't fully understand some of the more detailed points about JavaScript module loading. 
+
+
+There seems to be some opportunity for conflict surrounding dynamic routes, and pre-rendering dynamic components that the build system can't walk.
+One thing that wouldn't work, for example, was putting a `published` flag on the frontmatter of some posts. Even if you set that flag to `false` in the frontmatter, for some reason SvelteKit would still try to walk it (it doesn't know the published flag before it reads the files), but a conditional on returning the post would return a 404 error if it was false. I'm probably explaining that poorly. It had to do with the `/blog/[slug]/+page.ts` data loader. 
 
 ### Useful links
+
+sveltekit project structure
+https://svelte.dev/docs/kit/project-structure
 
 tailwind container query size reference 
 note that the standard viewport breakpoints `sm`, `md`, `lg`, `xl`, and `2xl` are different lengths from the container query breakpoints `@sm`, `@md`, `@lg`, 
@@ -68,21 +78,19 @@ https://tailwindcss.com/docs/responsive-design#container-size-reference
 how to debug your code
 https://svelte.dev/docs/kit/debugging#Visual-Studio-Code
 
-general guidance for project layout 
+general guidance for project layout (maybe outdated)
 https://joyofcode.xyz/sveltekit-markdown-blog#rendering-a-single-post
 
 some default settings to put in `.vscode` 
 https://www.sveltepatterns.dev/getting-started-with-vscode
 
-phenomenal guide, can probably ditch the mdsvex if it's excessive 
+phenomenal guide, can probably ditch the mdsvex if it's excessive or causing problems
 https://gebna.gg/blog/blog-from-scratch-using-sveltekit
 
-baller
+hella baller
 https://github.com/josh-collinsworth/sveltekit-blog-starter
-
+also mega baller 
 https://mli.puffinsystems.com/blog/sveltekit-blog-docs-with-mdsvex
 
 nice icons, fontawesome is hella bloatware
 https://simpleicons.org/?q=github
-
-https://svelte.dev/docs/kit/project-structure
