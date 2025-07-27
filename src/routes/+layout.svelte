@@ -24,7 +24,7 @@
 	</div>
 	<nav class="flex @md:ml-auto text-md @sm:text-lg @md:text-xl @3xl:text-2xl @4xl:text-3xl">
 		<ul class="flex flex-wrap gap-x-5 px-2">
-			<!-- <a href="/" class="@md:hidden text-dsa-red font-bold dark:text-dsa-red1">Home</a> -->
+			<a href="/" class="@md:hidden text-dsa-red font-bold dark:text-dsa-red1">Home</a>
 			{#each data.sections as { title, link }}
 				<a href={link} class="text-dsa-red font-bold dark:text-dsa-red1">{title}</a>
 			{/each}

@@ -22,13 +22,11 @@
 		</Prose>
 	</div>
 
-	<div class="flex flex-col @5xl:flex-row">
-		<section>
-			<Prose>
-				<About/>
-			</Prose>
-		</section>
-		<aside class="float-right">
+	<div class="flex flex-col @5xl:flex-row @5xl:justify-center bg-white/80 dark:bg-dsa-black/80">
+		<Prose>
+			<About/>
+		</Prose>
+		<aside>
 			<img alt='BR DSA members distribute food' src="/images/baton-rouge-dsa-cover-image.jpg" class="object-scale-down" />
 		</aside>
 	</div>

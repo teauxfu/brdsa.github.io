@@ -37,7 +37,7 @@
 	</div>
 	
 
-	<div>
+	<div class="bg-white/80 dark:bg-dsa-black/80">
 		<Prose>
 			<Campaigns />
 		</Prose>
