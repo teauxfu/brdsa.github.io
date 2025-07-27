@@ -5,19 +5,19 @@
 	let { data } = $props();
 
 	const options: Intl.DateTimeFormatOptions = {
-		weekday: 'long',
 		year: 'numeric',
-		month: 'long'
+		month: 'long',
+		day: 'numeric'		
 	};
 </script>
 
 <svelte:head>
-	<title>Statements and blog posts</title>
+	<title>Statements by BRDSA</title>
 	<meta name="Statements and blog posts released by Baton Rouge DSA" />
 </svelte:head>
 
 <article class="@container flex flex-col">
-	<PaletteHeader>Statements & posts</PaletteHeader>
+	<PaletteHeader>Statements</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
 			<p class="dark:text-white">
@@ -29,8 +29,8 @@
 		<ul class="flex flex-col gap-3">
 			{#each data.posts as post}
 				<li class="flex flex-col">
+					<a href="/blog/{post.slug}" class="text-4xl underline decoration-dsa-red">{post.title}</a>
 					<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
-					<a href="/blog/{post.slug}" class="text-5xl">{post.title}</a>
 				</li>
 			{/each}
 		</ul>

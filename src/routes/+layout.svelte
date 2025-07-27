@@ -16,7 +16,7 @@
 </svelte:head>
 
 <header class="@container flex items-center">
-	<div class="hidden h-15 w-15 rounded-full p-0.5 transition hover:scale-105 @md:block">
+	<div class="hidden h-15 w-15 rounded-full p-0.5  ml-1 transition hover:scale-105 @md:block">
 		<a href="/" title="Go to the BRDSA home page">
 			<span class="hidden">Go to the home page</span>
 			<enhanced:img src="$lib/images/small-dsabr.png" alt="BR DSA logo" />
@@ -27,8 +27,8 @@
 		class="text-md flex @sm:text-lg @md:ml-auto @md:text-xl @3xl:text-2xl @4xl:text-3xl"
 	>
 		<ul class="flex flex-wrap gap-x-5 px-2">
-			<li>
-				<a href="/" class="font-bold text-dsa-red @md:hidden dark:text-dsa-red1" title="go to the home page">Home</a>
+			<li class="@md:hidden">
+				<a href="/" class="font-bold text-dsa-red dark:text-dsa-red1" title="go to the home page">Home</a>
 			</li>
 			{#each data.sections as { title, link, caption }}
 				<li>

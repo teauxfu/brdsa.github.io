@@ -2,7 +2,7 @@
 <script lang="ts">
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
-	import Fite from './Fite.md'
+	import Fite from './fite.md'
 	import hero from '$lib/images/FITE04-2025.png?enhanced';
 </script>
 
@@ -17,17 +17,17 @@
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
 			<blockquote class="mb-0 border-l-dsa-red pr-1">
-				We who believe in freedom cannot rest
+				Hunger not to have, but to be
 				<footer>
 					<cite class="dark:font-bold">
-						-- <a href="https://en.wikipedia.org/wiki/Ella_Baker">Ella Baker</a>, 1964</cite
+						-- <a href="https://en.wikipedia.org/wiki/John_Dewey">John Dewey</a></cite
 					>
 				</footer>
 			</blockquote>
 			<img
-				src="https://www.crmvet.org/crmpics/band/bakerella.jpg"
-				title="Ella Baker"
-				alt="Ella Baker passionately speaking into a mic"
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/John_Dewey_cph.3a51565.jpg/250px-John_Dewey_cph.3a51565.jpg"
+				title="John Dewey"
+				alt="Portrait of John Dewey"
 				class="float-right mt-0 mb-0 object-scale-down py-2"
 			/>
 		</Prose>
