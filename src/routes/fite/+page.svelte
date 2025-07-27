@@ -28,7 +28,7 @@
 				src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/John_Dewey_cph.3a51565.jpg/250px-John_Dewey_cph.3a51565.jpg"
 				title="John Dewey"
 				alt="Portrait of John Dewey"
-				class="float-right mt-0 mb-0 object-scale-down py-2"
+				class="float-right mt-0 mb-0 object-scale-down py-2 max-h-65"
 			/>
 		</Prose>
 	</div>

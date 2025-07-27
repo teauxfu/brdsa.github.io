@@ -1,7 +1,6 @@
 <script lang="ts">
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
-	import Donate from './donate.md';
 	const actionNetworkLink =
 		'https://actionnetwork.org/widgets/v5/fundraising/donate-to-baton-rouge-democratic-socialists-of-america?format=js&source=widget&css=whitelabel&style=full';
 </script>
