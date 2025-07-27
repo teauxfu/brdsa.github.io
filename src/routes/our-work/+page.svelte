@@ -10,7 +10,7 @@
 	<meta name="description" content="Information about campaigns and projects by Baton Rouge DSA" />
 </svelte:head>
 
-<article class="@container flex flex-col">
+<article class="@container flex flex-col grow">
 	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">
 		Our Work
 	</PaletteHeader>
@@ -37,7 +37,7 @@
 	</div>
 	
 
-	<div class="bg-white/80 dark:bg-dsa-black/80">
+	<div class="bg-white/90 dark:bg-dsa-black/90">
 		<Prose>
 			<Campaigns />
 		</Prose>

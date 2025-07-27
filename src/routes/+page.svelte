@@ -12,7 +12,7 @@
 	<link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' />
 </svelte:head>
 
-<article class="@container flex flex-col">
+<article class="@container flex flex-col grow">
 	<PaletteHeader>Welcome to Baton Rouge DSA</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
@@ -26,7 +26,7 @@
 		</Prose>
 	</div>
 
-	<div class="flex flex-col @5xl:flex-row @5xl:justify-center bg-white/80 dark:bg-dsa-black/80">
+	<div class="flex flex-col @5xl:flex-row @5xl:justify-center bg-white/90 dark:bg-dsa-black/90">
 		<Prose>
 			<About/>
 		</Prose>
@@ -35,7 +35,7 @@
 		</aside>
 	</div>
 
-	<div class="bg-white/80 dark:bg-dsa-black/80 mx-auto">
+	<div class="bg-white/90 dark:bg-dsa-black/90 mx-auto">
 		 <script src='https://actionnetwork.org/widgets/v5/form/join-brdsa?format=js&source=widget'></script><div id='can-form-area-join-brdsa' style='width: 100%'></div>
 	</div>
 </article>

@@ -9,7 +9,7 @@
 	<meta name="description" content="How you can get involved with Baton Rouge DSA" />
 </svelte:head>
 
-<article class="@container flex flex-col">
+<article class="@container flex flex-col grow">
 	<PaletteHeader>
 	    Get Involved
 	</PaletteHeader>

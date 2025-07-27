@@ -101,3 +101,5 @@ https://mli.puffinsystems.com/blog/sveltekit-blog-docs-with-mdsvex
 
 nice icons, fontawesome is hella bloatware
 https://simpleicons.org/?q=github
+https://tabler.io/icons
+https://heroicons.com/

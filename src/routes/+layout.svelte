@@ -42,13 +42,19 @@
 		</ul>
 	</nav>
 </header>
-<main class="grow">
+<main class="flex grow">
 	{@render children()}
 </main>
-<footer class="flex flex-col flex-wrap">
+<footer>
 	<PaletteBackground reversed backgroundClass='opacity-65'>
-		<div class="pt-2"></div>
-		<Socials />
-		<address class="text-center text-lg">🐊 Baton Rouge DSA 🌹</address>
+		<div class="md:hidden">
+			<address class="text-center text-lg">🐊 Baton Rouge DSA 🌹</address>
+			<Socials />
+		</div>
+		<div class="hidden md:grid grid-cols-3">
+			<div></div>
+			<address class="text-center text-lg">🐊 Baton Rouge DSA 🌹</address>
+			<Socials />
+		</div>
 	</PaletteBackground>
 </footer>

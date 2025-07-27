@@ -27,7 +27,7 @@
 	<meta name="description" content={metadata.description} />
 </svelte:head>
 
-<article class="@container flex flex-col">
+<article class="@container flex flex-col grow">
 	<PaletteHeader>
 		{metadata.title}
 	</PaletteHeader>
@@ -43,7 +43,7 @@
 		</Prose>
 	</div>
 
-    <div class="bg-white/80 dark:bg-dsa-black/80">
+    <div class="bg-white/90 dark:bg-dsa-black/90">
         <Prose>
             <Post></Post>
         </Prose>

@@ -11,7 +11,7 @@
 	<meta name="description" content="About Baton Rouge DSA" />
 </svelte:head>
 
-<article class="@container flex flex-col">
+<article class="@container flex flex-col grow">
 	<PaletteHeader>About us</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
@@ -39,7 +39,7 @@
 		</Prose>
 	</div>
 
-	<div class="bg-white/80 dark:bg-dsa-black/80">
+	<div class="bg-white/90 dark:bg-dsa-black/90">
 		<Prose>
 			<About />
 		</Prose>
