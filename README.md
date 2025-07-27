@@ -1,5 +1,5 @@
 <!-- omit from toc -->
-# SvelteKit migration 
+# SvelteKit migration (WIP)
 
 This is a proposal for a migration of brdsa.org's source code to a new framework. 
 
