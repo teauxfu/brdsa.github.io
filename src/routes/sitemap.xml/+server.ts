@@ -38,7 +38,7 @@ export async function GET() {
                 <loc>${config.location}/blog<loc>
             </url>
             ${posts.map(post => 
-                !post.published ? null : `
+                `
                 <url>
                     <loc>${config.location}/blog/${post.slug}</loc>
                 </url>

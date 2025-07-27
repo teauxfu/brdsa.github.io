@@ -17,16 +17,16 @@
 
 <header class="@container flex items-center">
 	<div class="hidden @md:block p-0.5 rounded-full w-15 h-15 transition hover:scale-105">
-		<a href="/" title="Home">
+		<a href="/" title="Go to the BRDSA home page">
 			<span class="hidden">Go to the home page</span>
 			<img src="/images/small-dsabr.png" alt="BR DSA logo" /> 
 		</a>
 	</div>
-	<nav class="flex @md:ml-auto text-md @sm:text-lg @md:text-xl @3xl:text-2xl @4xl:text-3xl">
+	<nav title="main pages" class="flex @md:ml-auto text-md @sm:text-lg @md:text-xl @3xl:text-2xl @4xl:text-3xl">
 		<ul class="flex flex-wrap gap-x-5 px-2">
 			<a href="/" class="@md:hidden text-dsa-red font-bold dark:text-dsa-red1">Home</a>
-			{#each data.sections as { title, link }}
-				<a href={link} class="text-dsa-red font-bold dark:text-dsa-red1">{title}</a>
+			{#each data.sections as { title, link, caption }}
+				<a href={link} class="text-dsa-red font-bold dark:text-dsa-red1" title={caption}>{title}</a>
 			{/each}
 		</ul>
 	</nav>
