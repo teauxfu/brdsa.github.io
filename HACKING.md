@@ -60,6 +60,11 @@ I actually struggled with this a fair bit.
 
 ### Useful links
 
+tailwind container query size reference 
+note that the standard viewport breakpoints `sm`, `md`, `lg`, `xl`, and `2xl` are different lengths from the container query breakpoints `@sm`, `@md`, `@lg`, 
+https://tailwindcss.com/docs/responsive-design#working-mobile-first
+https://tailwindcss.com/docs/responsive-design#container-size-reference
+
 how to debug your code
 https://svelte.dev/docs/kit/debugging#Visual-Studio-Code
 
@@ -77,7 +82,7 @@ https://github.com/josh-collinsworth/sveltekit-blog-starter
 
 https://mli.puffinsystems.com/blog/sveltekit-blog-docs-with-mdsvex
 
-
-
+nice icons, fontawesome is hella bloatware
+https://simpleicons.org/?q=github
 
 https://svelte.dev/docs/kit/project-structure

@@ -1,23 +1,40 @@
 <script lang="ts">
 	import PaletteBackground from '$lib/PaletteBackground.svelte';
-import '../app.css';
+	import '../app.css';
 	let { data, children } = $props();
+	import {config } from '$lib/config';
+	import Socials from '$lib/Socials.svelte';
+	
 </script>
 
-<header>
-	<nav>
-		<ul class="flex flex-wrap gap-5 px-2">
+<svelte:head>
+	<title>{data.title}</title>
+	<meta name={data.description}/>
+</svelte:head>
+
+<header class="@container flex items-center">
+	<div class="hidden @md:block p-0.5 rounded-full w-15 h-15 transition hover:scale-105">
+		<a href="/" title="Home">
+			<span class="hidden">Go to the home page</span>
+			<img src="/images/small-dsabr.png" alt="BR DSA logo" /> 
+		</a>
+	</div>
+	<nav class="flex @md:ml-auto text-md @sm:text-lg @md:text-xl @3xl:text-2xl @4xl:text-3xl">
+		<ul class="flex flex-wrap gap-x-5 px-2">
+			<a href="/" class="@md:hidden text-dsa-red font-bold dark:text-dsa-red1">Home</a>
 			{#each data.sections as { title, link }}
-				<a href={link} class="text-lg ">{title}</a>
+				<a href={link} class="text-dsa-red font-bold dark:text-dsa-red1">{title}</a>
 			{/each}
 		</ul>
 	</nav>
 </header>
-<main class="grow dark:bg-dsa-black4 bg-[url(/images/Main_Logo_Transparent_Small.png)] bg-size-[200px_200px] bg-position-[bottom_1%_right_50%] bg-no-repeat">
+<main class="grow">
 	{@render children()}
 </main>
-<footer>
-	<PaletteBackground reversed>
-		<address class="text-center">🐊 Baton Rouge DSA 🌹</address>
+<footer class="flex flex-col flex-wrap">
+	<PaletteBackground reversed backgroundClass="opacity-75 dark:opacity-100">
+		<div class="pt-2"></div>
+		<Socials />
+		<address class="text-center text-lg">🐊 Baton Rouge DSA 🌹</address>
 	</PaletteBackground>
 </footer>

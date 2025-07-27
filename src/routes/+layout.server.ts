@@ -3,6 +3,8 @@ import {config} from '$lib/config'
 
 export const load: LayoutServerLoad = () => {
 	return {
-		sections: config.navLinks
+		title: config.title,
+		description: config.description,
+		sections: config.headerLinks
 	};
 };

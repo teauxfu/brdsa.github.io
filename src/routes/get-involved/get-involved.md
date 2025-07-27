@@ -1,5 +1,9 @@
-The [Democratic Socialists of America](https://www.dsausa.org/) is the largest socialist organization in the United States because we’re a member-driven, mass organization. We are a political and activist organization, not a party. We believe that working people should run both the economy and civil society, and we show our commitment to this principle by being an organization of, by, and for the working class.
+There's always work to be done in the struggle to establish economic democracy, and organization is the path forward.
 
-[Join DSA](https://act.dsausa.org/donate/membership/?source=Baton%20Rouge) today!
+Baton Rouge DSA members facilitate and participate in a number of community outreach programs, working with our neighbors and allies to create an environment that is safe, inclusive, and conducive human thriving. Whether you're a seasoned activist or a curious about what socialist organizing really looks like, we would be glad to have you join us. The participation of workers like you is what drives this nation forward. 
 
-Want to stay in the loop? [Join Baton Rouge DSA’s email list](https://actionnetwork.org/forms/join-brdsa).
+Our weekly [FITE](/fite) food distribution team could always use a hand with prepping meals, and our monthly Coffee With Comrades events are a great way to relax and make some friends. 
+
+If you haven't already, we invite you to [join DSA](https://act.dsausa.org/donate/membership/?source=Baton%20Rouge) today!
+
+Want to stay in the loop? [Join our email list](https://actionnetwork.org/forms/join-brdsa) or save a link to the calendar below.

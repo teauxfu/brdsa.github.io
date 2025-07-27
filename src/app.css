@@ -3,19 +3,11 @@
 @plugin '@tailwindcss/typography';
 @import './DSATheme.css';
 
-
-a {
-    @apply text-dsa-red font-bold hover:underline
+.prose p a {
+	@apply font-bold text-dsa-red1 hover:underline decoration-dsa-red1;
 }
 
-article {
-	h1 {
-		@apply text-5xl pl-2
-		
-	}
-	p {
-		@apply pl-2
-	}
+.prose cite a {
+	@apply font-bold decoration-dsa-red1;
 }
-
 

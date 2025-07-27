@@ -7,7 +7,10 @@
 		"+layout.svelte": "+layout.server.ts,+layout.server.js,+layout.ts,+layout.js,+layout.gql",
 		"+page.svelte": "+page.server.ts,+page.server.js,+page.ts,+page.js,+page.gql"
 	},
-    "files.associations": {  "*.svx": "markdown" },
+    "files.associations": {
+		  "*.svx": "markdown",
+		  "*.css": "tailwindcss"
+		},
     // custom tab colors 
 	"workbench.editor.customLabels.patterns": {
 		// Page

@@ -1,13 +1,21 @@
-    <script lang="ts">
-	    let { data } = $props();
-    </script>
+<script lang="ts">
+	import PaletteHeader from '$lib/PaletteHeader.svelte';
+	import Prose from '$lib/Prose.svelte';
 
-    <article>
-        <header>
-            <h1 class="text-xl">{data.metadata.title}</h1>
-        </header>
-        <div class="prose prose-headings:text-xl prose-headings:underline">
-            <data.component/>
-        </div>
-    </article>
- 
+	let { data } = $props();
+</script>
+
+<svelte:head>
+	<title>{data.title}</title>
+	<meta name={data.description} />
+</svelte:head>
+
+<article class="@container flex flex-col">
+	<PaletteHeader>
+		{data.metadata.title}
+	</PaletteHeader>
+
+	<Prose>
+		<data.component />
+	</Prose>
+</article>

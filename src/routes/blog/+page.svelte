@@ -9,6 +9,11 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Statements and blog posts</title>
+	<meta name="Statements and blog posts released by Baton Rouge DSA" />
+</svelte:head>
+
 <header>
 	<hgroup>
 		<PaletteBackground>

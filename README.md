@@ -6,6 +6,7 @@ This is a proposal for a migration of brdsa.org's source code to a new framework
 - [What's this about?](#whats-this-about)
 - [Why do this?](#why-do-this)
 - [Why Svelte specifically?](#why-svelte-specifically)
+- [TODOS](#todos)
 
 ## What's this about?
 
@@ -41,4 +42,5 @@ cons
 - Jekyll was designed specifically for static site generation, Svelte was not
 - Svelte is more niche
 
-
+## TODOS
+- update frontmatter so we can expose an image per post/page to the rss feed
