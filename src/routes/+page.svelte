@@ -9,7 +9,8 @@
 <svelte:head>
 	<title>Baton Rouge DSA</title>
 	<meta name="description" content="Home page for Baton Rouge DSA" />
-	<link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' />
+	<!-- <link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' /> -->
+	 <link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css' />
 </svelte:head>
 
 <article class="@container flex flex-col grow">
@@ -35,7 +36,7 @@
 		</aside>
 	</div>
 
-	<div class="bg-white/90 dark:bg-dsa-black/90 mx-auto">
-		 <script src='https://actionnetwork.org/widgets/v5/form/join-brdsa?format=js&source=widget'></script><div id='can-form-area-join-brdsa' style='width: 100%'></div>
+	<div class="grow max-w-5xl mx-auto p-2">
+		 <script src='https://actionnetwork.org/widgets/v5/form/join-brdsa?format=js&source=widget'></script><div id='can-form-area-join-brdsa' style='width: 100%'  class="bg-white/80 dark:bg-dsa-black/80"  ></div>
 	</div>
 </article>
