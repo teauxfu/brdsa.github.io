@@ -6,6 +6,7 @@ This is a proposal for a migration of brdsa.org's source code to a new framework
 - [What's this about?](#whats-this-about)
 - [Why do this?](#why-do-this)
 - [Why SvelteKit specifically?](#why-sveltekit-specifically)
+- [On approval](#on-approval)
 - [Technical details](#technical-details)
 - [TODOS](#todos)
 
@@ -37,7 +38,6 @@ More to the point, because SvelteKit excels at pre-prendering pages for optimal 
 
 Svelte itself as a UI library has a really robust component model -- basically we can design a few elements on the page and reuse them easily. For anything but trivial HTML layouts, this is essential. Furthermore, through community libraries such as `mdsvex` we can easily take advantage of using Markdown for writing content. In combination, we get to design beautiful and responsive UI using Svelte, and do the bulk of our copy/prose/post authoring in easy-breezy Markdown.
 
-
 pros 
 - we can continue to build with a GitHub action and host on GitHub Pages
 - we can retain all our existing Markdown pages, and continue using Markdown to add content 
@@ -46,10 +46,16 @@ pros
 - (opinion) it's easier to develop. the tooling is nice. the docs are nice.
 cons
 - it's time consuming to make the initial change
-- it uses some file extensions that might be offputting for folks that want to contribute
+- Svelte uses some file extensions that might be offputting for folks that want to contribute
 - SvelteKit itself has an opinionated project structure that may be divisive 
 - Jekyll was designed specifically for static site generation, Svelte was not
-- Svelte is more niche
+- Svelte is more niche. however, once things are set up it's easy to copy/paste styles from existing pages
+
+## On approval
+
+If the proposal proceeds, we should schedule a day where I give a little walkthrough of the project to whoever is interested so we can see where additional documentaion might be needed, and to provide additional opportunity for input. That'll make it easier for other folks to contribute if they want to. 
+
+Some of the copy has also been slightly changed. We should talk about that too and get feedback on site language.
 
 ## Technical details
 
@@ -66,4 +72,7 @@ Here's a Lighthouse report on the current site:
 - update frontmatter so we can expose an image per post/page to the rss feed
 
 
-sveltekit build is 9-9.3MB
+sveltekit build is 9-9.3 MB
+jekyll is 6.3-6.5 MB
+however, we did add some images, many of which are unused so far
+it also looks like sveltekit enhanced image is actually making some downsized copies of images for each image, it looks like the difference is largely there
