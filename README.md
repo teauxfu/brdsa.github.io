@@ -64,3 +64,6 @@ Here's a Lighthouse report on the current site:
 - fill out the generic /blob/ route to list all the available posts
 - make fill out meta tags for open graph images, title, etc. for when posts are shared
 - update frontmatter so we can expose an image per post/page to the rss feed
+
+
+sveltekit build is 9-9.3MB
