@@ -34,7 +34,7 @@
 		}
 	</style>
 	<PaletteHeader>Welcome to Baton Rouge DSA</PaletteHeader>
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/78">
+	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
 			<blockquote class="border-l-dsa-red dark:border-l-dsa-red1  dark:bg-dsa-black/90 ">
 				How many men ever went to a barbecue and would let one man take off the table what was intended for nine-tenths of the people?
