@@ -13,7 +13,26 @@
 	 <link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css' />
 </svelte:head>
 
+
+
 <article class="@container flex flex-col grow">
+	<style>
+		.can_embed #can_embed_form #can_embed_form_inner input[type="checkbox"]
+		{
+			border-color: var(--color-dsa-red) !important;
+			accent-color: var(--color-red-500) !important;
+			appearance: auto !important;
+			
+		}	
+		@media(prefers-color-scheme: dark)
+		{
+			.can_embed #can_embed_form_inner input[type="checkbox"]
+			{
+				border: 1px !important;
+				border-color: var(--color-red) !important;
+			}	
+		}
+	</style>
 	<PaletteHeader>Welcome to Baton Rouge DSA</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/78">
 		<Prose>

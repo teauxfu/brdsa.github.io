@@ -6,4 +6,4 @@ Our weekly [FITE](/fite) food distribution team could always use a hand with pre
 
 If you haven't already, we invite you to [join DSA](https://act.dsausa.org/donate/membership/?source=Baton%20Rouge) today!
 
-Want to stay in the loop? [Join our email list](https://actionnetwork.org/forms/join-brdsa) or save a link to the calendar below.
+

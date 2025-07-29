@@ -45,11 +45,11 @@
 <main class="flex grow">
 	{@render children()}
 </main>
-<footer>
+<footer class="p-0.5">
 	<PaletteBackground reversed backgroundClass='opacity-65'>
 		<div class="md:hidden">
-			<address class="text-center text-lg">🐊 Baton Rouge DSA 🌹</address>
 			<Socials />
+			<address class="text-center text-lg">🐊 Baton Rouge DSA 🌹</address>
 		</div>
 		<div class="hidden md:grid grid-cols-3">
 			<div></div>

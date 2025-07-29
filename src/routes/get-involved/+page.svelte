@@ -10,9 +10,7 @@
 </svelte:head>
 
 <article class="@container flex flex-col grow">
-	<PaletteHeader>
-	    Get Involved
-	</PaletteHeader>
+	<PaletteHeader>Get Involved</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
 			<blockquote class="mb-0 border-l-dsa-red pr-1">
@@ -31,12 +29,12 @@
 			/>
 		</Prose>
 	</div>
-
-	<div class="mx-auto p-2">
-		<Prose>
-			<GetInvolved />
-		</Prose>
-	</div>
+	
+	<Prose>
+		<p class="dark:text-white">
+			Want to stay in the loop? <a href="https://actionnetwork.org/forms/join-brdsa" target="_blank">Join our email list</a> or save a link to the calendar below.
+		</p>
+	</Prose>
 
 	<div class="p-2">
 		<iframe
@@ -48,5 +46,11 @@
 			scrolling="no"
 			title="BR DSA's Google Calendar"
 		></iframe>
+	</div>
+
+	<div class="mx-auto p-2">
+		<Prose>
+			<GetInvolved />
+		</Prose>
 	</div>
 </article>
