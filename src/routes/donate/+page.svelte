@@ -2,7 +2,7 @@
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
 	const actionNetworkLink =
-		'https://actionnetwork.org/widgets/v5/fundraising/donate-to-baton-rouge-democratic-socialists-of-america?format=js&source=widget';
+				'https://actionnetwork.org/widgets/v5/fundraising/donate-to-baton-rouge-democratic-socialists-of-america?format=js&source=widget&recurring=true&period=recurring_monthly';
 
 </script>
 
