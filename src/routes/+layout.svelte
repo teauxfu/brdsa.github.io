@@ -45,7 +45,7 @@
 <main class="flex grow">
 	{@render children()}
 </main>
-<footer class="p-0.5">
+<footer>
 	<PaletteBackground reversed backgroundClass='opacity-65'>
 		<div class="md:hidden">
 			<Socials />

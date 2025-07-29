@@ -17,7 +17,7 @@
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
 			<div class="@sm:flex @sm:gap-3">
-				<blockquote class="border-l-dsa-red1 ">
+				<blockquote class="border-l-dsa-red dark:border-l-dsa-red1 dark:bg-dsa-black1">
 					Liberty will not descend to a people, a people must raise themselves to liberty
 					<footer class="text-right">
 						<cite>
@@ -30,7 +30,7 @@
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Emma_Goldman_seated.jpg/800px-Emma_Goldman_seated.jpg"
 					title="Emma Goldman"
 					alt="Portrait of Emma Goldman"
-					class="float-right mt-0 mb-0 max-h-65 object-scale-down py-2"
+					class="float-right mt-0 mb-0 max-h-55 object-scale-down py-2"
 				/>
 			</div>
 		</Prose>

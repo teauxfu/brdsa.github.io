@@ -13,8 +13,8 @@
 	<PaletteHeader>Get Involved</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<blockquote class="mb-0 border-l-dsa-red pr-1">
-				We who believe in freedom cannot rest
+			<blockquote class="mb-0 border-l-dsa-red dark:border-l-dsa-red1 pr-1 dark:bg-dsa-black1">
+				We who believe in freedom cannot rest until it comes
 				<footer>
 					<cite class="dark:font-bold">
 						-- <a href="https://en.wikipedia.org/wiki/Ella_Baker">Ella Baker</a>, 1964</cite
@@ -31,7 +31,7 @@
 	</div>
 	
 	<Prose>
-		<p class="dark:text-white">
+		<p class="dark:text-white p-2">
 			Want to stay in the loop? <a href="https://actionnetwork.org/forms/join-brdsa" target="_blank">Join our email list</a> or save a link to the calendar below.
 		</p>
 	</Prose>
@@ -39,7 +39,7 @@
 	<div class="p-2">
 		<iframe
 			src="https://calendar.google.com/calendar/embed?src=33f91d95d3ed14ecfbf1848ae987b26e0b8979829a078c99a2d142fadbec13bd%40group.calendar.google.com&ctz=America%2FChicago"
-			style="border: 0"
+			style="border: 0;"
 			width="100%"
 			height="600"
 			frameborder="0"
@@ -48,7 +48,7 @@
 		></iframe>
 	</div>
 
-	<div class="mx-auto p-2">
+	<div class="p-2 bg-white/90 dark:bg-dsa-black/90 ">
 		<Prose>
 			<GetInvolved />
 		</Prose>

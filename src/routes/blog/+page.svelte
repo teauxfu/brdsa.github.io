@@ -15,17 +15,17 @@
 	<meta name="description" content="Statements and blog posts released by Baton Rouge DSA" />
 </svelte:head>
 
-<article class="@container flex flex-col grow">
+<article class="@container flex flex-col grow bg-white/90 dark:bg-dsa-black/90">
 	<PaletteHeader>Statements</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<p class="dark:text-white">
+			<p class="dark:text-white  border-l-dsa-red dark:border-l-dsa-red1 dark:bg-dsa-black1 p-2 border-l-4">
 				This is a list of statements released by our chapter.
 			</p>
 		</Prose>
 	</div>
-	<nav class="flex grow">
-		<ul class="flex grow flex-col gap-3 bg-white/90 dark:bg-dsa-black/90">
+	<nav class="flex grow p-2">
+		<ul class="flex grow flex-col gap-3 ">
 			{#each data.posts as post}
 				<li class="flex flex-col">
 					<a href="/blog/{post.slug}" class="text-4xl underline decoration-dsa-red">{post.title}</a>

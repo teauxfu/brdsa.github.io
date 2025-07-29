@@ -19,7 +19,7 @@
 	<PaletteHeader>Donate to BRDSA</PaletteHeader>
 	<div class="w-full bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<p class="dark:text-white">
+			<p class="dark:text-white dark:bg-dsa-black1 p-2 border-l-dsa-red dark:border-l-dsa-red1 border-l-4">
 				Want to see where your money goes? Come to <a href="/get-involved">our next chapter meeting</a> and
 				see what we're up to!
 			</p>
