@@ -75,6 +75,11 @@ for main content included in a page, we use `enhanced:img` wherever possible, in
 
 ### Useful links
 
+action network css examples
+https://help.actionnetwork.org/hc/en-us/articles/115005729066-CSS-snippets-for-embed-customization
+
+text contrast checker https://webaim.org/resources/contrastchecker/
+
 sveltekit project structure
 https://svelte.dev/docs/kit/project-structure
 
