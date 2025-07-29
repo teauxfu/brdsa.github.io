@@ -3,6 +3,14 @@
 
 This is a proposal for a migration of brdsa.org's source code to a new framework. 
 
+TODOS
+- nav icons above the brdsa text
+- black on grey image hero in home page
+- checkboxes on interest form 
+- donate is too skinny 
+- get invovled shorter text on top, right to calendar on load 
+
+
 - [What's this about?](#whats-this-about)
 - [Why do this?](#why-do-this)
 - [Why SvelteKit specifically?](#why-sveltekit-specifically)

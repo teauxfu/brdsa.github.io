@@ -66,6 +66,7 @@ There seems to be some opportunity for conflict surrounding dynamic routes, and 
 One thing that wouldn't work, for example, was putting a `published` flag on the frontmatter of some posts. Even if you set that flag to `false` in the frontmatter, for some reason SvelteKit would still try to walk it (it doesn't know the published flag before it reads the files), but a conditional on returning the post would return a 404 error if it was false. I'm probably explaining that poorly. It had to do with the `/blog/[slug]/+page.ts` data loader. 
 
 ### If there's a weird problem
+
 especially if you're getting a weird type error that seems wrong, give a shot just reloading vscode `ctrl shift p` then `developer: reload window`. occassionally the type cache is bad
 
 ### Quirks with images

@@ -15,7 +15,7 @@
 
 <article class="@container flex flex-col grow">
 	<PaletteHeader>Welcome to Baton Rouge DSA</PaletteHeader>
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/78">
 		<Prose>
 			<blockquote class="border-l-dsa-red1 ">
 				How many men ever went to a barbecue and would let one man take off the table what was intended for nine-tenths of the people?
