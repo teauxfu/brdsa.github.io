@@ -10,14 +10,14 @@
 	<meta name="description" content="Information about campaigns and projects by Baton Rouge DSA" />
 </svelte:head>
 
-<article class="@container flex flex-col grow">
+<article class="@container flex flex-col grow bg-white/90 dark:bg-dsa-black/90">
 	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">
 		Our Work
 	</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
 			<div class="@sm:flex @sm:gap-3">
-				<blockquote class="border-l-dsa-red dark:border-l-dsa-red1 dark:bg-dsa-black1">
+				<blockquote class="p-2 border-l-dsa-red dark:border-l-dsa-red1 dark:bg-dsa-black1">
 					Liberty will not descend to a people, a people must raise themselves to liberty
 					<footer class="text-right">
 						<cite>
@@ -36,10 +36,7 @@
 		</Prose>
 	</div>
 	
-
-	<div class="bg-white/90 dark:bg-dsa-black/90">
-		<Prose>
-			<Campaigns />
-		</Prose>
-	</div>
+	<Prose>
+		<Campaigns />
+	</Prose>
 </article>

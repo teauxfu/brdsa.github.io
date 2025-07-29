@@ -7,7 +7,6 @@
 </script>
 
 
-
 <svelte:head>
 	<title>Resources</title>
 	<meta name="description" content="Information about donating to Baton Rouge DSA" />
@@ -16,17 +15,12 @@
 </svelte:head>
 
 <article class="@container flex flex-col grow">
-	<PaletteHeader>Donate to BRDSA</PaletteHeader>
+	<PaletteHeader>Resources</PaletteHeader>
 	<div class="w-full bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
 			<p class="dark:text-white">
-				Want to see where your money goes? Come to <a href="/get-involved">our next chapter meeting</a> and
-				see what we're up to!
+				Sorry, this section is under construction. Please check back later.
 			</p>
 		</Prose>
-	</div>
-	<div class="grow max-w-5xl mx-auto p-1">
-		<script src={actionNetworkLink}></script>
-		<div id='can-fundraising-area-donate-to-baton-rouge-democratic-socialists-of-america' class="bg-white/80 dark:bg-dsa-black/80" ></div>
 	</div>
 </article>
