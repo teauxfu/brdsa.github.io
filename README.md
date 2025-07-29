@@ -8,7 +8,7 @@ TODOS
 - [x] donate is too skinny 
 - [ ] black on grey image hero in home page (dark mode)
 
-re: text contrast https://webaim.org/resources/contrastchecker/
+re: text contrast concerns, haven't applied it yet but found this https://webaim.org/resources/contrastchecker/
 
 This is a proposal for a migration of brdsa.org's source code to a new framework. 
 
