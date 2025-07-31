@@ -109,3 +109,6 @@ nice icons, fontawesome is hella bloatware
 https://simpleicons.org/?q=github
 https://tabler.io/icons
 https://heroicons.com/
+
+underline animation 
+https://cssf1.com/how-to/create-hover-underline-animation-tailwind-css

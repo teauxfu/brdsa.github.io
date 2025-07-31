@@ -14,7 +14,7 @@
 	<!-- <link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' /> -->
 </svelte:head>
 
-<article class="@container flex flex-col grow">
+<article>
 	<PaletteHeader>Resources</PaletteHeader>
 	<div class="w-full bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>

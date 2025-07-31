@@ -15,7 +15,7 @@
 	<meta name="description" content="Statements and blog posts released by Baton Rouge DSA" />
 </svelte:head>
 
-<article class="@container flex flex-col grow bg-white/90 dark:bg-dsa-black/90">
+<article>
 	<PaletteHeader>Statements</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>

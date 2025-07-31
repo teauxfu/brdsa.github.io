@@ -3,13 +3,32 @@
 @plugin '@tailwindcss/typography';
 @import './DSATheme.css';
 
+@layer base {
+	article {
+		@apply @container flex grow flex-col bg-white/90 dark:bg-dsa-black/90;
+	}
+}
+
+.prose blockquote {
+	@apply mb-0 border-l-dsa-red p-2 pr-1 dark:border-l-dsa-red1 dark:bg-dsa-black1 h-fit;
+}
+
+.prose blockquote a 
+{
+	@apply decoration-dsa-red1
+}
+
 .prose p a {
-	@apply font-bold text-dsa-red1 dark:text-white hover:underline decoration-dsa-red1;
+	@apply font-bold decoration-dsa-red1 hover:underline dark:text-white;
 }
 
-.prose cite a {
-	@apply font-bold  decoration-dsa-red1;
+.prose .prose cite a {
+	@apply font-bold decoration-dsa-red1;
 }
 
-
-
+.prose figcaption {
+	@apply  p-2 text-sm text-dsa-black dark:text-white  bg-white/50  dark:bg-dsa-black1;
+}
+.prose figure a {
+	@apply decoration-dsa-red1;
+}

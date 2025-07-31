@@ -4,7 +4,7 @@
 	let { data, children } = $props();
 	import Socials from '$lib/components/Socials.svelte';
 	import { page } from '$app/state';
-	import hero from '$lib/images/DSABR_Logo_3ColorOnBlk_Web.png?enhanced';
+	import logo from '$lib/images/DSABR_Logo_3ColorOnBlk_Web.png?enhanced';
 	import {config} from '$lib/config';
 </script>
 
@@ -21,7 +21,7 @@
 	<div class="hidden h-15 w-15 rounded-full p-0.5  ml-1 transition hover:scale-105 @md:block">
 		<a href="/" title="Go to the BRDSA home page">
 			<span class="hidden">Go to the home page</span>
-			<enhanced:img src="$lib/images/small-dsabr.png" alt="BR DSA logo" />
+			<enhanced:img src={logo} alt="BR DSA logo" />
 		</a>
 	</div>
 	<nav
@@ -33,9 +33,10 @@
 				<a href="/" class="font-bold text-dsa-red dark:text-dsa-red1" title="go to the home page">Home</a>
 			</li>
 			{#each data.sections as { title, link, caption }}
-				<li>
-					<a href={link} class="font-bold text-dsa-red dark:text-dsa-red1" title={caption}>
+				<li >
+					<a href={link} class="font-bold text-dsa-red dark:text-dsa-red1 group" title={caption}>
 						{title}
+						<div class="bg-dsa-red dark:bg-dsa-red1 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
 					</a>
 				</li>
 			{/each}

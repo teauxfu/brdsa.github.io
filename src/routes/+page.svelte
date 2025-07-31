@@ -15,28 +15,15 @@
 
 
 
-<article class="@container flex flex-col grow bg-white/90 dark:bg-dsa-black/90">
-	<style>
-		.can_embed #can_embed_form #can_embed_form_inner input[type="checkbox"]
-		{
-			border-color: var(--color-dsa-red) !important;
-			accent-color: var(--color-red-500) !important;
-			appearance: auto !important;
-			
-		}	
-		@media(prefers-color-scheme: dark)
-		{
-			.can_embed #can_embed_form_inner input[type="checkbox"]
-			{
-				border: 1px !important;
-				border-color: var(--color-red) !important;
-			}	
-		}
-	</style>
+<article>
+
+
+
 	<PaletteHeader>Welcome to Baton Rouge DSA</PaletteHeader>
+
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<blockquote class="border-l-dsa-red dark:border-l-dsa-red1  dark:bg-dsa-black/90 p-2">
+			<blockquote>
 				How many men ever went to a barbecue and would let one man take off the table what was intended for nine-tenths of the people?
 				<footer class="text-right">
 					<cite class="font-bold">-- Huey P. Long, 1934</cite>
@@ -56,6 +43,24 @@
 	</div>
 
 	<div class="grow max-w-5xl mx-auto p-2 ">
-		 <script src='https://actionnetwork.org/widgets/v5/form/join-brdsa?format=js&source=widget'  fetchpriority="low" ></script><div id='can-form-area-join-brdsa' style='width: 100%' class="bg-white/80 dark:bg-dsa-black/80"  ></div>
+		<style>
+			.can_embed #can_embed_form #can_embed_form_inner input[type="checkbox"]
+			{
+				border-color: var(--color-dsa-red) !important;
+				accent-color: var(--color-red-500) !important;
+				appearance: auto !important;
+				
+			}	
+			@media(prefers-color-scheme: dark)
+			{
+				.can_embed #can_embed_form_inner input[type="checkbox"]
+				{
+					border: 1px !important;
+					border-color: var(--color-red) !important;
+				}	
+			}
+		</style>
+		 <script src='https://actionnetwork.org/widgets/v5/form/join-brdsa?format=js&source=widget'  fetchpriority="low"></script>
+		 <div id='can-form-area-join-brdsa'  class="w-full bg-white/80 dark:bg-dsa-black/80"></div>
 	</div>
 </article>

@@ -10,32 +10,34 @@
 	<meta name="description" content="Information about campaigns and projects by Baton Rouge DSA" />
 </svelte:head>
 
-<article class="@container flex flex-col grow bg-white/90 dark:bg-dsa-black/90">
-	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">
-		Our Work
-	</PaletteHeader>
+<article>
+	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">Our Work</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
 			<div class="@sm:flex @sm:gap-3">
-				<blockquote class="p-2 border-l-dsa-red dark:border-l-dsa-red1 dark:bg-dsa-black1">
+				<blockquote>
 					Liberty will not descend to a people, a people must raise themselves to liberty
 					<footer class="text-right">
 						<cite>
-							-- grave of <a href="https://en.wikipedia.org/wiki/Emma_Goldman">Emma Goldman</a
-							></cite
-						>
+							-- grave of <a href="https://en.wikipedia.org/wiki/Emma_Goldman">Emma Goldman</a>
+						</cite>
 					</footer>
 				</blockquote>
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Emma_Goldman_seated.jpg/800px-Emma_Goldman_seated.jpg"
-					title="Emma Goldman"
-					alt="Portrait of Emma Goldman"
-					class="float-right mt-0 mb-0 max-h-55 object-scale-down py-2"
-				/>
+				<figure>
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Emma_Goldman_seated.jpg/800px-Emma_Goldman_seated.jpg"
+						title="Emma Goldman"
+						alt="Portrait of Emma Goldman"
+						class="float-right mt-0 mb-0 max-h-55 object-scale-down py-2"
+					/>
+					<figcaption class="min-w-2xs">
+						<a href="https://commons.wikimedia.org/wiki/File:Emma_Goldman_seated.jpg" target="_blank">Takuma Kajiwara</a>, Public domain, via Wikimedia Commons
+					</figcaption>
+				</figure>
 			</div>
 		</Prose>
 	</div>
-	
+
 	<Prose>
 		<Campaigns />
 	</Prose>

@@ -10,9 +10,11 @@ export type PostMetadata = {
   slug: string;
   date: Date;
   description: string;
-  author: string;
+  module?: unknown;
+  author?: string;
   imageUrl?: string;
   imageDescription?:string;
+  hidden?: boolean;
 };
 
 export type PostModules = Record<string, () => Promise<{default: Component, metadata: PostMetadata}>>;

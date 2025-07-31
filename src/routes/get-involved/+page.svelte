@@ -2,6 +2,7 @@
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
 	import GetInvolved from './get-involved.md';
+	import hero from '$lib/images/Ella_Baker.jpg?enhanced';
 </script>
 
 <svelte:head>
@@ -9,11 +10,11 @@
 	<meta name="description" content="How you can get involved with Baton Rouge DSA" />
 </svelte:head>
 
-<article class="@container flex flex-col grow bg-white/90 dark:bg-dsa-black/90">
+<article>
 	<PaletteHeader>Get Involved</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<blockquote class="mb-0 p-2 border-l-dsa-red dark:border-l-dsa-red1 pr-1 dark:bg-dsa-black1">
+			<blockquote>
 				We who believe in freedom cannot rest until it comes
 				<footer>
 					<cite class="dark:font-bold">
@@ -21,12 +22,15 @@
 					>
 				</footer>
 			</blockquote>
-			<img
-				src="https://www.crmvet.org/crmpics/band/bakerella.jpg"
+			<figure>
+				<enhanced:img
+				src={hero}
 				title="Ella Baker"
 				alt="Ella Baker passionately speaking into a mic"
 				class="float-right mt-0 mb-0 object-scale-down py-2"
-			/>
+				/>
+				<figcaption><span class="text-nowrap">George Ballis via <a href="https://www.crmvet.org/images/imgfs.htm">Civil Rights Movement Archive</a></span></figcaption>
+			</figure>
 		</Prose>
 	</div>
 	
