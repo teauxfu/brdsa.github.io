@@ -53,7 +53,6 @@ export const load: PageServerLoad = (async ({ params }) => {
 		let match: any | undefined = undefined;
 		let hero: Picture | undefined;
 		if (post.imageUrl) {
-			console.log('looking');
 			match = imageModules[`/src/lib/images/${post.imageUrl}`];
 			// the typescript compiler says there's no default on match, but the code only works with it, so...
 			if(match)
@@ -87,6 +86,5 @@ export const load: PageServerLoad = (async ({ params }) => {
 export const entries: EntryGenerator = () => {
 	const posts = getPosts(true);
 	const slugs = posts.map((p) => ({ slug: p.slug ?? p.title }));
-	console.log(slugs);
 	return slugs;
 };

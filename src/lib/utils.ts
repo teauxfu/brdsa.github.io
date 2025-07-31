@@ -46,7 +46,6 @@ export function getPosts(includeHidden = false): PostMetadata[] {
 	const posts: PostMetadata[] = [];
 	const seenSlugs = new Set<string>();
 
-	console.log('getPosts: Found files:', Object.keys(paths));
 
 	for (const [path, file] of Object.entries(paths)) {
 		if (file && typeof file === 'object' && 'metadata' in file) {
@@ -72,20 +71,12 @@ export function getPosts(includeHidden = false): PostMetadata[] {
 			// Only include non-hidden posts unless explicitly requested
 			if (includeHidden || !post.hidden) {
 				posts.push(post);
-				console.log('Added post with slug:', post.slug);
-			} else {
-				console.log('Skipped hidden post:', post.slug);
-			}
+			} 
 		}
 	}
 
 	// Sort by date (newest first)
 	posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-	console.log(
-		'getPosts: Returning posts with slugs:',
-		posts.map((p) => p.slug)
-	);
 	return posts;
 }
 
