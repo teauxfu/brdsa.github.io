@@ -56,6 +56,6 @@
 	</div>
 
 	<div class="grow max-w-5xl mx-auto p-2 ">
-		 <script src='https://actionnetwork.org/widgets/v5/form/join-brdsa?format=js&source=widget'></script><div id='can-form-area-join-brdsa' style='width: 100%'  class="bg-white/80 dark:bg-dsa-black/80"  ></div>
+		 <script src='https://actionnetwork.org/widgets/v5/form/join-brdsa?format=js&source=widget'  fetchpriority="low" ></script><div id='can-form-area-join-brdsa' style='width: 100%' class="bg-white/80 dark:bg-dsa-black/80"  ></div>
 	</div>
 </article>
