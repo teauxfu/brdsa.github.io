@@ -56,16 +56,15 @@
 		</aside>
 	</div>
 
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65 mt-4">
+	<div class="mt-4 bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<p class="dark:text-white  border-l-dsa-red dark:border-l-dsa-red1 dark:bg-dsa-black1 p-2 border-l-4">
-				Check out some of our recent posts below
+			<p
+				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
+			>
+				Here are some recent posts from us
 			</p>
 		</Prose>
-	</div>
-
-	<Prose>
-		<nav class="flex grow p-2">
+		<nav class="flex grow p-2 max-w-[65ch] mx-auto">
 			<ul class="flex grow flex-col gap-3">
 				{#each data.posts as post}
 					<li class="flex flex-col">
@@ -77,7 +76,7 @@
 				{/each}
 			</ul>
 		</nav>
-	</Prose>
+	</div>
 
 	<div class="mx-auto max-w-5xl grow p-2">
 		<style>

@@ -1,10 +1,16 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+    import remarkSlug from 'remark-slug';
+    import remarkAutolinkHeadings from 'remark-autolink-headings';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.svx', '.md']
+	extensions: ['.svx', '.md'],
+	   remarkPlugins: [
+        remarkSlug,
+        remarkAutolinkHeadings,
+      ],
 };
 
 /** @type {import('@sveltejs/kit').Config} */

@@ -1,12 +1,10 @@
 import { json } from '@sveltejs/kit'
 import { getPosts } from '$lib/utils'
 
-export async function GET({url}) {
-	// Check if we should include hidden posts (useful for admin/preview)
-	const includeHidden = url.searchParams.get('includeHidden') === 'true';
+export async function GET() {
 	
 	try {
-		const posts = getPosts(includeHidden);
+		const posts = getPosts();
 		
 		// Remove the module property for API response (not serializable)
 		const serializedPosts = posts.map(({ module, ...post }) => post);
