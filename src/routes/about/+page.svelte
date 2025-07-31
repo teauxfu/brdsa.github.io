@@ -17,7 +17,7 @@
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
             <div class="@2xl:flex @2xl:gap-3 items-center">
-                <blockquote class="min-w-sm">
+                <blockquote class="min-w-xs @md:min-w-sm">
                     The Republican and Democratic parties, or, to be more exact, the Republican-Democratic
                     party, represents the capitalist class in the class struggle. They are the political wings
                     of the capitalist system and such differences as arise between them relate to spoils and not
