@@ -1,52 +1,42 @@
 <script lang="ts">
-	//@ts-nocheck because our enhanced image complains about not having a default prop, but it does have one
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
-	import type { Picture } from 'vite-imagetools';
-
 	let { data } = $props();
-	const { component: Post, metadata } = data;
-
-	const imageModules = import.meta.glob(
-		'/src/lib/images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
-		{
-			eager: true,
-			query: {
-				enhanced: true
-			}
-		}
-	);
-
-	const match = imageModules[`/src/lib/images/${metadata.imageUrl}`] as string | Picture;
+	const { post, html, hero } = data;
 </script>
 
 <svelte:head>
-	<title>{metadata.title}</title>
-	<meta name="description" content={metadata.description} />
+	<title>{post.title}</title>
+	<meta name="description" content={post.description} />
 </svelte:head>
 
-<article class="@container flex grow flex-col bg-white/90 dark:bg-dsa-black/90">
+<article>
 	<PaletteHeader>
-		{metadata.title}
+		{post.title}
 	</PaletteHeader>
 
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<p class="-mb-7 p-2 dark:bg-dsa-black1 dark:text-white border-l-dsa-red dark:border-l-dsa-red1 border-l-4">
-				{metadata.description}
+			<p
+				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
+			>
+				{post.description}
 			</p>
-			{#if metadata.imageUrl}
+			{#if hero}
 				<enhanced:img
-					src={match.default}
-					alt={metadata.imageDescription ?? 'This image has no description'}
+					src={hero}
+					alt={post.imageDescription ?? 'This image has no description'}
+					class="-mt-7"
 				/>
 			{/if}
 		</Prose>
 	</div>
 
-	<div>
-		<Prose>
-			<Post></Post>
-		</Prose>
-	</div>
+	{#if html}
+		<div>
+			<Prose>
+				{@html html}
+			</Prose>
+		</div>
+	{/if}
 </article>

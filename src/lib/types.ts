@@ -5,16 +5,20 @@ import type { Component } from "svelte";
 /** 
  * This type models the frontmatter of a Markdown blog post file.
 */
-export type PostMetadata = {
-  title: string;
-  slug: string;
-  date: Date;
-  description: string;
-  module?: unknown;
-  author?: string;
-  imageUrl?: string;
-  imageDescription?:string;
-  hidden?: boolean;
-};
+export interface PostMetadata {
+	title: string;
+	date: string;
+	author?: string;
+	slug?: string; // Custom slug from frontmatter
+	hidden?: boolean; // Whether to hide from public post lists
+	description?: string;
+	tags?: string[];
+	imageUrl?: string;
+	imageDescription?: string;
+	module?: any; // The actual Svelte component module
+}
 
-export type PostModules = Record<string, () => Promise<{default: Component, metadata: PostMetadata}>>;
+export type PostModules = Record<string, () => Promise<{
+	default: any;
+	metadata: PostMetadata;
+}>>;

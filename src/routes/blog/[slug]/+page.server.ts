@@ -1,42 +1,92 @@
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageServerLoad } from './$types';
-import { slugToPath, getSlugs, getPostModules, getPosts } from "$lib/utils";
+import { getPosts, getPostBySlug } from '$lib/utils';
+import { render } from 'svelte/server';
+import type { Picture } from 'vite-imagetools';
+
 
 // SvelteKit pages are expected to export this load function
-// this params object provides info about the current request, such as which slug is in the URL 
+// this params object provides info about the current request, such as which slug is in the URL
 
 export const load: PageServerLoad = (async ({ params }) => {
-	// this will return pointers to all the available posts in the `/src/lib/posts/` folder
-	const posts = getPosts(true);
-	// we find a match by the slug, which should be unique 
-	// TODO verify that getPostModules throws at build time if a duplicate is detected
+	const { slug } = params;
 
-	console.log('blog load sees posts: ' + posts);
+	try {
+		const post = await getPostBySlug(slug);
 
-	const thisPost = posts.find(p => p.slug == params.slug);
+		if (!post) {
+			throw error(404, 'Post not found');
+		}
 
-	if(!thisPost || !thisPost.module)
-		error(404, "Sorry, we couldn't find that page");
+		// For server-side rendering, we need to render the component to HTML
+		// The module.default is the Svelte component
+		const Component = post.module?.default;
 
-	// here we actually load the markdown file and return it as an object whose
-	// default property is a svelte component that can be rendered, plus a metadata object
-	// that is populated with the stuff in frontmatter
+		if (!Component) {
+			throw error(500, 'Post content could not be loaded');
+		}
 
-	const path = slugToPath(params.slug);
-	const mods = import.meta.glob(`/src/lib/posts/${path}.md`, { eager: true });
+		// Render the component to HTML string using Svelte 5's render function
+		let html = '';
+		try {
+			const renderResult = render(Component, {
+				props: {}
+			});
 
-	const {default: component} = await thisPost.module().then();
+			// In Svelte 5, render() returns { body, head }
+			html = renderResult.body || '';
+		} catch (renderError) {
+			console.error('Error rendering component:', renderError);
+			html = '<p>Content rendering failed</p>';
+		}
 
-	return {component, thisPost};
+		const imageModules = import.meta.glob(
+			'/src/lib/images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+			{
+				eager: true,
+				query: {
+					enhanced: true
+				}
+			}
+		);
+
+		let match: any | undefined = undefined;
+		let hero: Picture | undefined;
+		if (post.imageUrl) {
+			console.log('looking');
+			match = imageModules[`/src/lib/images/${post.imageUrl}`];
+			// the typescript compiler says there's no default on match, but the code only works with it, so...
+			if(match)
+				hero = match.default;
+		}
+
+		return {
+			post: {
+				title: post.title,
+				date: post.date,
+				author: post.author,
+				slug: post.slug,
+				hidden: post.hidden,
+				description: post.description,
+				tags: post.tags,
+				imageUrl: post.imageUrl,
+				imageDescription: post.imageDescription
+			},
+			html,
+			hero
+		};
+	} catch (err) {
+		console.error('Error loading post:', err);
+		throw error(404, 'Post not found');
+	}
 }) satisfies PageServerLoad;
 
-
 // because /blog/[slug] is a dynamic route, we need to let SvelteKit know to pre-render our blog posts
-// we do this by globbing over the posts dir 
+// we do this by globbing over the posts dir
 // https://svelte.dev/docs/kit/page-options#entries
 export const entries: EntryGenerator = () => {
 	const posts = getPosts(true);
-	const slugs = posts.map(p => ({slug: p.slug}));
+	const slugs = posts.map((p) => ({ slug: p.slug ?? p.title }));
 	console.log(slugs);
 	return slugs;
 };
