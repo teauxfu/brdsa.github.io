@@ -14,8 +14,8 @@
 	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">Our Work</PaletteHeader>
 	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
 		<Prose>
-			<div class="@sm:flex @sm:gap-3">
-				<blockquote>
+			<div class="">
+				<blockquote class="min-w-xs">
 					Liberty will not descend to a people, a people must raise themselves to liberty
 					<footer class="text-right">
 						<cite>
