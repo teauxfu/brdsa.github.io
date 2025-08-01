@@ -6,21 +6,28 @@ const dev = 'http://localhost:5173';
 const preview = 'http://localhost:4173';
 const staging = 'https://brdsa.teauxfu.dev'
 const prod = 'https://brdsa.org'
+const domains = [
+  // dev,
+  //preview,
+  staging,
+  prod
+];
 
-// UPDATE THIS LINE AS NEEDED
-const domain = preview;
+const metasummary = './reports/metasummary.json';
 
-const URLS_TO_TEST =  {
-  'Homepage': `${domain}`,
-  'About': `${domain}/about`,
-  'Donate': `${domain}/donate`,
-  'FITE': `${domain}/fite`,
-  'Get Involved': `${domain}/get-involved`,
-  'Our work': `${domain}/our-work`,
-};
+function getUrls(domain) {
+  return {
+    'Homepage': `${domain}`,
+    'About': `${domain}/about`,
+    'FITE': `${domain}/fite`,
+    'Get Involved': `${domain}/get-involved`,
+    'Our Work': `${domain}/campaigns`,
+    'Donate': `${domain}/donate`,
+  }
+}
 
-async function runLighthouse(url, name) {
-  const chrome = await chromeLauncher.launch({chromeFlags: ['--headless']});
+async function runLighthouse(domain, url, name) {
+  const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless'] });
   const options = {
     logLevel: 'info',
     output: 'html',
@@ -29,19 +36,22 @@ async function runLighthouse(url, name) {
   };
 
   const runnerResult = await lighthouse(url, options);
-  
+
   // Save HTML report
   const reportHtml = runnerResult.report;
   const filename = `./reports/${sanitizeUrl(domain)}-${name.toLowerCase().replace(/\s+/g, '-')}.html`;
   fs.writeFileSync(filename, reportHtml);
-  
   console.log(`${name} report saved to ${filename}`);
-  console.log('Scores:', {
+
+  const summary = JSON.parse(fs.readFileSync(metasummary));
+  const reportObj = {
     performance: runnerResult.lhr.categories.performance.score * 100,
     accessibility: runnerResult.lhr.categories.accessibility.score * 100,
     bestPractices: runnerResult.lhr.categories['best-practices'].score * 100,
     seo: runnerResult.lhr.categories.seo.score * 100,
-  });
+  };
+  summary[sanitizeUrl(url)] = reportObj;
+  fs.writeFileSync(metasummary, JSON.stringify(summary, null, 2));
 
   chrome.kill();
 }
@@ -53,13 +63,18 @@ function sanitizeUrl(url) {
 }
 
 
+// MAIN 
+
 (async () => {
-  for (const [name, url] of Object.entries(URLS_TO_TEST)) {
-    try {
-      console.log(`\nTesting ${name}: ${url}`);
-      await runLighthouse(url, name);
-    } catch (err) {
-      console.error(`Error testing ${url}:`, err);
+  fs.writeFile(metasummary, JSON.stringify({ reports: {}}, null, 2), (e) => console.log(e));
+  for (const domain of domains) {
+    for (const [name, url] of Object.entries(getUrls(domain))) {
+      try {
+        console.log(`\nTesting ${name}: ${url}`);
+        await runLighthouse(domain, url, name);
+      } catch (err) {
+        console.error(`Error testing ${url}:`, err);
+      }
     }
   }
 })();
