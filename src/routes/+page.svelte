@@ -56,28 +56,6 @@
 		</aside>
 	</div>
 
-	<div class="mt-4 bg-dsa-red4/65 dark:bg-dsa-black4/65">
-		<Prose>
-			<p
-				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
-			>
-				Here are some recent posts from us
-			</p>
-		</Prose>
-		<nav class="flex grow p-2 max-w-[65ch] mx-auto">
-			<ul class="flex grow flex-col gap-3">
-				{#each data.posts as post}
-					<li class="flex flex-col">
-						<a href="/blog/{post.slug}" class="text-3xl underline decoration-dsa-red"
-							>{post.title}</a
-						>
-						<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
-
 	<div class="mx-auto max-w-5xl grow p-2">
 		<style>
 			.can_embed #can_embed_form #can_embed_form_inner input[type='checkbox'] {
@@ -97,5 +75,25 @@
 			fetchpriority="low"
 		></script>
 		<div id="can-form-area-join-brdsa" class="w-full bg-white/80 dark:bg-dsa-black/80"></div>
+	</div>
+
+	<div class="mt-4 bg-dsa-red4/65 dark:bg-dsa-black4/65">
+		<Prose>
+			<p class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white">
+				Here are some recent posts from us
+			</p>
+		</Prose>
+		<nav class="mx-auto flex max-w-[65ch] grow p-2">
+			<ul class="flex grow flex-col gap-3">
+				{#each data.posts as post}
+					<li class="flex flex-col">
+						<a href="/blog/{post.slug}" class="text-3xl underline decoration-dsa-red"
+							>{post.title}</a
+						>
+						<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
+					</li>
+				{/each}
+			</ul>
+		</nav>
 	</div>
 </article>
