@@ -1,14 +1,13 @@
 import { error } from '@sveltejs/kit';
-import type { EntryGenerator, PageServerLoad } from './$types';
+import type { EntryGenerator, PageLoad } from './$types';
 import { getPosts, getPostBySlug } from '$lib/utils';
 import { render } from 'svelte/server';
 import type { Picture } from 'vite-imagetools';
 
-
 // SvelteKit pages are expected to export this load function
 // this params object provides info about the current request, such as which slug is in the URL
 
-export const load: PageServerLoad = (async ({ params }) => {
+export const load: PageLoad = (async ({ params }) => {
 	const { slug } = params;
 
 	try {
@@ -55,8 +54,7 @@ export const load: PageServerLoad = (async ({ params }) => {
 		if (post.imageUrl) {
 			match = imageModules[`/src/lib/images/${post.imageUrl}`];
 			// the typescript compiler says there's no default on match, but the code only works with it, so...
-			if(match)
-				hero = match.default;
+			if (match) hero = match.default;
 		}
 
 		return {
@@ -72,13 +70,14 @@ export const load: PageServerLoad = (async ({ params }) => {
 				imageDescription: post.imageDescription
 			},
 			html,
-			hero
+			hero,
+			postModule: Component
 		};
 	} catch (err) {
 		console.error('Error loading post:', err);
 		throw error(404, 'Post not found');
 	}
-}) satisfies PageServerLoad;
+}) satisfies PageLoad;
 
 // because /blog/[slug] is a dynamic route, we need to let SvelteKit know to pre-render our blog posts
 // we do this by globbing over the posts dir

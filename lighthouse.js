@@ -30,27 +30,32 @@ async function runLighthouse(domain, url, name) {
   const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless'] });
   const options = {
     logLevel: 'info',
-    output: 'html',
+    output: ['html'],
     onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'],
     port: chrome.port,
   };
 
   const runnerResult = await lighthouse(url, options);
 
+  if(!runnerResult)
+    return;
+
   // Save HTML report
   const reportHtml = runnerResult.report;
   const filename = `./reports/${sanitizeUrl(domain)}-${name.toLowerCase().replace(/\s+/g, '-')}.html`;
-  fs.writeFileSync(filename, reportHtml);
+  fs.writeFileSync(filename, reportHtml.toString());
   console.log(`${name} report saved to ${filename}`);
 
   const summary = JSON.parse(fs.readFileSync(metasummary));
   const reportObj = {
-    performance: runnerResult.lhr.categories.performance.score * 100,
-    accessibility: runnerResult.lhr.categories.accessibility.score * 100,
-    bestPractices: runnerResult.lhr.categories['best-practices'].score * 100,
-    seo: runnerResult.lhr.categories.seo.score * 100,
+    page: url,
+    build: domain === prod ?  'Jekyll' : 'SvelteKit',
+    performance: (runnerResult.lhr.categories.performance.score ?? 0) * 100,
+    accessibility: (runnerResult.lhr.categories.accessibility.score ?? 0 )* 100,
+    bestPractices: (runnerResult.lhr.categories['best-practices'].score ?? 0 )* 100,
+    seo: (runnerResult.lhr.categories.seo.score ?? 0) * 100,
   };
-  summary[sanitizeUrl(url)] = reportObj;
+  summary.data.push(reportObj);
   fs.writeFileSync(metasummary, JSON.stringify(summary, null, 2));
 
   chrome.kill();
@@ -66,7 +71,7 @@ function sanitizeUrl(url) {
 // MAIN 
 
 (async () => {
-  fs.writeFile(metasummary, JSON.stringify({ reports: {}}, null, 2), (e) => console.log(e));
+  fs.writeFile(metasummary, JSON.stringify({ data: []}, null, 2), (e) => console.log(e));
   for (const domain of domains) {
     for (const [name, url] of Object.entries(getUrls(domain))) {
       try {

@@ -112,3 +112,7 @@ https://heroicons.com/
 
 underline animation 
 https://cssf1.com/how-to/create-hover-underline-animation-tailwind-css
+
+
+his svelte components still work in md, why don't ours?
+https://github.com/mvasigh/sveltekit-mdsvex-blog/tree/main
