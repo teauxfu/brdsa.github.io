@@ -7,7 +7,7 @@ hidden: false
 ---
 
 <script>
-    import LightHouseScores from '$lib/components/LightHouseScores.svelte'
+    import LightHouseScores from '$lib/components/LightHouseScores2.svelte'
     import Counter from '$lib/components/Counter.svelte'
 </script>
 

@@ -1,7 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageLoad } from './$types';
-import { getPosts, getPostBySlug } from '$lib/utils';
-import { render } from 'svelte/server';
+import { getPosts, getPostBySlug, getPostModules, slugToPath } from '$lib/utils';
 import type { Picture } from 'vite-imagetools';
 
 // SvelteKit pages are expected to export this load function
@@ -12,32 +11,14 @@ export const load: PageLoad = (async ({ params }) => {
 
 	try {
 		const post = await getPostBySlug(slug);
-
+		const posts = getPostModules();
+		const contentModule = posts[slugToPath(params.slug)];
 		if (!post) {
 			throw error(404, 'Post not found');
 		}
 
-		// For server-side rendering, we need to render the component to HTML
-		// The module.default is the Svelte component
-		const Component = post.module?.default;
+		const { default: component, metadata } = await contentModule().then();
 
-		if (!Component) {
-			throw error(500, 'Post content could not be loaded');
-		}
-
-		// Render the component to HTML string using Svelte 5's render function
-		let html = '';
-		try {
-			const renderResult = render(Component, {
-				props: {}
-			});
-
-			// In Svelte 5, render() returns { body, head }
-			html = renderResult.body || '';
-		} catch (renderError) {
-			console.error('Error rendering component:', renderError);
-			html = '<p>Content rendering failed</p>';
-		}
 
 		const imageModules = import.meta.glob(
 			'/src/lib/images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
@@ -69,9 +50,8 @@ export const load: PageLoad = (async ({ params }) => {
 				imageUrl: post.imageUrl,
 				imageDescription: post.imageDescription
 			},
-			html,
 			hero,
-			postModule: Component
+			component
 		};
 	} catch (err) {
 		console.error('Error loading post:', err);
@@ -84,6 +64,6 @@ export const load: PageLoad = (async ({ params }) => {
 // https://svelte.dev/docs/kit/page-options#entries
 export const entries: EntryGenerator = () => {
 	const posts = getPosts(true);
-	const slugs = posts.map((p) => ({ slug: p.slug ?? p.title }));
+	const slugs = posts.map((p) => ({ slug: p.slug ?? 'no-slug' }));
 	return slugs;
 };

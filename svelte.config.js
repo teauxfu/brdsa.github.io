@@ -29,7 +29,11 @@ const config = {
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {
 				throw new Error(message);
-			}
+			},
+			handleMissingId: (({ message, id, path}) => {
+				console.log(`skipping missing id error ${message}`)
+				return;
+			})
 		}
 	},
 	extensions: ['.svelte', '.svx', '.md']

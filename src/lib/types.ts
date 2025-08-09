@@ -15,10 +15,9 @@ export interface PostMetadata {
 	tags?: string[];
 	imageUrl?: string;
 	imageDescription?: string;
-	module?: any; // The actual Svelte component module
 }
 
-export type PostModules = Record<string, () => Promise<{
-	default: any;
-	metadata: PostMetadata;
-}>>;
+export type PostModules = Record<
+	string,
+	() => Promise<{default: Component; metadata: PostMetadata;}>
+>;

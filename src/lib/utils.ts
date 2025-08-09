@@ -65,7 +65,6 @@ export function getPosts(includeHidden = false): PostMetadata[] {
 				slug, // Ensure slug is always present
 				author: metadata.author || 'Baton Rouge DSA',
 				hidden: metadata.hidden || false,
-				module: file
 			};
 
 			// Only include non-hidden posts unless explicitly requested
@@ -96,7 +95,6 @@ export async function getPostBySlug(targetSlug: string): Promise<PostMetadata | 
 				slug,
 				author: metadata.author || 'Baton Rouge DSA',
 				hidden: metadata.hidden || false,
-				module
 			};
 		}
 	}

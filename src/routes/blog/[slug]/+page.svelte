@@ -1,22 +1,8 @@
 <script lang="ts">
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
-	import type { PostMetadata } from '$lib/types.js';
-	import { getPostBySlug } from '$lib/utils.js';
 	let { data } = $props();
-	const { post, html, hero, postModule } = data;
-
-	let metadata: PostMetadata | undefined;
-	let postComponent: any = $state();
-
-	if (post.slug) {
-		getPostBySlug(post.slug).then((meta) => {
-			if (meta) {
-				metadata = meta;
-				postComponent = metadata.module.default;
-			}
-		});
-	}
+	const { post, hero } = data;
 </script>
 
 <svelte:head>
@@ -45,17 +31,7 @@
 			{/if}
 		</Prose>
 	</div>
-
-	<!-- {#if html}
-		<div>
-			<Prose>
-				{@html html}
-			</Prose>
-		</div>
-	{/if} -->
-
-	{#if postComponent}
-		<p>component below</p>
-		<postComponent></postComponent>
-	{/if}
+	<Prose>
+		<data.component></data.component>
+	</Prose>
 </article>

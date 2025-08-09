@@ -69,5 +69,4 @@
 	};
 </script>
 
-<p>Lighthouse graph below</p>
-<div id={chartId} {@attach myAttachment} style="width: 600px; height:400px;"></div>
+<div id={chartId} {@attach myAttachment} style="width: 600px; height:400px;" class="bg-white"></div>
