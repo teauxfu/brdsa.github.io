@@ -25,7 +25,7 @@
 
 <article>
 	<PaletteHeader>Welcome to Baton Rouge DSA</PaletteHeader>
-	<div class="palette-sibling">
+	<div class="palette-sibling flex justify-center">
 		<Prose>
 			<blockquote>
 				How many men ever went to a barbecue and would let one man take off the table what was
@@ -77,11 +77,13 @@
 	</div>
 
 	<div class="mt-4 palette-sibling">
-		<Prose>
-			<p class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white">
-				Here are some recent posts from us
-			</p>
-		</Prose>
+		<div class="flex justify-center">
+			<Prose>
+				<p class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white">
+					Here are some recent posts from us
+				</p>
+			</Prose>
+		</div>
 		<nav class="mx-auto flex max-w-[65ch] grow p-2">
 			<ul class="flex grow flex-col gap-3">
 				{#each data.posts as post}

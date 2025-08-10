@@ -14,7 +14,7 @@
 
 <article>
 	<PaletteHeader>About us</PaletteHeader>
-	<div class="palette-sibling">
+	<div class="palette-sibling flex justify-center">
 		<Prose>
             <div class="@2xl:flex @2xl:gap-3 items-center">
                 <blockquote class="min-w-xs @md:min-w-sm">
@@ -45,7 +45,7 @@
 		</Prose>
 	</div>
 
-	<div class="p-2">
+	<div class="p-2 flex justify-center">
 		<Prose>
 			<About />
 		</Prose>

@@ -9,7 +9,8 @@
 		Tooltip,
 		Legend,
 		Title,
-		Colors
+		Colors,
+		type ChartConfiguration
 	} from 'chart.js';
 
 	Chart.register([
@@ -23,72 +24,74 @@
 		Colors
 	]);
 
-	const chartId = 'chart';
+	import { data } from '$lib/data/lighthouse-scores.json';
+
+	const pages = [... new Set(data.map(r => r.page))];
+	let chart: Chart | undefined = $state();
+	let currentPage = $state('/');
+	let canvasElement : HTMLCanvasElement | undefined = $state();
+
 
 	const loadChart: Attachment = (element) => {
-		const scores = [
-			{
-				page: 'about',
-				build: 'jekyll',
-				seo: 78,
-				bestPractices: 18,
-				accessibility: 40,
-				performance: 90
-			},
-			{
-				page: 'fite',
-				build: 'jekyll',
-				seo: 68,
-				bestPractices: 78,
-				accessibility: 80,
-				performance: 55
-			},
-			{
-				page: 'fite',
-				build: 'sveltekit',
-				seo: 55,
-				bestPractices: 68,
-				accessibility: 66,
-				performance: 45
-			},
-			{
-				page: 'fite',
-				build: 'sveltekit',
-				seo: 32,
-				bestPractices: 99,
-				accessibility: 53,
-				performance: 12
-			}
-		];
-
-		const canvasElement = element as HTMLCanvasElement;
-		let chart: Chart;
+		canvasElement = element as HTMLCanvasElement;
 		if (canvasElement) {
-			chart = new Chart(canvasElement, {
-				type: 'bar',
-				data: {
-					labels: ['Accessibility', 'Performance', 'Best practices', 'SEO'],
-					datasets: [
-						{
-							label: 'Jekyll',
-							data: [15, 45, 75, 98]
-						},
-						{
-							label: 'SvelteKit',
-							data: [15, 45, 75, 98]
-						},
-					]
-				}
-			});
+			chart = new Chart(canvasElement, getChartConfigForPage('/'));
 		}
 
 		return () => {
-			console.log('cleaning up');
-			chart.destroy();
+			chart?.destroy();
 		};
 	};
+
+		function getDataForPage(build: 'SvelteKit' | 'Jekyll', page: string) {
+		const item = data.filter((r) => r.build === build && r.page === page).at(0);
+		if (!item) return [];
+		return [item.accessibility, item.performance, item.bestPractices, item.seo];
+	}
+
+	function getChartConfigForPage(page: string) {
+		return {
+			type: 'bar',
+			data: {
+				labels: ['Accessibility', 'Performance', 'Best practices', 'SEO'],
+				datasets: [
+					{
+						label: 'Jekyll',
+						data: getDataForPage('Jekyll', page)
+					},
+					{
+						label: 'SvelteKit',
+						data: getDataForPage('SvelteKit', page)
+					}
+				]
+			},
+			options: {
+				plugins: {
+					title: {
+						display: true,
+						text: `Results for page ${page}`
+					}
+				}
+			}
+		} as ChartConfiguration<'bar', number[], string>;
+	}
+
+	function changePage(page: string)
+	{
+		currentPage = page;
+		if (currentPage && canvasElement) {
+			chart?.destroy();
+			chart = new Chart(canvasElement, getChartConfigForPage(currentPage));
+		}
+	}
 </script>
 
+<div class="flex justify-evenly">
+	{#each pages as page}
+	<button class="dark:text-white font-bold bg-dsa-black2 border-2 border-dsa-red rounded-md px-0.5 my-2" 
+		onclick={() => changePage(page)}>{page}</button>
+	{/each}
+</div>
 <div class="bg-white">
-	<canvas id={chartId} {@attach loadChart} style="w-sm h-sm"></canvas>
+	<canvas {@attach loadChart} style="w-sm h-sm"></canvas>
 </div>

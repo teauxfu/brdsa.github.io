@@ -16,9 +16,9 @@
 
 <article>
 	<PaletteHeader>Famine Is The Enemy (FITE)</PaletteHeader>
-	<div class="palette-sibling">
+	<div class="palette-sibling flex justify-center">
 		<Prose>
-			<div class="items-center @2xl:flex @2xl:gap-3">
+			<div class="@2xl:flex @2xl:items-center @2xl:gap-3">
 				<blockquote>
 					The curse of poverty has no justification in our age. It is socially as cruel and blind as
 					the practice of cannibalism at the dawn of civilization, when men ate each other because
@@ -40,7 +40,10 @@
 						class="float-right mt-0 mb-0 max-h-55 object-scale-down py-2"
 					/>
 					<figcaption class="min-w-2xs">
-						<a href="https://commons.wikimedia.org/wiki/File:Martin_Luther_King,_Jr..jpg" target="_blank">
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Martin_Luther_King,_Jr..jpg"
+							target="_blank"
+						>
 							Nobel Foundation
 						</a>, Public domain, via Wikimedia Commons
 					</figcaption>
@@ -53,7 +56,7 @@
 		<Prose>
 			<Fite />
 		</Prose>
-		<aside>
+		<aside class="lg:pr-2">
 			<enhanced:img src={hero} alt="BR DSA members distribute food" />
 		</aside>
 	</div>

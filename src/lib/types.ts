@@ -25,7 +25,6 @@ export interface Recipie extends PostMetadata {
 	price?: string;
 }
 
-
 export type PostModules = Record<
 	string,
 	() => Promise<{default: Component; metadata: PostMetadata;}>

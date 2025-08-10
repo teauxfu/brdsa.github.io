@@ -2,6 +2,7 @@
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
 
+	import hero from '$lib/images/Emma_Goldman_seated.jpg?enhanced';
 	import Campaigns from './our-work.md';
 </script>
 
@@ -11,10 +12,10 @@
 </svelte:head>
 
 <article>
-	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">Our Work</PaletteHeader>	
-	<div class="palette-sibling">
+	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">Our Work</PaletteHeader>
+	<div class="palette-sibling flex justify-center">
 		<Prose>
-			<div class="">
+			<div class="@2xl:flex @2xl:items-center @2xl:gap-3">
 				<blockquote class="min-w-xs">
 					Liberty will not descend to a people, a people must raise themselves to liberty
 					<footer class="text-right">
@@ -24,21 +25,36 @@
 					</footer>
 				</blockquote>
 				<figure>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Emma_Goldman_seated.jpg/800px-Emma_Goldman_seated.jpg"
+					<enhanced:img
+						src={hero}
 						title="Emma Goldman"
 						alt="Portrait of Emma Goldman"
 						class="float-right mt-0 mb-0 max-h-55 object-scale-down py-2"
 					/>
 					<figcaption class="min-w-2xs">
-						<a href="https://commons.wikimedia.org/wiki/File:Emma_Goldman_seated.jpg" target="_blank">Takuma Kajiwara</a>, Public domain, via Wikimedia Commons
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Emma_Goldman_seated.jpg"
+							target="_blank">Takuma Kajiwara</a
+						>, Public domain, via Wikimedia Commons
 					</figcaption>
 				</figure>
 			</div>
 		</Prose>
 	</div>
 
-	<Prose>
-		<Campaigns />
-	</Prose>
+	<div class="flex justify-center">
+		<Prose>
+			<Campaigns />
+		</Prose>
+	</div>
+	<div class="palette-sibling flex justify-center">
+		<Prose>
+			<h2>Want to join the fight?</h2>
+			<p
+				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
+			>
+				If you'd like to take action to support these initiatives, please  <a href="/get-involved">check out our calendar</a> to see what we have planned
+			</p>
+		</Prose>
+	</div>
 </article>

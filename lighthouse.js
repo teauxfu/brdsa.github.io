@@ -17,7 +17,7 @@ const metasummary = './reports/metasummary.json';
 
 function getUrls(domain) {
   return {
-    'Homepage': `${domain}`,
+    'Homepage': `${domain}/`,
     'About': `${domain}/about`,
     'FITE': `${domain}/fite`,
     'Get Involved': `${domain}/get-involved`,
@@ -48,7 +48,7 @@ async function runLighthouse(domain, url, name) {
 
   const summary = JSON.parse(fs.readFileSync(metasummary));
   const reportObj = {
-    page: url,
+    page: url.replace(domain, ''),
     build: domain === prod ?  'Jekyll' : 'SvelteKit',
     performance: (runnerResult.lhr.categories.performance.score ?? 0) * 100,
     accessibility: (runnerResult.lhr.categories.accessibility.score ?? 0 )* 100,

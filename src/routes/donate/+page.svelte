@@ -1,9 +1,6 @@
 <script lang="ts">
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
-	const actionNetworkLink =
-				'https://actionnetwork.org/widgets/v5/fundraising/donate-to-baton-rouge-democratic-socialists-of-america?format=js&source=widget&recurring=true&period=recurring_monthly';
-
 </script>
 
 
@@ -17,7 +14,7 @@
 
 <article class="@container flex flex-col grow">
 	<PaletteHeader>Donate to BRDSA</PaletteHeader>
-	<div class="w-full bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<div class="palette-sibling flex justify-center">
 		<Prose>
 			<p class="dark:text-white dark:bg-dsa-black1 p-2 border-l-dsa-red dark:border-l-dsa-red1 border-l-4">
 				Want to see where your money goes? Come to <a href="/get-involved">our next chapter meeting</a> and
@@ -26,7 +23,7 @@
 		</Prose>
 	</div>
 	<div class="grow palette-sibling">
-		<script src={actionNetworkLink}></script>
+		<script src='https://actionnetwork.org/widgets/v5/fundraising/donate-to-baton-rouge-democratic-socialists-of-america?format=js&source=widget&recurring=true&period=recurring_monthly'></script>
 		<div id='can-fundraising-area-donate-to-baton-rouge-democratic-socialists-of-america' class="bg-white/80 dark:bg-dsa-black/80 max-w-6xl mx-auto" ></div>
 	</div>
 </article>

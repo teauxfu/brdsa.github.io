@@ -12,7 +12,7 @@
 
 <article>
 	<PaletteHeader>Get Involved</PaletteHeader>
-	<div class="palette-sibling">
+	<div class="palette-sibling flex justify-center">
 		<Prose>
 			<blockquote>
 				We who believe in freedom cannot rest until it comes
@@ -34,11 +34,13 @@
 		</Prose>
 	</div>
 	
-	<Prose>
-		<p class="dark:text-white p-2">
-			Want to stay in the loop? <a href="https://actionnetwork.org/forms/join-brdsa" target="_blank">Join our email list</a> or save a link to the calendar below.
-		</p>
-	</Prose>
+	<div class="flex justify-center">
+		<Prose>
+			<p class="dark:text-white p-2">
+				Want to stay in the loop? <a href="https://actionnetwork.org/forms/join-brdsa" target="_blank">Join our email list</a> or save a link to the calendar below.
+			</p>
+		</Prose>
+	</div>
 
 	<div class="p-2">
 		<iframe
@@ -52,7 +54,8 @@
 		></iframe>
 	</div>
 
-	<div class="p-2  ">
+
+	<div class="p-2 flex justify-center">
 		<Prose>
 			<GetInvolved />
 		</Prose>

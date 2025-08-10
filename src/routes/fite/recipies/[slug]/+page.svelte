@@ -16,7 +16,7 @@
 		{post.title}
 	</PaletteHeader>
 
-	<div class="palette-sibling">
+	<div class="palette-sibling flex justify-center">
 		<Prose>
 			<p
 				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
@@ -36,7 +36,18 @@
 			{/if}
 		</Prose>
 	</div>
-	<Prose>
-		<data.component></data.component>
-	</Prose>
+	<div class="flex justify-center">
+		<Prose>
+			<data.component></data.component>
+		</Prose>
+	</div>
+	<div class="palette-sibling flex justify-center">
+		<Prose>
+			<p
+				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
+			>
+				<a href="/fite/recipies">Back to list of recipies</a>
+			</p>
+		</Prose>
+	</div>
 </article>
