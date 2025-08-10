@@ -59,6 +59,16 @@ export function getRecipies(includeHidden = false): Recipie[] {
 	return posts;    
 }
 
+	export function getSummary(recipie : Recipie) 
+	{
+		const values = [];
+		values.push(recipie.difficulty)
+		if(recipie.cookTime)
+			values.push(recipie.cookTime)
+		if(recipie.feeds)
+			values.push(`feeds ${recipie.feeds}`);
+		return values.join(', ');
+	}
 
 // Get a single post by slug (for dynamic routes)
 export async function getPostBySlug(targetSlug: string): Promise<Recipie | null> {

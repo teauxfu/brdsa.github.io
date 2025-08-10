@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
+	import { getSummary } from '$lib/recipieUtils';
 	import type { Recipie } from '$lib/types.js';
 	let { data } = $props();
 
@@ -10,16 +11,7 @@
 		day: 'numeric'
 	};
 
-	function getSummary(recipie : Recipie) 
-	{
-		let values = [];
-		values.push(recipie.difficulty)
-		if(recipie.cookTime)
-			values.push(recipie.cookTime)
-		if(recipie.feeds)
-			values.push(`feeds ${recipie.feeds}`);
-		return values.join(', ');
-	}
+
 
 </script>
 
@@ -29,7 +21,7 @@
 </svelte:head>
 
 <article>
-	<PaletteHeader>Statements</PaletteHeader>
+	<PaletteHeader>FITE Cookbook 🥖🌹</PaletteHeader>
 	<div class="palette-sibling">
 		<Prose>
 			<p
