@@ -37,7 +37,14 @@
 						{#if post.date}
 							<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
 						{/if}
-						<span>{post.difficulty}, {post.cookTime}, {post.feeds}</span>
+						<span>{post.difficulty}
+							{#if post.cookTime}
+							, {post.cookTime}
+							{/if}
+							{#if post.feeds}
+							, feeds {post.feeds}
+							{/if}
+						</span>
 					</li>
 				{/each}
 			</ul>
