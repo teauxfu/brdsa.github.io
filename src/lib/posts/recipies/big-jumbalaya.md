@@ -1,5 +1,5 @@
 ---
-title: Meaty Jambalaya
+title: Jambalaya (big and small)
 source: https://docs.google.com/document/d/166HsLlPp05iQ_Lou_3KJtllEbTd9NIL9l3ZhsseOX9w/edit?usp=drive_link
 difficulty: hard
 cookTime: 5 hrs

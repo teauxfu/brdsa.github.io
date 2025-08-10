@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
+	import type { Recipie } from '$lib/types.js';
 	let { data } = $props();
 
 	const options: Intl.DateTimeFormatOptions = {
@@ -8,6 +9,18 @@
 		month: 'long',
 		day: 'numeric'
 	};
+
+	function getSummary(recipie : Recipie) 
+	{
+		let values = [];
+		values.push(recipie.difficulty)
+		if(recipie.cookTime)
+			values.push(recipie.cookTime)
+		if(recipie.feeds)
+			values.push(`feeds ${recipie.feeds}`);
+		return values.join(', ');
+	}
+
 </script>
 
 <svelte:head>
@@ -37,14 +50,7 @@
 						{#if post.date}
 							<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
 						{/if}
-						<span>{post.difficulty}
-							{#if post.cookTime}
-							, {post.cookTime}
-							{/if}
-							{#if post.feeds}
-							, feeds {post.feeds}
-							{/if}
-						</span>
+						<span>{getSummary(post)}</span>
 					</li>
 				{/each}
 			</ul>

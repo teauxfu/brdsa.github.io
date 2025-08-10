@@ -1,5 +1,5 @@
 ---
-title: Meaty Jambaaya
+title: Cajun Ninja Meaty Jambalaya
 source: https://docs.google.com/document/d/1ud0O2ROldjUq-JSV1equGyAbT-jDcK34_-tt7BNRUIU/edit?usp=drive_link
 difficulty: hard
 cookTime: 5 hrs
