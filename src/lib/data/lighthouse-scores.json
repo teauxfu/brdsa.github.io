@@ -3,7 +3,7 @@
     {
       "page": "/",
       "build": "SvelteKit",
-      "performance": 70,
+      "performance": 71,
       "accessibility": 84,
       "bestPractices": 79,
       "seo": 92
@@ -11,7 +11,7 @@
     {
       "page": "/about",
       "build": "SvelteKit",
-      "performance": 83,
+      "performance": 81,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 100
@@ -19,7 +19,7 @@
     {
       "page": "/fite",
       "build": "SvelteKit",
-      "performance": 85,
+      "performance": 81,
       "accessibility": 100,
       "bestPractices": 100,
       "seo": 100
@@ -27,7 +27,7 @@
     {
       "page": "/get-involved",
       "build": "SvelteKit",
-      "performance": 69,
+      "performance": 64,
       "accessibility": 100,
       "bestPractices": 75,
       "seo": 100
@@ -35,15 +35,15 @@
     {
       "page": "/campaigns",
       "build": "SvelteKit",
-      "performance": 79,
+      "performance": 81,
       "accessibility": 100,
-      "bestPractices": 79,
+      "bestPractices": 100,
       "seo": 100
     },
     {
       "page": "/donate",
       "build": "SvelteKit",
-      "performance": 56.00000000000001,
+      "performance": 55.00000000000001,
       "accessibility": 96,
       "bestPractices": 79,
       "seo": 100

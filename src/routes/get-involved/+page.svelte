@@ -27,7 +27,7 @@
 				src={hero}
 				title="Ella Baker"
 				alt="Ella Baker passionately speaking into a mic"
-				class="float-right mt-0 mb-0 py-2"
+				class="float-right mt-0 mb-0 py-2 w-full lg:w-2/3"
 				/>
 				<figcaption>George Ballis via <a href="https://www.crmvet.org/images/imgfs.htm" class="text-nowrap">Civil Rights Movement Archive</a></figcaption>
 			</figure>

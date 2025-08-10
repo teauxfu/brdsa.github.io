@@ -2,7 +2,6 @@
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
 	import { getSummary } from '$lib/recipieUtils';
-	import type { Recipie } from '$lib/types.js';
 	let { data } = $props();
 
 	const options: Intl.DateTimeFormatOptions = {
