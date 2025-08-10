@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit'
-import { getPosts } from '$lib/utils'
+import { getPosts } from '$lib/postUtils'
 
 export async function GET() {
 	

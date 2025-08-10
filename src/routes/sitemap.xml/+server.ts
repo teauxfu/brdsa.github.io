@@ -1,5 +1,5 @@
 import { config } from "$lib/config";
-import { getPosts } from "$lib/utils";
+import { getPosts } from "$lib/postUtils";
 
 export const prerender = true;
 

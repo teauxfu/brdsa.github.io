@@ -31,15 +31,13 @@ Note: meat can be substituted, does not have to be this exact proportion
 
 ### Instructions
 
-Preheat oven to 450 degrees.
-In a large pot, add sausage and cook until browned. 
-Add green onions, celery and bell pepper and sauté until tender .
-Add all other ingredients except rice and simmer for 15-30 minutes.
-Stir in rice.  Cover and reduce heat to low.
-After 20 minutes, stir and continue cooking covered for 10 more minutes.
-Turn off oven.  Put covered pot/aluminum trays in the oven for 1 hour.
-
----
+1. Preheat oven to 450 degrees.
+2. In a large pot, add sausage and cook until browned. 
+3. Add green onions, celery and bell pepper and sauté until tender .
+4. Add all other ingredients except rice and simmer for 15-30 minutes.
+5. Stir in rice.  Cover and reduce heat to low.
+6. After 20 minutes, stir and continue cooking covered for 10 more minutes.
+7. Turn off oven.  Put covered pot/aluminum trays in the oven for 1 hour.
 
 ## Small Jambalaya
 

@@ -12,12 +12,12 @@ feeds: 50
 Hi, it’s Jay!  This is my tried-and-true red beans and rice recipe for FITE.  I’ve been making this for years.  It’s quite popular and very cheap compared to some other meals.  (The beans, rice, onions, and celery were around $15 at Wal-Mart as of 11/24/2023.)  Thank you for cooking!
 
 You will need:
--A large metal pot with a lid (mine is 12in in diameter and 10in tall -- about 4.9 gallons)
--A long spoon
--A large rice cooker (ideal), a smaller rice cooker, OR a pot to cook rice on the stove
--A crock pot OR an oven-safe pot and an oven to keep the rice warm after cooking
--A sharp knife
--A cutting board
+- A large metal pot with a lid (mine is 12in in diameter and 10in tall -- about 4.9 gallons)
+- A long spoon
+- A large rice cooker (ideal), a smaller rice cooker, OR a pot to cook rice on the stove
+- A crock pot OR an oven-safe pot and an oven to keep the rice warm after cooking
+- A sharp knife
+- A cutting board
 
 ## Ingredients
 

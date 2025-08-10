@@ -13,9 +13,7 @@ price:
 
 ## Ingredients 
 
-
 Ingredients (total)
-
 
 ## Ingredients 
 

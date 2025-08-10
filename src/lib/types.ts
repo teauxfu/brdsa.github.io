@@ -1,7 +1,5 @@
 import type { Component } from "svelte";
 
-// this type models the frontmatter of a markdown post
-
 /** 
  * This type models the frontmatter of a Markdown blog post file.
 */

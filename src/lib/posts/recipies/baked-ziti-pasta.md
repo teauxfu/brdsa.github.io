@@ -9,20 +9,19 @@ cookTime: 1-2 hrs
 
 ## Ingredients 
 
-Approx 10lb ground beef ($30)
-4lb of ground Italian sausage ($12)
-9lb uncooked ziti pasta ($8)
-6 45oz jars Prego ($14)
-5lb bag mozzarella ($12)
-2 1lb bags Italian cheese ($4)
+- Approx 10lb ground beef ($30)
+- 4lb of ground Italian sausage ($12)
+- 9lb uncooked ziti pasta ($8)
+- 6 45oz jars Prego ($14)
+- 5lb bag mozzarella ($12)
+- 2 1lb bags Italian cheese ($4)
 
-Total cost of pasta was $80
-Should make 4 large catering pans
+Total cost of pasta was $80. Should make 4 large catering pans.
 
 ## Steps
 
-Brown and drain meats (season)
-Cook and strain pasta (salt water)
-Toss all ingredients together 
-Add any additional seasonings to taste 
-Bake 1hr at 350 degrees
+1. Brown and drain meats (season)
+2. Cook and strain pasta (salt water)
+3. Toss all ingredients together 
+4. Add any additional seasonings to taste 
+5. Bake 1hr at 350 degrees

@@ -3,7 +3,7 @@
 	location: 'https://brdsa.teauxfu.dev',
 	tagLine: 'Homepage for Baton Rouge DSA (BRDSA)',
 	description: 'Website for the Baton Rouge chapter of the Democratic Socialists of America (BRDSA)',
-	author: "BRDSA Communications Committee",
+	author: "BRDSA",
 	email: "brdsa@gmail.com",
 	// title is visible, link is link, caption is put in tooltip <a href={link} title={caption}>{title}</a>
 	headerLinks: [

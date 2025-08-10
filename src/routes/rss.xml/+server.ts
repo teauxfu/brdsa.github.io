@@ -1,4 +1,4 @@
-import { getPosts } from '$lib/utils';
+import { getPosts } from '$lib/postUtils';
 import {config} from '$lib/config';
 import type { PostMetadata } from '$lib/types';
 

@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageLoad } from './$types';
-import { getPosts, getPostModules, slugToPath } from '$lib/utils';
+import { getPosts, getPostModules, slugToPath } from '$lib/postUtils';
 import type { Picture } from 'vite-imagetools';
 
 // SvelteKit pages are expected to export this load function
