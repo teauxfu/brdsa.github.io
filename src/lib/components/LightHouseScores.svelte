@@ -1,45 +1,82 @@
 <script lang="ts">
 	import type { Attachment } from 'svelte/attachments';
-	import {Chart, BarController, BarElement, CategoryScale, LinearScale, Tooltip, Legend, Title, Colors, } from 'chart.js';
-	
-	Chart.register(
-		[
-			BarController,
-			BarElement,
-			CategoryScale, 
-			LinearScale,
-			Tooltip,
-			Legend,
-			Title,
-			Colors
-		]
-	);
+	import {
+		Chart,
+		BarController,
+		BarElement,
+		CategoryScale,
+		LinearScale,
+		Tooltip,
+		Legend,
+		Title,
+		Colors
+	} from 'chart.js';
+
+	Chart.register([
+		BarController,
+		BarElement,
+		CategoryScale,
+		LinearScale,
+		Tooltip,
+		Legend,
+		Title,
+		Colors
+	]);
 
 	const chartId = 'chart';
 
 	const loadChart: Attachment = (element) => {
-		const data = [
-			{ year: 2010, count: 10 },
-			{ year: 2011, count: 20 },
-			{ year: 2012, count: 15 },
-			{ year: 2013, count: 25 },
-			{ year: 2014, count: 22 },
-			{ year: 2015, count: 30 },
-			{ year: 2016, count: 28 }
+		const scores = [
+			{
+				page: 'about',
+				build: 'jekyll',
+				seo: 78,
+				bestPractices: 18,
+				accessibility: 40,
+				performance: 90
+			},
+			{
+				page: 'fite',
+				build: 'jekyll',
+				seo: 68,
+				bestPractices: 78,
+				accessibility: 80,
+				performance: 55
+			},
+			{
+				page: 'fite',
+				build: 'sveltekit',
+				seo: 55,
+				bestPractices: 68,
+				accessibility: 66,
+				performance: 45
+			},
+			{
+				page: 'fite',
+				build: 'sveltekit',
+				seo: 32,
+				bestPractices: 99,
+				accessibility: 53,
+				performance: 12
+			}
 		];
 
 		const canvasElement = element as HTMLCanvasElement;
-		let chart : Chart;
+		let chart: Chart;
 		if (canvasElement) {
 			chart = new Chart(canvasElement, {
 				type: 'bar',
 				data: {
-					labels: data.map((row) => row.year),
+					labels: ['Accessibility', 'Performance', 'Best practices', 'SEO'],
 					datasets: [
 						{
-							label: 'Acquisitions by year',
-							data: data.map((row) => row.count),
-						}
+							label: 'Jekyll',
+							data: [15, 45, 75, 98]
+						},
+						{
+							label: 'SvelteKit',
+							data: [15, 45, 75, 98]
+						},
 					]
 				}
 			});
