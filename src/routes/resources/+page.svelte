@@ -1,9 +1,6 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import LightHouseScores from '$lib/components/LightHouseScores.svelte';
-	import LightHouseScores2 from '$lib/components/LightHouseScores2.svelte';
-
-	// import Proposal from '$lib/posts/sveltekit-migration-proposal.md'
+	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 </script>
 
 
@@ -16,7 +13,7 @@
 	<PaletteHeader>Resources</PaletteHeader>
 	<div class="w-full palette-sibling">
 		<div class="w-300 h-300 bg-white">
-
+			<LightHouseScores />
 		</div>
 	</div>
 </article>

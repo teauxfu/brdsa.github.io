@@ -1,72 +1,53 @@
 <script lang="ts">
 	import type { Attachment } from 'svelte/attachments';
-	import * as echarts from 'echarts';
+	import {Chart, BarController, BarElement, CategoryScale, LinearScale} from 'chart.js';
+	
+	Chart.register(
+		[
+			BarController,
+			BarElement,
+			CategoryScale, 
+			LinearScale
+		]
+	);
 
 	const chartId = 'chart';
 
-	const chartConfig: echarts.EChartsOption = {
-		title: {
-			text: 'Lighthouse Scores'
-		},
-		tooltip: {},
-		dataset: {
-			dimensions: ['build', 'page', 'Accessibility', 'Best Practices', 'Performance', 'SEO'],
-			source: [
-				{
-					build: 'Jekyll',
-					page: '/',
-					Accessibility: 90,
-					'Best Practices': 80,
-					Performance: 70,
-					SEO: 60
-				},
-				{
-					build: 'Sveltekit',
-					page: '/',
-					Accessibility: 90,
-					'Best Practices': 80,
-					Performance: 70,
-					SEO: 60
-				},
-				{
-					build: 'Jekyll',
-					page: '/about',
-					Accessibility: 90,
-					'Best Practices': 80,
-					Performance: 70,
-					SEO: 60
-				},
-				{
-					build: 'Sveltekit',
-					page: '/about',
-					Accessibility: 90,
-					'Best Practices': 80,
-					Performance: 70,
-					SEO: 60
-				}
-			]
-		},
-		// Declare an x-axis (category axis).
-		// The category map the first column in the dataset by default.
-		xAxis: { type: 'category' },
-		// Declare a y-axis (value axis).
-		yAxis: {},
-		// Declare several 'bar' series,
-		// every series will auto-map to each column by default.
-		series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }]
-	};
+	const loadChart: Attachment = (element) => {
+		const data = [
+			{ year: 2010, count: 10 },
+			{ year: 2011, count: 20 },
+			{ year: 2012, count: 15 },
+			{ year: 2013, count: 25 },
+			{ year: 2014, count: 22 },
+			{ year: 2015, count: 30 },
+			{ year: 2016, count: 28 }
+		];
 
-	const myAttachment: Attachment = (element) => {
-		console.log('setting the chart options');
-		let chart = echarts.init(document.getElementById(chartId));
-		chart.setOption(chartConfig);
-		console.log('set the chart options');
+		const canvasElement = element as HTMLCanvasElement;
+		let chart : Chart;
+		if (canvasElement) {
+			chart = new Chart(canvasElement, {
+				type: 'bar',
+				data: {
+					labels: data.map((row) => row.year),
+					datasets: [
+						{
+							label: 'Acquisitions by year',
+							data: data.map((row) => row.count)
+						}
+					]
+				}
+			});
+		}
 
 		return () => {
 			console.log('cleaning up');
-			chart.dispose();
+			chart.destroy();
 		};
 	};
 </script>
 
-<div id={chartId} {@attach myAttachment} style="width: 600px; height:400px;" class="bg-white"></div>
+<div class="bg-white">
+	<canvas id={chartId} {@attach loadChart} style="w-sm h-sm"></canvas>
+</div>

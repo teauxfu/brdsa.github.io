@@ -7,8 +7,7 @@ hidden: false
 ---
 
 <script>
-    import LightHouseScores from '$lib/components/LightHouseScores2.svelte'
-    import Counter from '$lib/components/Counter.svelte'
+    import LightHouseScores from '$lib/components/LightHouseScores.svelte'
 </script>
 
 - [What's this about?](#whats-this-about)
@@ -21,6 +20,7 @@ hidden: false
 This branch is a proposal / proof of concept for of migrating the brdsa.org website from it's current site generator [Jekyll](https://jekyllrb.com/), to a new one called [SvelteKit](https://svelte.dev/docs/kit/introduction#What-is-SvelteKit).
 
 <LightHouseScores/>
+
 ## Why do this?
 
 Changing a framework like this is usually something you'd want to avoid unless you had good reasons. Jekyll is a great tool because it makes it easy to quickly generate static sites. It's been around for a long time, has lots of community support online, and a low barrier to entry. So why go through the trouble of this? Personally, I wanted to do it for fun, but there are some other reasons that are worth considering.

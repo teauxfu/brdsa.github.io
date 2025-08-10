@@ -7,13 +7,6 @@ imageUrl: Inaug2025speechphoto.jpg
 imageDescription: Jacob Newsom speaking outside the Governor's mansion
 ---
 
-<script>
-    import Counter from '$lib/components/Counter.svelte'
-    import LightHouseScores from '$lib/components/LightHouseScores.svelte'
-</script>
-
-<LightHouseScores/>
-
 Good afternoon, it is a pleasure to stand with yall today, my fellow workers and comrades, standing in defiance of the latest manifestation of the existential crisis of our age, this crisis of capitalism. True, we are here to express our discontent with President-Elect Donald Trump, but we oppose more than the man; we gather to oppose the system that supports him. A system that tells up things could be worse rather than they could be better, a system that tells us to blame our neighbor for our ills rather than the slumlord, the corporation, or the billionaire tax cuts, a system that steals from the working man and woman to line the pockets of those that already have more than enough in ill-gotten gains.
 
 We stand in the shadow of the tallest state capitol in the United States, a beacon of art-deco design and a construction that came with a promise; a progressive future for the families of Louisiana where every man was a king and there was a chicken in every pot; this is a future that has clearly not come to pass. We live in this state between a rock and a hard place. On the one hand, we have a Republican party lead by Jeff Landry, a Trump sycophant that eagerly enforces xenophobic rhetoric as a balm to cover his platform of privatization that benefits only his donors. On the other hand, we have an anemic Democratic Party who didn't even run enough candidates to prevent a Republican supermajority; the ineffectiveness of this "Left" party nationally is apparent, they are more concerned with fundraising galas than with showing up on time to prevent the gutting of the NLRB, as was the case with Kamala Harris last week.
