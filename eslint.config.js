@@ -6,6 +6,7 @@ import globals from 'globals';
 import { fileURLToPath } from 'node:url';
 import ts from 'typescript-eslint';
 import svelteConfig from './svelte.config.js';
+import stylistic from '@stylistic/eslint-plugin'
 
 const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
 
@@ -19,6 +20,10 @@ export default ts.config(
 	{
 		languageOptions: {
 			globals: { ...globals.browser, ...globals.node }
+		},
+		plugins:
+		{
+			'@stylistic': stylistic
 		},
 		rules: {
 			// typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.

@@ -1,15 +1,15 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
-	import Prose from '$lib/components/Prose.svelte';
-	import GetInvolved from './get-involved.md';
-	import hero from '$lib/images/Ella_Baker.jpg?enhanced';
+	import PaletteHeader from "$lib/components/PaletteHeader.svelte";
+	import Prose from "$lib/components/Prose.svelte";
+	import GetInvolved from "./get-involved.md";
+	import hero from "$lib/images/Ella_Baker.jpg?enhanced";
+	import HeadSummary from "$lib/components/HeadSummary.svelte";
 	const description = "How you can get involved with Baton Rouge DSA";
+	const title = "Get Involved";
 </script>
 
 <svelte:head>
-	<title>Get involved</title>
-	<meta name="description" content={description} />
-	<meta property="og:description" content={description}/>;
+	<HeadSummary {title} {description} />
 </svelte:head>
 
 <article>
@@ -26,20 +26,27 @@
 			</blockquote>
 			<figure>
 				<enhanced:img
-				src={hero}
-				title="Ella Baker"
-				alt="Ella Baker passionately speaking into a mic"
-				class="float-right mt-0 mb-0 py-2 w-full lg:w-2/3"
+					src={hero}
+					title="Ella Baker"
+					alt="Ella Baker passionately speaking into a mic"
+					class="float-right mt-0 mb-0 w-full py-2 lg:w-2/3"
 				/>
-				<figcaption>George Ballis via <a href="https://www.crmvet.org/images/imgfs.htm" class="text-nowrap">Civil Rights Movement Archive</a></figcaption>
+				<figcaption>
+					George Ballis via <a href="https://www.crmvet.org/images/imgfs.htm" class="text-nowrap"
+						>Civil Rights Movement Archive</a
+					>
+				</figcaption>
 			</figure>
 		</Prose>
 	</div>
-	
+
 	<div class="flex justify-center">
 		<Prose>
-			<p class="dark:text-white p-2">
-				Want to stay in the loop? <a href="https://actionnetwork.org/forms/join-brdsa" target="_blank">Join our email list</a> or save a link to the calendar below.
+			<p class="p-2 dark:text-white">
+				Want to stay in the loop? <a
+					href="https://actionnetwork.org/forms/join-brdsa"
+					target="_blank">Join our email list</a
+				> or save a link to the calendar below.
 			</p>
 		</Prose>
 	</div>
@@ -56,8 +63,7 @@
 		></iframe>
 	</div>
 
-
-	<div class="p-2 flex justify-center">
+	<div class="flex justify-center p-2">
 		<Prose>
 			<GetInvolved />
 		</Prose>

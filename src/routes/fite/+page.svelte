@@ -1,20 +1,20 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
-	import Prose from '$lib/components/Prose.svelte';
-	import Fite from './fite.md';
-	import hero from '$lib/images/FITE04-2025.png?enhanced';
-	import mlk from '$lib/images/Martin_Luther_King_Jr.jpg?enhanced';
-	const description = 'Information about our food distribution project Famine is the Enemy (FITE)';
+	import PaletteHeader from "$lib/components/PaletteHeader.svelte";
+	import Prose from "$lib/components/Prose.svelte";
+	import Fite from "./fite.md";
+	import hero from "$lib/images/FITE04-2025.png?enhanced";
+	import mlk from "$lib/images/Martin_Luther_King_Jr.jpg?enhanced";
+	import HeadSummary from "$lib/components/HeadSummary.svelte";
+	const description = "Information about our food distribution project Famine is the Enemy (FITE)";
+	const title = "Famine Is The Enemy (FITE)";
 </script>
 
 <svelte:head>
-	<title>Famine Is The Enemy (FITE)</title>
-	<meta name="description" content={description} />
-	<meta property="og:description" content={description} />
+	<HeadSummary {title} {description} />
 </svelte:head>
 
 <article>
-	<PaletteHeader>Famine Is The Enemy (FITE)</PaletteHeader>
+	<PaletteHeader>{title}</PaletteHeader>
 	<div class="palette-sibling flex justify-center">
 		<Prose>
 			<div class="@2xl:flex @2xl:items-center @2xl:gap-3">

@@ -1,20 +1,20 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
-	import Prose from '$lib/components/Prose.svelte';
+	import HeadSummary from "$lib/components/HeadSummary.svelte";
+	import PaletteHeader from "$lib/components/PaletteHeader.svelte";
+	import Prose from "$lib/components/Prose.svelte";
 	let { data } = $props();
 
 	const options: Intl.DateTimeFormatOptions = {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
+		year: "numeric",
+		month: "long",
+		day: "numeric"
 	};
+	const title = "Statements by BRDSA";
 	const description = "Statements and blog posts released by Baton Rouge DSA";
 </script>
 
 <svelte:head>
-	<title>Statements by BRDSA</title>	
-	<meta name="description" content={description} />
-	<meta property="og:description" content={description} />
+	<HeadSummary {title} {description} />
 </svelte:head>
 
 <article>
@@ -38,7 +38,7 @@
 								>{post.title}</a
 							>
 							{#if post.date}
-								<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
+								<time>{new Date(post.date).toLocaleDateString("en-us", options)}</time>
 							{/if}
 						</li>
 					{/each}

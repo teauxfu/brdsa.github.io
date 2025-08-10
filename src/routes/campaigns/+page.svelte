@@ -1,17 +1,16 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
-	import Prose from '$lib/components/Prose.svelte';
+	import HeadSummary from "$lib/components/HeadSummary.svelte";
+	import PaletteHeader from "$lib/components/PaletteHeader.svelte";
+	import Prose from "$lib/components/Prose.svelte";
 
-	import hero from '$lib/images/Emma_Goldman_seated.jpg?enhanced';
-	import Campaigns from './our-work.md';
+	import hero from "$lib/images/Emma_Goldman_seated.jpg?enhanced";
+	import Campaigns from "./our-work.md";
 	const description = "Information about campaigns and projects by Baton Rouge DSA";
+	const title = "Our work";
 </script>
 
 <svelte:head>
-	<title>Our work</title>
-	<meta name="description" content={description} />
-	<meta property="og:description" content={description} />
-
+	<HeadSummary {title} {description} />
 </svelte:head>
 
 <article>
@@ -56,7 +55,9 @@
 			<p
 				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
 			>
-				If you'd like to take action to support these initiatives, please  <a href="/get-involved">check out our calendar</a> to see what we have planned
+				If you'd like to take action to support these initiatives, please <a href="/get-involved"
+					>check out our calendar</a
+				> to see what we have planned
 			</p>
 		</Prose>
 	</div>

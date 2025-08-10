@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { reversed = false, backgroundClass = 'opacity-65', children }   = $props();
+	let { reversed = false, backgroundClass = "opacity-65", children } = $props();
 </script>
 
 <div class="relative isolate">

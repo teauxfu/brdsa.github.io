@@ -1,23 +1,23 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
-	import Prose from '$lib/components/Prose.svelte';
-	import About from './about/about.md';
-	import hero from '$lib/images/Header_ABetterWorld_Louisiana.jpeg?enhanced';
-	import foodDistribution from '$lib/images/baton-rouge-dsa-cover-image.jpg?enhanced';
+	import PaletteHeader from "$lib/components/PaletteHeader.svelte";
+	import Prose from "$lib/components/Prose.svelte";
+	import HeadSummary from "$lib/components/HeadSummary.svelte";
+	import type { PageProps } from "./$types";
+	import About from "./about/about.md";
+	import hero from "$lib/images/Header_ABetterWorld_Louisiana.jpeg?enhanced";
+	import foodDistribution from "$lib/images/baton-rouge-dsa-cover-image.jpg?enhanced";
 	const options: Intl.DateTimeFormatOptions = {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
+		year: "numeric",
+		month: "long",
+		day: "numeric"
 	};
-	let { data } = $props();
+	let { data }: PageProps = $props();
+	const { title } = data;
 	const description = "Home page for Baton Rouge DSA";
-	</script>
+</script>
 
 <svelte:head>
-	<title>Baton Rouge DSA</title>
-	<meta name="description" content={description} />
-	<meta property="og:description" content={description}/>;
-	
+	<HeadSummary {title} {description} />
 	<link
 		href="https://actionnetwork.org/css/style-embed-whitelabel-v3.css"
 		rel="stylesheet"
@@ -59,13 +59,13 @@
 
 	<div class="mx-auto max-w-5xl grow p-2">
 		<style>
-			.can_embed #can_embed_form #can_embed_form_inner input[type='checkbox'] {
+			.can_embed #can_embed_form #can_embed_form_inner input[type="checkbox"] {
 				border-color: var(--color-dsa-red) !important;
 				accent-color: var(--color-red-500) !important;
 				appearance: auto !important;
 			}
 			@media (prefers-color-scheme: dark) {
-				.can_embed #can_embed_form_inner input[type='checkbox'] {
+				.can_embed #can_embed_form_inner input[type="checkbox"] {
 					border: 1px !important;
 					border-color: var(--color-red) !important;
 				}
@@ -78,10 +78,12 @@
 		<div id="can-form-area-join-brdsa" class="w-full bg-white/80 dark:bg-dsa-black/80"></div>
 	</div>
 
-	<div class="mt-4 palette-sibling">
+	<div class="palette-sibling mt-4">
 		<div class="flex justify-center">
 			<Prose>
-				<p class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white">
+				<p
+					class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
+				>
 					Here are some recent posts from us
 				</p>
 			</Prose>
@@ -94,7 +96,7 @@
 							>{post.title}</a
 						>
 						{#if post.date}
-							<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
+							<time>{new Date(post.date).toLocaleDateString("en-us", options)}</time>
 						{/if}
 					</li>
 				{/each}

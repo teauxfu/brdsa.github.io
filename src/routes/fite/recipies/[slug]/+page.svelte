@@ -1,15 +1,17 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
-	import Prose from '$lib/components/Prose.svelte';
-	import { getSummary } from '$lib/recipieUtils.js';
+	import HeadSummary from "$lib/components/HeadSummary.svelte";
+	import PaletteHeader from "$lib/components/PaletteHeader.svelte";
+	import Prose from "$lib/components/Prose.svelte";
+	import { getSummary } from "$lib/recipieUtils.js";
 	let { data } = $props();
 	const { post, hero } = data;
 </script>
 
 <svelte:head>
-	<title>{post.title}</title>
-	<meta name="description" content={post.description} />
-	<meta property="og:description" content={post.description}/>;
+	<HeadSummary
+		title={post.title}
+		description={post.description ?? "A recipie contributed to FITE"}
+	/>
 </svelte:head>
 
 <article>
@@ -24,14 +26,14 @@
 			>
 				{getSummary(post)}
 				{#if post.description}
-					<br/>
+					<br />
 					{post.description}
 				{/if}
 			</p>
 			{#if hero}
 				<enhanced:img
 					src={hero}
-					alt={post.imageDescription ?? 'This image has no description'}
+					alt={post.imageDescription ?? "This image has no description"}
 					class="-mt-7"
 				/>
 			{/if}

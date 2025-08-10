@@ -1,14 +1,14 @@
 <script lang="ts">
-	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
-	import Prose from '$lib/components/Prose.svelte';
+	import HeadSummary from "$lib/components/HeadSummary.svelte";
+	import PaletteHeader from "$lib/components/PaletteHeader.svelte";
+	import Prose from "$lib/components/Prose.svelte";
 	let { data } = $props();
 	const { post, hero } = data;
+	const { title, description } = post;
 </script>
 
 <svelte:head>
-	<title>{post.title}</title>
-	<meta name="description" content={post.description} />
-	<meta property="og:description" content={post.description} />
+	<HeadSummary {title} description={description ?? title} />
 </svelte:head>
 
 <article>
@@ -28,7 +28,7 @@
 			{#if hero}
 				<enhanced:img
 					src={hero}
-					alt={post.imageDescription ?? 'This image has no description'}
+					alt={post.imageDescription ?? "This image has no description"}
 					class="-mt-7"
 				/>
 			{/if}

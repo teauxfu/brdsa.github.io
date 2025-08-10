@@ -4,8 +4,7 @@ import { getPosts } from "$lib/utils";
 export const prerender = true;
 
 export async function GET() {
-
-    const posts = getPosts();
+	const posts = getPosts();
 	return new Response(
 		`
 		<?xml version="1.0" encoding="UTF-8" ?>
@@ -38,19 +37,19 @@ export async function GET() {
             <url>
                 <loc>${config.location}/blog</loc>
             </url>
-            ${posts.map(post => 
-                `
+            ${posts.map(
+							(post) =>
+								`
                 <url>
                     <loc>${config.location}/blog/${post.slug}</loc>
                 </url>
                 `
-            )}
+						)}
 		</urlset>`.trim(),
 		{
 			headers: {
-				'Content-Type': 'application/xml'
+				"Content-Type": "application/xml"
 			}
 		}
 	);
 }
-
