@@ -3,7 +3,7 @@
 	import Chart from 'chart.js/auto';
 	const chartId = 'chart';
 
-	const myAttachment: Attachment = (element) => {
+	const loadChart: Attachment = (element) => {
 		const data = [
 			{ year: 2010, count: 10 },
 			{ year: 2011, count: 20 },
@@ -14,7 +14,7 @@
 			{ year: 2016, count: 28 }
 		];
 
-		const canvasElement = document.getElementById(chartId) as HTMLCanvasElement;
+		const canvasElement = element as HTMLCanvasElement;
 		let chart : Chart;
 		if (canvasElement) {
 			chart = new Chart(canvasElement, {
@@ -38,5 +38,4 @@
 	};
 </script>
 
-<p>Lighthouse graph below :(</p>
-<canvas id={chartId} {@attach myAttachment} style="width: 600px; height:400px;"></canvas>
+<canvas id={chartId} {@attach loadChart} style="w-sm h-sm"></canvas>

@@ -7,7 +7,7 @@ import type { Component } from "svelte";
 */
 export interface PostMetadata {
 	title: string;
-	date: string;
+	date?: string;
 	author?: string;
 	slug?: string; // Custom slug from frontmatter
 	hidden?: boolean; // Whether to hide from public post lists
@@ -17,7 +17,21 @@ export interface PostMetadata {
 	imageDescription?: string;
 }
 
+export interface Recipie extends PostMetadata {
+	difficulty?: string;
+	source?: string;
+	feeds?: number;
+	cookTime?: string;
+	price?: string;
+}
+
+
 export type PostModules = Record<
 	string,
 	() => Promise<{default: Component; metadata: PostMetadata;}>
+>;
+
+export type RecipieModules = Record<
+	string,
+	() => Promise<{default: Component; metadata: Recipie;}>
 >;

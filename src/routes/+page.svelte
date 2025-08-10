@@ -25,8 +25,7 @@
 
 <article>
 	<PaletteHeader>Welcome to Baton Rouge DSA</PaletteHeader>
-
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<div class="palette-sibling">
 		<Prose>
 			<blockquote>
 				How many men ever went to a barbecue and would let one man take off the table what was
@@ -77,7 +76,7 @@
 		<div id="can-form-area-join-brdsa" class="w-full bg-white/80 dark:bg-dsa-black/80"></div>
 	</div>
 
-	<div class="mt-4 bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<div class="mt-4 palette-sibling">
 		<Prose>
 			<p class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white">
 				Here are some recent posts from us
@@ -90,7 +89,9 @@
 						<a href="/blog/{post.slug}" class="text-3xl underline decoration-dsa-red"
 							>{post.title}</a
 						>
-						<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
+						{#if post.date}
+							<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
+						{/if}
 					</li>
 				{/each}
 			</ul>

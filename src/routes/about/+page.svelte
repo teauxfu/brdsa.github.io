@@ -14,7 +14,7 @@
 
 <article>
 	<PaletteHeader>About us</PaletteHeader>
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<div class="palette-sibling">
 		<Prose>
             <div class="@2xl:flex @2xl:gap-3 items-center">
                 <blockquote class="min-w-xs @md:min-w-sm">

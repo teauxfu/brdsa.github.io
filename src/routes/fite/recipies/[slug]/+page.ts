@@ -1,7 +1,7 @@
+import { getPostBySlug, getRecipieModules, getRecipies, slugToPath } from '$lib/recipieUtils';
 import { error } from '@sveltejs/kit';
-import type { EntryGenerator, PageLoad } from './$types';
-import { getPosts, getPostBySlug, getPostModules, slugToPath } from '$lib/utils';
 import type { Picture } from 'vite-imagetools';
+import type { EntryGenerator, PageLoad } from './$types';
 
 // SvelteKit pages are expected to export this load function
 // this params object provides info about the current request, such as which slug is in the URL
@@ -15,7 +15,7 @@ export const load: PageLoad = (async ({ params }) => {
 			throw error(404, 'Post not found');
 		}
 		
-		const posts = getPostModules();
+		const posts = getRecipieModules();
 		const contentModule = posts[slugToPath(params.slug)];
 		const { default: component, metadata } = await contentModule().then();
 
@@ -54,8 +54,8 @@ export const load: PageLoad = (async ({ params }) => {
 			component
 		};
 	} catch (err) {
-		console.error('Error loading post:', err);
-		throw error(404, 'Post not found');
+		console.error('Error loading recipie:', err);
+		throw error(404, 'Recipie not found');
 	}
 }) satisfies PageLoad;
 
@@ -63,7 +63,7 @@ export const load: PageLoad = (async ({ params }) => {
 // we do this by globbing over the posts dir
 // https://svelte.dev/docs/kit/page-options#entries
 export const entries: EntryGenerator = () => {
-	const posts = getPosts(true);
+	const posts = getRecipies(true);
 	const slugs = posts.map((p) => ({ slug: p.slug ?? 'no-slug' }));
 	return slugs;
 };

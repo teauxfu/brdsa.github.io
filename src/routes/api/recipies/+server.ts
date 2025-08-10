@@ -1,10 +1,10 @@
 import { json } from '@sveltejs/kit'
-import { getPosts } from '$lib/utils'
+import { getRecipies } from '$lib/recipieUtils';
 
 export async function GET() {
 	
 	try {
-		const posts = getPosts();
+		const posts = getRecipies();
 		return json(posts);
 	} catch (error) {
 		console.error('Error fetching posts:', error);

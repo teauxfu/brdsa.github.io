@@ -11,8 +11,8 @@
 </script>
 
 <svelte:head>
-	<title>Statements by BRDSA</title>
-	<meta name="description" content="Statements and blog posts released by Baton Rouge DSA" />
+	<title>FITE Cookbook</title>
+	<meta name="description" content="FITE Recipies and Guides" />
 </svelte:head>
 
 <article>
@@ -22,7 +22,7 @@
 			<p
 				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
 			>
-				This is a list of statements released by our chapter.
+				This is a list of recipies submitted by FITE contributors.
 			</p>
 		</Prose>
 	</div>
@@ -31,12 +31,13 @@
 			<ul class="flex grow flex-col gap-3">
 				{#each data.posts as post}
 					<li class="flex flex-col">
-						<a href="/blog/{post.slug}" class="text-4xl underline decoration-dsa-red"
+						<a href="/fite/recipies/{post.slug}" class="text-4xl underline decoration-dsa-red"
 							>{post.title}</a
 						>
 						{#if post.date}
 							<time>{new Date(post.date).toLocaleDateString('en-us', options)}</time>
 						{/if}
+						<span>{post.difficulty}, {post.cookTime}, {post.feeds}</span>
 					</li>
 				{/each}
 			</ul>

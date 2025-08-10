@@ -12,7 +12,7 @@
 
 <article>
 	<PaletteHeader>Get Involved</PaletteHeader>
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<div class="palette-sibling">
 		<Prose>
 			<blockquote>
 				We who believe in freedom cannot rest until it comes

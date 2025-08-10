@@ -14,13 +14,9 @@
 
 <article>
 	<PaletteHeader>Resources</PaletteHeader>
-	<div class="w-full bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<div class="w-full palette-sibling">
 		<div class="w-300 h-300 bg-white">
 
-			<LightHouseScores2/>
 		</div>
-	</div>
-	<div>
-		<!-- <Proposal/> -->
 	</div>
 </article>

@@ -16,7 +16,7 @@
 
 <article>
 	<PaletteHeader>Famine Is The Enemy (FITE)</PaletteHeader>
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<div class="palette-sibling">
 		<Prose>
 			<div class="items-center @2xl:flex @2xl:gap-3">
 				<blockquote>

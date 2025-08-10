@@ -11,8 +11,8 @@
 </svelte:head>
 
 <article>
-	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">Our Work</PaletteHeader>
-	<div class="bg-dsa-red4/65 dark:bg-dsa-black4/65">
+	<PaletteHeader headerClass="text-5xl font-bold pl-2 pb-3">Our Work</PaletteHeader>	
+	<div class="palette-sibling">
 		<Prose>
 			<div class="">
 				<blockquote class="min-w-xs">

@@ -25,7 +25,7 @@
 			</p>
 		</Prose>
 	</div>
-	<div class="grow">
+	<div class="grow palette-sibling">
 		<script src={actionNetworkLink}></script>
 		<div id='can-fundraising-area-donate-to-baton-rouge-democratic-socialists-of-america' class="bg-white/80 dark:bg-dsa-black/80 max-w-6xl mx-auto" ></div>
 	</div>

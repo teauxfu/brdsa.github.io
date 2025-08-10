@@ -9,6 +9,15 @@
 	}
 }
 
+@layer components
+{
+	.palette-sibling
+	{
+		@apply bg-dsa-red4/65 dark:bg-dsa-black4/65;
+	}
+}
+
+
 .prose blockquote {
 	@apply mb-0 border-l-dsa-red p-2 pr-1 dark:border-l-dsa-red1 dark:bg-dsa-black1 h-fit;
 }
