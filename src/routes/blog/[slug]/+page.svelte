@@ -15,7 +15,7 @@
 		{post.title}
 	</PaletteHeader>
 
-	<div class="palette-sibling">
+	<div class="palette-sibling flex justify-center">
 		<Prose>
 			{#if post.description}
 				<p
@@ -33,7 +33,9 @@
 			{/if}
 		</Prose>
 	</div>
-	<Prose>
-		<data.component></data.component>
-	</Prose>
+	<div class="flex justify-center">
+		<Prose>
+			<data.component></data.component>
+		</Prose>
+	</div>
 </article>

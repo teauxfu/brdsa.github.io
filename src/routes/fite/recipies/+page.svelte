@@ -18,7 +18,7 @@
 </svelte:head>
 
 <article>
-	<PaletteHeader>FITE Cookbook 🥖🌹</PaletteHeader>
+	<PaletteHeader>FITE Cookbook</PaletteHeader>
 	<div class="palette-sibling flex justify-center">
 		<Prose>
 			<p

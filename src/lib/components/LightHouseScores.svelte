@@ -86,6 +86,7 @@
 	}
 </script>
 
+<em>click to view results for page</em>
 <div class="flex justify-evenly">
 	{#each pages as page}
 	<button class="dark:text-white font-bold bg-dsa-black2 border-2 border-dsa-red rounded-md px-0.5 my-2" 
