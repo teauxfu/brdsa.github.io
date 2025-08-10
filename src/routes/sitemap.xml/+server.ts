@@ -5,8 +5,7 @@ export const prerender = true;
 
 export async function GET() {
 
-    const posts = await getPosts();
-
+    const posts = getPosts();
 	return new Response(
 		`
 		<?xml version="1.0" encoding="UTF-8" ?>

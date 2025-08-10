@@ -8,11 +8,13 @@
 		month: 'long',
 		day: 'numeric'
 	};
+	const description = "Statements and blog posts released by Baton Rouge DSA";
 </script>
 
 <svelte:head>
-	<title>Statements by BRDSA</title>
-	<meta name="description" content="Statements and blog posts released by Baton Rouge DSA" />
+	<title>Statements by BRDSA</title>	
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description} />
 </svelte:head>
 
 <article>

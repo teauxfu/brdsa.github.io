@@ -10,12 +10,14 @@
 		day: 'numeric'
 	};
 	let { data } = $props();
-</script>
+	const description = "Home page for Baton Rouge DSA";
+	</script>
 
 <svelte:head>
 	<title>Baton Rouge DSA</title>
-	<meta name="description" content="Home page for Baton Rouge DSA" />
-	<!-- <link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' /> -->
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description}/>;
+	
 	<link
 		href="https://actionnetwork.org/css/style-embed-whitelabel-v3.css"
 		rel="stylesheet"

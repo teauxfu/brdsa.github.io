@@ -3,13 +3,14 @@
 	import Prose from '$lib/components/Prose.svelte';
 	import type { PostMetadata } from '$lib/types';
 	import About, { metadata } from './about.md';
-	const meta = metadata as PostMetadata;
     import hero from '$lib/images/Debs.jpg?enhanced'
+    const description = "About Baton Rouge DSA";
 </script>
 
 <svelte:head>
 	<title>About BRDSA</title>
-	<meta name="description" content="About Baton Rouge DSA" />
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description} />
 </svelte:head>
 
 <article>

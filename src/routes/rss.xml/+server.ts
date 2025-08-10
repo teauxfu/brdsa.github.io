@@ -1,10 +1,27 @@
 import { getPosts } from '$lib/utils';
 import {config} from '$lib/config';
+import type { PostMetadata } from '$lib/types';
 
 export const prerender = true;
 
+
+function getItemsForPost(post: PostMetadata)
+{
+    const values = ['<item>'];
+    values.push(`<title>${post.title}</title>`);
+    values.push(`<link href="${config.location}/blog/${post.slug}/"/>`);
+    values.push(`<id>${config.location}/blog/${post.slug}/</id>`);
+    if(post.date)
+    {
+        values.push(`<updated>${new Date(post.date).toISOString()}</updated>`);
+        values.push(`<published>${new Date(post.date).toISOString()}</published>`);
+    }
+    values.push('</item>');
+    return values.join('\n');
+}
+
 export async function GET() {
-	const posts = await getPosts();
+	const posts = getPosts();
 	return new Response(
 		`
         <?xml version="1.0" encoding="utf-8"?>
@@ -21,17 +38,7 @@ export async function GET() {
                 <managingEditor>${config.email}</managingEditor>
                 <webMaster>${config.email}</webMaster>
                 <generator>JavaScript</generator>             
-            ${posts
-                .map(
-                (post) => `<item>
-                    <title>${post.title}</title>
-                    <link href="${config.location}/blog/${post.slug}/"/>
-                    <id>${config.location}/blog/${post.slug}/</id>
-                    <updated>${new Date(post.date).toISOString()}</updated>
-                    <published>${new Date(post.date).toISOString()}</published>
-                </item>`
-                )
-                .join('\n')}
+            ${posts.map((post) => getItemsForPost(post)).join('\n')}
             </channel>
         </rss>
         `.trim(),

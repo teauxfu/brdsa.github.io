@@ -3,11 +3,13 @@
 	import Prose from '$lib/components/Prose.svelte';
 	import GetInvolved from './get-involved.md';
 	import hero from '$lib/images/Ella_Baker.jpg?enhanced';
+	const description = "How you can get involved with Baton Rouge DSA";
 </script>
 
 <svelte:head>
 	<title>Get involved</title>
-	<meta name="description" content="How you can get involved with Baton Rouge DSA" />
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description}/>;
 </svelte:head>
 
 <article>

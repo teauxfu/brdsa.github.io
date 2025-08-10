@@ -4,11 +4,14 @@
 
 	import hero from '$lib/images/Emma_Goldman_seated.jpg?enhanced';
 	import Campaigns from './our-work.md';
+	const description = "Information about campaigns and projects by Baton Rouge DSA";
 </script>
 
 <svelte:head>
 	<title>Our work</title>
-	<meta name="description" content="Information about campaigns and projects by Baton Rouge DSA" />
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description} />
+
 </svelte:head>
 
 <article>

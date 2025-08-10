@@ -4,14 +4,13 @@
 	import Fite from './fite.md';
 	import hero from '$lib/images/FITE04-2025.png?enhanced';
 	import mlk from '$lib/images/Martin_Luther_King_Jr.jpg?enhanced';
+	const description = 'Information about our food distribution project Famine is the Enemy (FITE)';
 </script>
 
 <svelte:head>
 	<title>Famine Is The Enemy (FITE)</title>
-	<meta
-		name="description"
-		content="Information about our food distribution project Famine is the Enemy (FITE)"
-	/>
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description} />
 </svelte:head>
 
 <article>

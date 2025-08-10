@@ -9,11 +9,13 @@
 		month: 'long',
 		day: 'numeric'
 	};
+	const description = "FITE Recipies and Guides";
 </script>
 
 <svelte:head>
 	<title>FITE Cookbook</title>
-	<meta name="description" content="FITE Recipies and Guides" />
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description}/>;
 </svelte:head>
 
 <article>

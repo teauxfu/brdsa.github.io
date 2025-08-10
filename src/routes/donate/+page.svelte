@@ -1,14 +1,13 @@
 <script lang="ts">
 	import PaletteHeader from '$lib/components/PaletteHeader.svelte';
 	import Prose from '$lib/components/Prose.svelte';
+	const description = "Information about donating to Baton Rouge DSA";
 </script>
-
-
 
 <svelte:head>
 	<title>Donate to BRDSA</title>
-	<meta name="description" content="Information about donating to Baton Rouge DSA" />
-	<!-- <link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css' /> -->
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description} />
 	<link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' />
 </svelte:head>
 
