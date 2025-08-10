@@ -1,4 +1,4 @@
-import type { PostMetadata, Recipie } from '$lib/types';
+import type { Recipie } from '$lib/types';
 import type { PageServerLoad } from '../../$types';
 
 export const load: PageServerLoad = async ({fetch}) => {

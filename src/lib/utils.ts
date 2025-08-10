@@ -62,7 +62,7 @@ export async function getPostBySlug(targetSlug: string): Promise<PostMetadata | 
 	// First, try to find by custom slug in frontmatter
 	for (const [path, moduleLoader] of Object.entries(modules)) {
 		const module = await moduleLoader();
-		const metadata = (module as any).metadata as PostMetadata;
+		const metadata = (module as Record<string, unknown>).metadata as PostMetadata;
 		const slug = metadata.slug || pathToSlug(path);
 
 		if (slug === targetSlug) {

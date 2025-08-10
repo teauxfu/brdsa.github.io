@@ -1,4 +1,4 @@
-import { getPostBySlug, getRecipieModules, getRecipies, slugToPath } from '$lib/recipieUtils';
+import { getRecipieModules, getRecipies, slugToPath } from '$lib/recipieUtils';
 import { error } from '@sveltejs/kit';
 import type { Picture } from 'vite-imagetools';
 import type { EntryGenerator, PageLoad } from './$types';
@@ -7,18 +7,10 @@ import type { EntryGenerator, PageLoad } from './$types';
 // this params object provides info about the current request, such as which slug is in the URL
 
 export const load: PageLoad = (async ({ params }) => {
-	const { slug } = params;
-
 	try {
-		const post = await getPostBySlug(slug);
-		if (!post) {
-			throw error(404, 'Post not found');
-		}
-		
 		const posts = getRecipieModules();
 		const contentModule = posts[slugToPath(params.slug)];
 		const { default: component, metadata } = await contentModule().then();
-
 
 		const imageModules = import.meta.glob(
 			'/src/lib/images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
@@ -32,23 +24,15 @@ export const load: PageLoad = (async ({ params }) => {
 
 		let match: any | undefined = undefined;
 		let hero: Picture | undefined;
-		if (post.imageUrl) {
-			match = imageModules[`/src/lib/images/${post.imageUrl}`];
+		if (metadata.imageUrl) {
+			match = imageModules[`/src/lib/images/${metadata.imageUrl}`];
 			// the typescript compiler says there's no default on match, but the code only works with it, so...
 			if (match) hero = match.default;
 		}
 
 		return {
 			post: {
-				title: post.title,
-				date: post.date,
-				author: post.author,
-				slug: post.slug,
-				hidden: post.hidden,
-				description: post.description,
-				tags: post.tags,
-				imageUrl: post.imageUrl,
-				imageDescription: post.imageDescription
+				...metadata
 			},
 			hero,
 			component

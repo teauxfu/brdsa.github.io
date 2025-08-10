@@ -1,6 +1,6 @@
 ---
 title: SvelteKit Migration Proposal
-slug: proposal
+slug: sveltekit-migration-proposal
 date: 2025-07-30
 description: This is a proposal for migrating the BRDSA site from Jekyll to SvelteKit.
 hidden: false
