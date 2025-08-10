@@ -58,13 +58,15 @@ Below are some additional technical details and some data that shows the perform
 [Svelte](https://svelte.dev/docs/svelte/overview) is a JavaScript library for creating UIs, and SvelteKit is a webserver tailored to serving Svelte apps.
 SvelteKit can also be used as a static site generator, which is what Jekyll is and what we want it for. 
 
-Our website is a static site -- just some files sitting on a server without any dynamic content like a comments section. The parts that are truly interactive (that talk to a database somewhere), like the donate widget and so on, are served through <code>iframe</code>s which act kind of like windows into a different website. For example, there's no comment section or like buttons because that would require updating a database somewhere, which we don't have or need.
+Our website is a static site -- just some files sitting on a server without any dynamic content from a database like a comments section. The parts that are dynamic, like the donate widget and so on, are served through <code>iframe</code>s which act kind of like windows into a different website.
 
 More to the point, because SvelteKit excels at pre-prendering pages for optimal load times and SEO performance, all those benefits apply to using it as a static site generator. Static sites are great because they can usually be hosted for free or cheaply. Our current (free) webhost, [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages), requires that we produce a static build. 
 
-Svelte itself as a UI library has a really robust component model -- basically we can design a few elements on the page and reuse them easily. For anything but trivial HTML layouts, this is essential. Furthermore, through community libraries such as [mdsvex](https://mdsvex.pngwn.io/) we can easily take advantage of using Markdown for writing content. In combination, we get to design beautiful and responsive UI using Svelte, and do the bulk of our copy/prose/post authoring in easy-breezy Markdown. We can also add interactive components such as the animated graph below.
+Svelte itself as a UI library has a really robust component model -- basically we can design a few rich elements or layouts and reuse them easily. For anything but trivial HTML layouts, this is essential. Additionally, through community libraries such as [mdsvex](https://mdsvex.pngwn.io/) we can easily take advantage of using Markdown for writing content. In combination, we get to design beautiful and responsive UI using Svelte, and do the bulk of our copy/prose/post authoring in easy-breezy Markdown. We can also add interactive Svelte components directly to our markdown, such as the animated graph below.
 
 ### Data
+
+As part of the project I thought it would make sense to gather some data to help motivate the change. The results indicate that the SvelteKit build is generally more performant than the Jekyll build. 
 
 [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) is an open source tool maintained by Google that is commonly used to generate metrics of page health. It measures across four core categories: accessibility, performance, best practices, and SEO friendliness. 
 
