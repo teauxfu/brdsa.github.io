@@ -1,13 +1,17 @@
 <script lang="ts">
 	import type { Attachment } from 'svelte/attachments';
-	import {Chart, BarController, BarElement, CategoryScale, LinearScale} from 'chart.js';
+	import {Chart, BarController, BarElement, CategoryScale, LinearScale, Tooltip, Legend, Title, Colors, } from 'chart.js';
 	
 	Chart.register(
 		[
 			BarController,
 			BarElement,
 			CategoryScale, 
-			LinearScale
+			LinearScale,
+			Tooltip,
+			Legend,
+			Title,
+			Colors
 		]
 	);
 
@@ -34,7 +38,7 @@
 					datasets: [
 						{
 							label: 'Acquisitions by year',
-							data: data.map((row) => row.count)
+							data: data.map((row) => row.count),
 						}
 					]
 				}
