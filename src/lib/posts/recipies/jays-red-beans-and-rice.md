@@ -3,7 +3,8 @@ title: Jay's Red Beans And Rice
 source: https://docs.google.com/document/d/1FLn0jF6KJLsfWypjEu3w81kdl8Nu7P61HTMqpZvliyE/edit?usp=drive_link
 difficulty: easy
 cookTime: 3.5-4 hrs
-description: Jay's tried and true red beans and rice. Feeds 50.
+description: Jay's tried and true red beans and rice. 
+feeds: 50
 ---
 
 # Red Beans and Rice

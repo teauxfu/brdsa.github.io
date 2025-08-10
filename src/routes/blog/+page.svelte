@@ -2,13 +2,15 @@
 	import HeadSummary from "$lib/components/HeadSummary.svelte";
 	import PaletteHeader from "$lib/components/PaletteHeader.svelte";
 	import Prose from "$lib/components/Prose.svelte";
-	let { data } = $props();
+	import dayjs from "dayjs";
+	import customParseFormat from "dayjs/plugin/customParseFormat";
+	import utc from "dayjs/plugin/utc";
+	import timezone from "dayjs/plugin/timezone";
+	dayjs.extend(customParseFormat);
+	dayjs.extend(utc);
+	dayjs.extend(timezone);
 
-	const options: Intl.DateTimeFormatOptions = {
-		year: "numeric",
-		month: "long",
-		day: "numeric"
-	};
+	let { data } = $props();
 	const title = "Statements by BRDSA";
 	const description = "Statements and blog posts released by Baton Rouge DSA";
 </script>
@@ -38,7 +40,16 @@
 								>{post.title}</a
 							>
 							{#if post.date}
-								<time>{new Date(post.date).toLocaleDateString("en-us", options)}</time>
+								<span>
+									<time
+										>{dayjs
+											.tz(post.date, "YYYY-MM-DD", "America/Chicago")
+											.format("YYYY-MM-DD")}.</time
+									>
+									{#if post.author}
+										{post.author}.
+									{/if}
+								</span>
 							{/if}
 						</li>
 					{/each}

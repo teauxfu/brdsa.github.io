@@ -68,9 +68,11 @@
 				plugins: {
 					title: {
 						display: true,
-						text: `Results for page ${page}`
+						text: `Results for ${page === '/' ? "home" : page}`
 					}
-				}
+				},
+				maintainAspectRatio: true,
+				aspectRatio: 1
 			}
 		} as ChartConfiguration<"bar", number[], string>;
 	}
@@ -85,14 +87,14 @@
 </script>
 
 <em>click to view results for page</em>
-<div class="flex justify-evenly">
+<div class="flex flex-wrap gap-x-4 gap-y-2 justify-evenly sm:flex-row my-2">
 	{#each pages as page}
 		<button
-			class="my-2 rounded-md border-2 border-dsa-red bg-dsa-black2 px-0.5 font-bold dark:text-white"
-			onclick={() => changePage(page)}>{page}</button
-		>
+			class="rounded-md w-fit border-2 border-dsa-red bg-dsa-black2 px-0.5 text-sm font-bold dark:text-white"
+			onclick={() => changePage(page)}>{page === '/' ? "home" : page}
+		</button>
 	{/each}
 </div>
-<div class="bg-white">
-	<canvas {@attach loadChart} style="w-sm h-sm"></canvas>
+<div class="bg-white" style="position: relative; height:40vh; width:100%">
+	<canvas {@attach loadChart}></canvas>
 </div>

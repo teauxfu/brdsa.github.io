@@ -1,9 +1,10 @@
 ---
 title: SvelteKit Migration Proposal
 slug: sveltekit-migration-proposal
-date: 2025-07-30
+date: 2025-08-10
 description: This is a proposal for migrating the BRDSA site from Jekyll to SvelteKit.
 hidden: false
+author: Alex W
 ---
 
 <script>
@@ -12,14 +13,13 @@ hidden: false
 
 - [What's this about?](#whats-this-about)
 - [Why do this?](#why-do-this)
-- [Why SvelteKit specifically?](#why-sveltekit-specifically)
 - [Technical details](#technical-details)
+  - [Why SvelteKit specifically?](#why-sveltekit-specifically)
+  - [Data](#data)
 
 ## What's this about?
 
-This branch is a proposal / proof of concept for of migrating the brdsa.org website from it's current site generator [Jekyll](https://jekyllrb.com/), to a new one called [SvelteKit](https://svelte.dev/docs/kit/introduction#What-is-SvelteKit).
-
-<LightHouseScores/>
+This is a proposal / proof of concept for migrating the brdsa.org website from its current site generator [Jekyll](https://jekyllrb.com/), to a new one called [SvelteKit](https://svelte.dev/docs/kit/introduction#What-is-SvelteKit).
 
 ## Why do this?
 
@@ -34,17 +34,6 @@ Shy of changing the framework we could
 
 But, for all that work, I suggest we might as well just rebuild it with something more convenient/powerful and retain the assets that we like. 
 
-## Why SvelteKit specifically? 
-
-Svelte is a JavaScript library for creating UIs, and SvelteKit is a webserver tailored to serving Svelte apps.
-SvelteKit can also be used as a static site generator, which is what Jekyll is and what we want it for. 
-
-Our website is a static site -- just some files sitting on a server without any dynamic content like a comments section. The parts that are truly interactive, like the mailing list and so on, are served through `<iframe>`s which act kind of like windows into a different website. For example, there's no comment section or like buttons because that would require updating a database somewhere, which we don't have or need.
-
-More to the point, because SvelteKit excels at pre-prendering pages for optimal load times and SEO performance, all those benefits apply to using it as a static site generator. Static sites are great because they can usually be hosted for free or cheaply. Our current (free) webhost, GitHub Pages, requires that we produce a static build. 
-
-Svelte itself as a UI library has a really robust component model -- basically we can design a few elements on the page and reuse them easily. For anything but trivial HTML layouts, this is essential. Furthermore, through community libraries such as `mdsvex` we can easily take advantage of using Markdown for writing content. In combination, we get to design beautiful and responsive UI using Svelte, and do the bulk of our copy/prose/post authoring in easy-breezy Markdown.
-
 pros 
 - we can continue to build with a GitHub action and host on GitHub Pages
 - we can retain all our existing Markdown pages, and continue using Markdown to add content 
@@ -58,9 +47,37 @@ cons
 - Jekyll was designed specifically for static site generation, Svelte was not
 - Svelte is more niche. however, once things are set up it's easy to copy/paste styles from existing pages
 
+Additionally, the site built with SvelteKit is [measurably more performant](#data) than the one built with Jekyll.
 
 ## Technical details
 
-TODO list some other tech specs to consider like build output size or some of the SEO features baked into SvelteKit
+Below are some additional technical details and some data that shows the performance improvement of the SvelteKit build.
 
-Here's a Lighthouse report on the current site: 
+### Why SvelteKit specifically? 
+
+[Svelte](https://svelte.dev/docs/svelte/overview) is a JavaScript library for creating UIs, and SvelteKit is a webserver tailored to serving Svelte apps.
+SvelteKit can also be used as a static site generator, which is what Jekyll is and what we want it for. 
+
+Our website is a static site -- just some files sitting on a server without any dynamic content like a comments section. The parts that are truly interactive (that talk to a database somewhere), like the donate widget and so on, are served through <code>iframe</code>s which act kind of like windows into a different website. For example, there's no comment section or like buttons because that would require updating a database somewhere, which we don't have or need.
+
+More to the point, because SvelteKit excels at pre-prendering pages for optimal load times and SEO performance, all those benefits apply to using it as a static site generator. Static sites are great because they can usually be hosted for free or cheaply. Our current (free) webhost, [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages), requires that we produce a static build. 
+
+Svelte itself as a UI library has a really robust component model -- basically we can design a few elements on the page and reuse them easily. For anything but trivial HTML layouts, this is essential. Furthermore, through community libraries such as [mdsvex](https://mdsvex.pngwn.io/) we can easily take advantage of using Markdown for writing content. In combination, we get to design beautiful and responsive UI using Svelte, and do the bulk of our copy/prose/post authoring in easy-breezy Markdown. We can also add interactive components such as the animated graph below.
+
+### Data
+
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) is an open source tool maintained by Google that is commonly used to generate metrics of page health. It measures across four core categories: accessibility, performance, best practices, and SEO friendliness. 
+
+Here's some plots of Lighthouse scores of the BRDSA site before and after conversion to SvelteKit. The new build is better or equivalent in all cases but one. Our banger portrait of Ella baker on the [Get Involved](/get-involved) page is lower resolution than Lighthouse would like, and so that page's score got dinged. Alas. 
+
+<LightHouseScores/>
+
+**Accessibility** can be difficult to achieve, but tends to involve a combination of using semantically correct HTML and added hints for screen readers in the from of [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) tags. To go a step further, we also used a [constrast checker tool](https://webaim.org/resources/contrastchecker/) to make sure all our text meets some minimum legibility standards.
+
+**Performance** is especially important for mobile devices, but also good for general sustainability. This is generally achieved by not loading more static assets than necessary (images, CSS styles, JavaScript).
+
+**Best practices** is somewhat more vaguely defined, but tends to involve using semantically correct HTML and using secure cookie features, etc. 
+
+Also somewhat vaguely defined, **SEO** involves using descriptive meta tags, serving a sitemap file, etc. and generally making the site friendly to link crawlers.  
+
+The script used to generate these scores is kept in the project, so it'll be easy for future maintainers to keep an eye on these metrics as well. 
