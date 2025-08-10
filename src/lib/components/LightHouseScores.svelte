@@ -71,8 +71,8 @@
 						text: `Results for ${page === '/' ? "home" : page}`
 					}
 				},
-				maintainAspectRatio: true,
-				aspectRatio: 1
+				aspectRatio: 2,
+				maintainAspectRatio: false
 			}
 		} as ChartConfiguration<"bar", number[], string>;
 	}
