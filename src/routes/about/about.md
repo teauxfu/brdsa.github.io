@@ -15,3 +15,5 @@ Baton Rouge Democratic Socialists are united by our common struggle against capi
 BRDSA is one of several Louisiana-based chapters of the Democratic Socialists of America, the largest socialist organization in the United States. We are a multi-racial, gender, and ability inclusive organization with a variety of left, anti-capitalist political perspectives. For more information [join Baton Rouge DSA’s email list.](https://actionnetwork.org/forms/join-brdsa).
 
 Check out our calendar to learn how [you can get involved](/get-involved)!
+
+To learn more about how we function as an organization, [take a look at our bylaws](/bylaws).
