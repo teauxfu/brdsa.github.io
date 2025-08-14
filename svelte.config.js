@@ -1,16 +1,16 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-    import remarkSlug from 'remark-slug';
-    import remarkAutolinkHeadings from 'remark-autolink-headings';
-
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.svx', '.md'],
-	   remarkPlugins: [
-        remarkSlug,
-        remarkAutolinkHeadings,
-      ],
+	rehypePlugins:
+		[
+			[rehypeSlug],
+			[rehypeAutolinkHeadings, { behavior: 'wrap'}]
+		]
 };
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -30,7 +30,7 @@ const config = {
 			handleHttpError: ({ path, referrer, message }) => {
 				throw new Error(message);
 			},
-			handleMissingId: (({ message, id, path}) => {
+			handleMissingId: (({ message, id, path }) => {
 				console.log(`skipping missing id error ${message}`)
 				return;
 			})
