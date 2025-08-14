@@ -48,21 +48,21 @@ lastUpdated: 2025-08-13
     - [Section 3(c).](#section-3c)
     - [Section 3 (d).](#section-3-d)
     - [Section 3(e).](#section-3e)
-    - [Section 4: Secretary.](#section-4-secretary)
-      - [Section 4(a).](#section-4a)
-      - [Section 4(b).](#section-4b)
-      - [Section 4(c).](#section-4c)
-      - [Section 5: Treasurer.](#section-5-treasurer)
-      - [Section 6: Additional Duties.](#section-6-additional-duties)
-      - [Section 7: Officers’ Council](#section-7-officers-council)
-      - [Section 8: Quorum.](#section-8-quorum-1)
+  - [Section 4: Secretary.](#section-4-secretary)
+    - [Section 4(a).](#section-4a)
+    - [Section 4(b).](#section-4b)
+    - [Section 4(c).](#section-4c)
+  - [Section 5: Treasurer.](#section-5-treasurer)
+  - [Section 6: Additional Duties.](#section-6-additional-duties)
+  - [Section 7: Officers’ Council](#section-7-officers-council)
+  - [Section 8: Quorum.](#section-8-quorum-1)
 - [ARTICLE 6: CAUCUSES](#article-6-caucuses)
   - [Section 1: Definition and Purpose.](#section-1-definition-and-purpose)
   - [Section 2: Official Recognition.](#section-2-official-recognition)
 - [ARTICLE 7. COMMITTEES](#article-7-committees)
   - [Section 1: Duration.](#section-1-duration)
   - [Section 2: Duties.](#section-2-duties)
-    - [Section 3: Structure.](#section-3-structure)
+  - [Section 3: Structure.](#section-3-structure)
 - [ARTICLE 8: VOLUNTARY DONATIONS](#article-8-voluntary-donations)
 - [ARTICLE 9. AMENDMENTS](#article-9-amendments)
   - [Section 1.](#section-1)
@@ -71,7 +71,7 @@ lastUpdated: 2025-08-13
 - [ARTICLE 11. ELECTIONS AND NOMINATIONS TO NATIONAL, STATE, OR REGIONAL CONVENTIONS OR MEETINGS](#article-11-elections-and-nominations-to-national-state-or-regional-conventions-or-meetings)
   - [Section 1:](#section-1-1)
   - [Section 2: Nominations Committee.](#section-2-nominations-committee)
-  - [Section 3:](#section-3)
+  - [Section 3: Method of Voting for Delegates to the National Convention.](#section-3-method-of-voting-for-delegates-to-the-national-convention)
   - [Section 4. Uncontested Positions.](#section-4-uncontested-positions)
 - [ARTICLE 12: RULES OF ORDER](#article-12-rules-of-order)
   - [Section 1: Majority Vote.](#section-1-majority-vote)
@@ -242,31 +242,31 @@ The Co-Chairs will report to Chapter Meetings on the business of the Officers Me
 
 At least one Co-Chair must not identify as white, cisgender, and male; one Co-Chair must identify as working class.
 
-#### Section 4: Secretary.
+### Section 4: Secretary.
 
-##### Section 4(a).
+#### Section 4(a).
 
 The Secretary will be responsible for answering all correspondence and queries of the Chapter, and for maintaining an up-to-date membership list for the Chapter. They will insure effective communication with national DSA. They will temporarily assume the responsibilities of the Co-Chair, if neither Co-Chair is able to do so.
 
-##### Section 4(b).
+#### Section 4(b).
 
 The Secretary will be responsible also for the taking of minutes of all Chapter and Officers Meetings, and will have custody of these minutes, and the resolutions, reports, and other official records of the Chapter. They will keep attendance records of all meetings. They will transfer official records in good condition to their successor. Official records will include meeting minutes and member lists.
 
-##### Section 4(c).
+#### Section 4(c).
 
 The Secretary will be responsible for ensuring proper recognition of formally recognized caucuses.
 
-##### Section 5: Treasurer.
+### Section 5: Treasurer.
 
 The Treasurer will be responsible for the funds and financial records of the Chapter. All funds collected by the Chapter will be turned over to the Treasurer, who will deposit them in a bank or credit union account under the name of the Chapter. In cooperation with the Secretary, the Treasurer will be responsible for ensuring that membership dues are paid and up-to-date. The Treasurer will prepare the annual Chapter budget and deliver the Chapter financial report to the General Meeting of the Chapter, as well as periodic progress reports as requested by the Officers of the Chapter.
 
-##### Section 6: Additional Duties.
+### Section 6: Additional Duties.
 
 The Chapter Officers may assign additional temporary duties to an officer of the Chapter, so long as such assignments do not conflict with the designation of responsibilities outlined in these Bylaws.
 
-##### Section 7: Officers’ Council
+### Section 7: Officers’ Council
 
-##### Section 8: Quorum.
+### Section 8: Quorum.
 
 A quorum of three (3) members of the Officers’ Council is required for the transaction of Officers’ Council business.
 
@@ -292,7 +292,7 @@ The Chapter will have Ad Hoc Committees or Working Groups, which will exist for 
 
 Chairs of Ad Hoc Committees will keep the Officers’ Council and the General Meetings of the Local Chapter informed on the activities of the committee.
 
-#### Section 3: Structure.
+### Section 3: Structure.
 
 Any representative for a committee must be a member in good standing. 
 
@@ -326,9 +326,7 @@ BRDSA delegates and alternates to the National Convention, as well as to any reg
 
 A three (3)-person Nominations Committee will be established at least one (1) month prior to every election by vote of a General Meeting. It will solicit and receive nominations for the positions to be elected.
 
-### Section 3:
-
-Method of Voting for Delegates to the National Convention.
+### Section 3: Method of Voting for Delegates to the National Convention.
  
 Following Article V, Section 5 of national DSA’s Constitution delegates to the National Convention must be elected by secret ballot.  Following Article VI, Section 3, of national DSA’s Bylaws, Local Chapters “may determine their own method of election of delegates to the Convention except that a petition from 10% of a Local’s membership or a motion supported by 15% of those present and voting at the Local meeting which determines the method of election will require the use of the Hare system in that Local’s election of delegates to the National Convention.”
  
@@ -357,7 +355,6 @@ Any action taken by an officer or member of the Local Chapter in contravention o
 ### Section 5: Harassment Policy.
  
 The Local Chapter will follow the Harassment Policy of national DSA.
-
 
 ## ARTICLE 13:  DISTRIBUTION OF ASSETS
 
