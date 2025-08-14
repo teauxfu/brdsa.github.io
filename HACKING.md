@@ -96,15 +96,18 @@ https://joyofcode.xyz/sveltekit-markdown-blog#rendering-a-single-post
 some default settings to put in `.vscode` 
 https://www.sveltepatterns.dev/getting-started-with-vscode
 
+
+### credits
+
+excellent project setup guides, basic plumbing
+https://mli.puffinsystems.com/blog/sveltekit-blog-docs-with-mdsvex
+https://github.com/mvasigh/sveltekit-mdsvex-blog/tree/main
+https://github.com/josh-collinsworth/sveltekit-blog-starter
+
 phenomenal guide, can probably ditch the mdsvex if it's excessive or causing problems
 https://gebna.gg/blog/blog-from-scratch-using-sveltekit
 
-hella baller
-https://github.com/josh-collinsworth/sveltekit-blog-starter
-also mega baller 
-https://mli.puffinsystems.com/blog/sveltekit-blog-docs-with-mdsvex
-
-nice icons, fontawesome is hella bloatware
+svg icons
 https://simpleicons.org/?q=github
 https://tabler.io/icons
 https://heroicons.com/
@@ -112,6 +115,5 @@ https://heroicons.com/
 underline animation 
 https://cssf1.com/how-to/create-hover-underline-animation-tailwind-css
 
-
-his svelte components still work in md, why don't ours?
-https://github.com/mvasigh/sveltekit-mdsvex-blog/tree/main
+details/summary animation 
+https://www.youtube.com/watch?v=Vzj3jSUbMtI
