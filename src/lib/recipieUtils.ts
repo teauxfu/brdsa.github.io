@@ -1,6 +1,6 @@
 import type { Recipie, RecipieModules } from "./types";
 
-// NOTE this is pretty much just copy/pasted from the postUtils to allow for minor differences in loading
+// NOTE this is pretty much just copy/pasted from the postUtils to allow for minor differences in loading without complicating things too much. consider merging later if it gets out of hand
 
 // Convert file path to default slug (filename without extension)
 export function pathToSlug(path: string): string {

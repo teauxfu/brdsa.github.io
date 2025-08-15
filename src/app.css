@@ -42,12 +42,10 @@
 	}
 }
 
-
 .prose h1 > a
 {
 	@apply no-underline
 }
-
 
 .prose  a {
 	@apply decoration-dsa-red1;
@@ -65,7 +63,7 @@
 	@apply font-bold decoration-dsa-red1 hover:underline dark:text-white;
 }
 
-.prose .prose cite a {
+.prose cite a {
 	@apply font-bold decoration-dsa-red1;
 }
 

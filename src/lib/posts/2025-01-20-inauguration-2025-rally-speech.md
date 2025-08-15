@@ -1,7 +1,6 @@
 ---
 title: Speech at Inauguration Day Rally 2025
 date: 2025-01-20
-slug: 2025-01-20-inauguration-2025-rally-speech
 description: This speech was given on January 20, 2025 by BRDSA member Jacob Newsom outside the Governor's mansion.
 imageUrl: Inaug2025speechphoto.jpg
 imageDescription: Jacob Newsom speaking outside the Governor's mansion
