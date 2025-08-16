@@ -5,7 +5,7 @@
 
 ## Customizing the website
 
-You can edit the site using the online GitHub editor, but this is more suited to minor changes like typos, text adjustment, adding links, etc. Cloning the repo to develop locally is recommended for any substantial changes.
+You can edit the site using the online GitHub editor, but this is more suited to minor changes like adding posts/recipies, typos / text adjustments, adding links, etc. Cloning the repo to develop locally is recommended for any substantial changes.
 
 ### Adding pages
 
