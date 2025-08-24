@@ -10,8 +10,39 @@ prereqs:
 
 ## Cloning the repo 
 
-TODO link to the github repo, instructions for cloning. 
-gh cli is pretty nice, they have a desktop interface too
+```
+git clone https://github.com/dsa-ntc/brdsa.github.io.git
+```
+
+or using the [GitHub CLI](https://cli.github.com/) (it's nice)
+
+```
+gh repo clone dsa-ntc/brdsa.github.io
+```
+
+Install the dependencies with 
+
+```
+npm install
+```
+
+Run the app 
+
+```
+npm run dev -- --open
+```
+
+Build and preview the app 
+
+```
+npm run build && npm run preview -- --open
+```
+
+Run the Lighthouse tests. Edit URLs to test in `lighthouse.js`.
+
+```
+npm run test:lighthouse
+```
 
 VSCode is not required, but highly recommended. The suggested settings in `.vscode/settings.json` and `.vscode/extensions.json` were tailored for this project, but are not required. For basic changes or working with Markdown, the online GitHub text editor is probably fine, too.
 
@@ -41,28 +72,16 @@ They may seem weird at first, but they're nice once they click.
 - `static` is just static stuff that should be served at the site root. `robots.txt`, `favicon.ico` etc.
 
 
-## Initial setup
-
-Initial creation of the project. In the startup options we added `tailwind` and `mdsvex`, and opted for the static adapter since we're pushing to github pages.
-
-```
-npx sv create my-app
-cd my-app
-npm install
-npm run dev
-```
-
 ### GitHub workflow
 
 Copied and modified this person's GH workflow, updated the Node version I think?
 https://github.com/khromov/derivault/blob/main/.github/workflows/build.yml
 
+see `.github/deploy.yml`.
+
 ### Setting up the blog route
 
-I actually struggled with this a fair bit at first, but it's working now. I don't fully understand some of the more detailed points about JavaScript module loading. 
-
-There seems to be some opportunity for conflict surrounding dynamic routes, and pre-rendering dynamic components that the build system can't walk.
-One thing that wouldn't work, for example, was putting a `published` flag on the frontmatter of some posts. Even if you set that flag to `false` in the frontmatter, for some reason SvelteKit would still try to walk it (it doesn't know the published flag before it reads the files), but a conditional on returning the post would return a 404 error if it was false. I'm probably explaining that poorly. It had to do with the `/blog/[slug]/+page.ts` data loader. 
+I actually struggled with this a fair bit at first, but it's working now. I don't fully understand some of the more detailed points about JavaScript module loading. The list of posts is served from /api/posts. See postUtils.ts for module loading specifics. Much of the code there was adapted from articles linked below.
 
 ### If there's a weird problem
 

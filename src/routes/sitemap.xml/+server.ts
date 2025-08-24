@@ -1,7 +1,17 @@
 import { config } from "$lib/config";
 import { getPosts } from "$lib/postUtils";
+import type { PostMetadata } from "$lib/types";
 
 export const prerender = true;
+
+function getItemsForPost(post: PostMetadata)
+{
+    return `
+    <url>
+        <loc>${config.location}/blog/${post.slug}</loc>
+        <lastmod>${post.date ? new Date(post.date).toISOString() : new Date().toISOString()}</lastmod>
+    </url>`;
+}
 
 export async function GET() {
 	const posts = getPosts();
@@ -37,14 +47,7 @@ export async function GET() {
             <url>
                 <loc>${config.location}/blog</loc>
             </url>
-            ${posts.map(
-							(post) =>
-								`
-                <url>
-                    <loc>${config.location}/blog/${post.slug}</loc>
-                </url>
-                `
-						)}
+            ${posts.map((post) => getItemsForPost(post)).join('\n')}
 		</urlset>`.trim(),
 		{
 			headers: {
