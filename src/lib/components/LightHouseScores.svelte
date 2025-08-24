@@ -68,7 +68,7 @@
 				plugins: {
 					title: {
 						display: true,
-						text: `Results for ${page === '/' ? "home" : page}`
+						text: `Results for ${page === "/" ? "home" : page}`
 					}
 				},
 				aspectRatio: 2,
@@ -87,11 +87,12 @@
 </script>
 
 <em>click to view results for page</em>
-<div class="flex flex-wrap gap-x-4 gap-y-2 justify-evenly sm:flex-row my-2">
+<div class="my-2 flex flex-wrap justify-evenly gap-x-4 gap-y-2 sm:flex-row">
 	{#each pages as page}
 		<button
-			class="rounded-md w-fit border-2 border-dsa-red bg-dsa-black2 px-0.5 text-sm font-bold dark:text-white"
-			onclick={() => changePage(page)}>{page === '/' ? "home" : page}
+			class="w-fit rounded-md border-2 border-dsa-red bg-dsa-black2 px-0.5 text-sm font-bold dark:text-white"
+			onclick={() => changePage(page)}
+			>{page === "/" ? "home" : page}
 		</button>
 	{/each}
 </div>

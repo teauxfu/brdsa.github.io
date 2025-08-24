@@ -1,11 +1,11 @@
 <script lang="ts">
-	import PaletteBackground from '$lib/components/PaletteBackground.svelte';
-	import '../app.css';
+	import PaletteBackground from "$lib/components/PaletteBackground.svelte";
+	import "../app.css";
 	let { data, children } = $props();
-	import Socials from '$lib/components/Socials.svelte';
-	import { page } from '$app/state';
-	import logo from '$lib/images/DSABR_Logo_3ColorOnBlk_Web.png?enhanced';
-	import {config} from '$lib/config';
+	import Socials from "$lib/components/Socials.svelte";
+	import { page } from "$app/state";
+	import logo from "$lib/images/BRDSAlogo_3ColorOnWhite.png?enhanced";
+	import { config } from "$lib/config";
 </script>
 
 <svelte:head>
@@ -13,12 +13,15 @@
 	<meta name="description" content={data.description} />
 	<meta property="og:title" content={data.title} />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content={`${config.location}/images/DSABR_Logo_3ColorOnBlk_Web.png?enhanced`} />
+	<meta
+		property="og:image"
+		content={`${config.location}/images/BRDSAlogo_3ColorOnWhite.png?enhanced`}
+	/>
 	<meta property="og:url" content={page.url.toString()} />
 </svelte:head>
 
 <header class="@container flex items-center">
-	<div class="hidden h-15 w-15 rounded-full p-0.5  ml-1 transition hover:scale-105 @md:block">
+	<div class="ml-1 hidden h-15 w-15 rounded-full p-0.5 transition hover:scale-105 @md:block">
 		<a href="/" title="Go to the BRDSA home page">
 			<span class="hidden">Go to the home page</span>
 			<enhanced:img src={logo} alt="BR DSA logo" />
@@ -30,13 +33,17 @@
 	>
 		<ul class="flex flex-wrap gap-x-5 px-2">
 			<li class="@md:hidden">
-				<a href="/" class="font-bold text-dsa-red dark:text-dsa-red1" title="go to the home page">Home</a>
+				<a href="/" class="font-bold text-dsa-red dark:text-dsa-red1" title="go to the home page"
+					>Home</a
+				>
 			</li>
 			{#each data.sections as { title, link, caption }}
-				<li >
-					<a href={link} class="font-bold text-dsa-red dark:text-dsa-red1 group" title={caption}>
+				<li>
+					<a href={link} class="group font-bold text-dsa-red dark:text-dsa-red1" title={caption}>
 						{title}
-						<div class="bg-dsa-red dark:bg-dsa-red1 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+						<div
+							class="h-[2px] w-0 bg-dsa-red transition-all duration-500 group-hover:w-full dark:bg-dsa-red1"
+						></div>
 					</a>
 				</li>
 			{/each}
@@ -47,12 +54,12 @@
 	{@render children()}
 </main>
 <footer>
-	<PaletteBackground reversed backgroundClass='opacity-65'>
+	<PaletteBackground reversed backgroundClass="opacity-65">
 		<div class="md:hidden">
 			<Socials />
 			<address class="text-center text-lg">🐊 Baton Rouge DSA 🌹</address>
 		</div>
-		<div class="hidden md:grid grid-cols-3">
+		<div class="hidden grid-cols-3 md:grid">
 			<div></div>
 			<address class="text-center text-lg">🐊 Baton Rouge DSA 🌹</address>
 			<Socials />

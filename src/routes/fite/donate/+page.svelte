@@ -18,7 +18,9 @@
 			<p
 				class="border-l-4 border-l-dsa-red p-2 dark:border-l-dsa-red1 dark:bg-dsa-black1 dark:text-white"
 			>
-				Baton Rouge DSA committed to funding FITE during its July 2025 general meeting. Donations earmarked for FITE will only be spent for supplies directly supporting mutual aid and community care. Donations to FITE via Baton Rouge DSA are not tax deductible. 
+				Baton Rouge DSA committed to funding FITE during its July 2025 general meeting. Donations
+				earmarked for FITE will only be spent for supplies directly supporting mutual aid and
+				community care. Donations to FITE via Baton Rouge DSA are not tax deductible.
 			</p>
 		</Prose>
 	</div>

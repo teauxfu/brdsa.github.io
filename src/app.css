@@ -42,12 +42,11 @@
 	}
 }
 
-.prose h1 > a
-{
-	@apply no-underline
+.prose h1 > a {
+	@apply no-underline;
 }
 
-.prose  a {
+.prose a {
 	@apply decoration-dsa-red1;
 }
 

@@ -61,12 +61,14 @@
 			<enhanced:img src={hero} alt="BR DSA members distribute food" />
 		</aside>
 	</div>
-	
-	<p class="text-center">
-		This QR code links to the FITE donation page.
-	</p>
-	<div class="flex justify-center py-3">
 
-		<enhanced:img src={qrCode} class="w-xs" alt="QR code linking to the FITE donation page" title="QR code linking to the FITE donation page" />
+	<p class="text-center">This QR code links to the FITE donation page.</p>
+	<div class="flex justify-center py-3">
+		<enhanced:img
+			src={qrCode}
+			class="w-xs"
+			alt="QR code linking to the FITE donation page"
+			title="QR code linking to the FITE donation page"
+		/>
 	</div>
 </article>
