@@ -2,6 +2,8 @@
 
 In 2024, Baton Rouge DSA voted to prioritize a Tenants Rights campaign with the ultimate goal of creating a citywide Tenants Union. We believe that by working together, tenants can take back control of their homes from the wealthy elites who own everything and charge us perpetual rent while contributing nothing. Landlords are organized, tenants should be too. If you agree and are interested in joining this campaign, [join our email list](https://actionnetwork.org/forms/join-brdsa) and consider [joining DSA](https://act.dsausa.org/donate/membership/?source=Baton%20Rouge).
 
+We're putting building a [page of tenant resources](/campaigns/tenant-resources).
+
 ## 🗽🌎 Immigrant Rights 
 
 BRDSA has been developing relationships with local immigrant advocacy organizations and developing workshops to educate our community about how to defend their neighbors from Immigration and Customs Enforcement (ICE) and why it must be abolished. Join our chapter's International Working Group to learn how you can contribute to this work. 
