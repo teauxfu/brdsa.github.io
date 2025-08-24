@@ -10,12 +10,11 @@ FITE is always looking for volunteers to cook, serve, or donate materials. [Foll
 
 ## Donate
 
-You can donate to FITE in person by coming to our Saturday food distro, or online donating to Baton Rouge DSA and including a message that you would like your donation to be used for FITE.
+Baton Rouge DSA committed to funding FITE during its July 2025 general meeting. Donations earmarked for FITE will only be spent for supplies directly supporting mutual aid and community care. 
 
-You can set up recurring [donations to Baton Rouge DSA](/donate/) or make a one-time donation via [Venmo](https://venmo.com/u/BRDSA). Donations to FITE and Baton Rouge DSA are _not_ tax deductible. 
+You can donate to FITE in person by coming to our Saturday food distro, or online. You can set up recurring [donations to FITE](/fite/donate) or make a one-time donation. Small, recurring donations make the most impact. Donations to FITE and Baton Rouge DSA are _not_ tax deductible. 
 
 ## Want to cook?
 
 Check out [our cookbook](/fite/recipies)!
-
 
