@@ -22,7 +22,7 @@
 			</p>
 		</Prose>
 	</div>
-	<div class="flex">
+	<div class="flex justify-center">
 		<Prose>
 			<Resources />
 		</Prose>
