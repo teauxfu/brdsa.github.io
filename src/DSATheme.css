@@ -1,0 +1,59 @@
+/* this file hold some DSA specific styles, such as the official colors and font
+ * TODO add other fonts, such as Styrene B
+ * see the DSA Design guide for more info https://design.dsausa.org/national-identity/
+ */
+
+@import '../static/fonts/ManifoldDSA.css';
+
+@theme {
+	/* Primary Colors */
+	--color-dsa-red: rgb(236, 31, 39);
+	--color-dsa-black: rgb(35, 31, 32);
+	/* Red Tints */
+	--color-dsa-red1: rgb(240, 76, 83);
+	--color-dsa-red2: rgb(244, 121, 126);
+	--color-dsa-red3: rgb(247, 165, 169);
+	--color-dsa-red4: rgb(251, 210, 212);
+	/* Black Tints */
+	--color-dsa-black1: rgb(59, 56, 56);
+	--color-dsa-black2: rgb(96, 92, 92);
+	--color-dsa-black3: rgb(140, 137, 137);
+	--color-dsa-black4: rgb(193, 192, 191);
+	--font-manifold: 'Manifold DSA', sans-serif;
+	/* Animations */
+	--animate-fade-in-scale: fade-in-scale 0.4s ease-out;
+	--animate-fade-out: fade-out 0.5s ease-out;
+	--animate-swell:  scale-up 0.5s ease-out;
+
+	@keyframes scale-up {
+		0% {
+			transform: scale(1);
+		}
+		100%
+		{
+			transform: scale(1.1);
+		}
+	}
+
+	@keyframes fade-in-scale {
+		0% {
+			opacity: 0;
+			transform: scale(0.95);
+		}
+
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes fade-out {
+		0% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 0;
+		}
+	}
+}

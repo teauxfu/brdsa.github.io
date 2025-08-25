@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@import "./DSATheme.css";
+
+/*
+ this allows us to use a newer/advanced css feature if the browser supports it.
+ this lets us stylishly animate our summary elements
+ */
+:root {
+	interpolate-size: allow-keywords;
+}
+
+@layer base {
+	article {
+		@apply @container flex grow flex-col bg-white/90 dark:bg-dsa-black/90;
+	}
+
+	/* the following rules for details are to animate them when opening */
+
+	details {
+		@apply overflow-hidden bg-white dark:bg-dsa-black;
+	}
+
+	details::details-content {
+		block-size: 0;
+		transition:
+			block-size 1s,
+			content-visibility 1s;
+		transition-behavior: allow-discrete;
+	}
+
+	details:open::details-content {
+		block-size: auto;
+		@apply dark:bg-dsa-black;
+	}
+}
+
+@layer components {
+	.palette-sibling {
+		@apply bg-dsa-red4/65 dark:bg-dsa-black4/65;
+	}
+}
+
+.prose h1 > a {
+	@apply no-underline;
+}
+
+.prose a {
+	@apply decoration-dsa-red1;
+}
+
+.prose blockquote {
+	@apply mb-0 h-fit border-l-dsa-red p-2 pr-1 dark:border-l-dsa-red1 dark:bg-dsa-black1;
+}
+
+.prose blockquote a {
+	@apply decoration-dsa-red1;
+}
+
+.prose p a {
+	@apply font-bold decoration-dsa-red1 hover:underline dark:text-white;
+}
+
+.prose cite a {
+	@apply font-bold decoration-dsa-red1;
+}
+
+.prose figcaption {
+	@apply bg-white/50 p-2 text-sm text-dsa-black dark:bg-dsa-black1 dark:text-white;
+}
+.prose figure a {
+	@apply decoration-dsa-red1;
+}
