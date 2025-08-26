@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "page": "/",
+      "build": "SvelteKit",
+      "performance": 71,
+      "accessibility": 84,
+      "bestPractices": 79,
+      "seo": 92
+    },
+    {
+      "page": "/about",
+      "build": "SvelteKit",
+      "performance": 81,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/fite",
+      "build": "SvelteKit",
+      "performance": 81,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/get-involved",
+      "build": "SvelteKit",
+      "performance": 64,
+      "accessibility": 100,
+      "bestPractices": 75,
+      "seo": 100
+    },
+    {
+      "page": "/campaigns",
+      "build": "SvelteKit",
+      "performance": 81,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/donate",
+      "build": "SvelteKit",
+      "performance": 55.00000000000001,
+      "accessibility": 96,
+      "bestPractices": 79,
+      "seo": 100
+    },
+    {
+      "page": "/",
+      "build": "Jekyll",
+      "performance": 57.99999999999999,
+      "accessibility": 82,
+      "bestPractices": 79,
+      "seo": 85
+    },
+    {
+      "page": "/about",
+      "build": "Jekyll",
+      "performance": 60,
+      "accessibility": 94,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "page": "/fite",
+      "build": "Jekyll",
+      "performance": 59,
+      "accessibility": 89,
+      "bestPractices": 100,
+      "seo": 92
+    },
+    {
+      "page": "/get-involved",
+      "build": "Jekyll",
+      "performance": 56.99999999999999,
+      "accessibility": 79,
+      "bestPractices": 79,
+      "seo": 92
+    },
+    {
+      "page": "/campaigns",
+      "build": "Jekyll",
+      "performance": 60,
+      "accessibility": 94,
+      "bestPractices": 100,
+      "seo": 100
+    },
+    {
+      "page": "/donate",
+      "build": "Jekyll",
+      "performance": 36,
+      "accessibility": 91,
+      "bestPractices": 79,
+      "seo": 100
+    }
+  ]
+}
